@@ -116,10 +116,7 @@ def mutator(input_PPT):
     mutation = random.randint(1, 5)
     mutate_tree = []
     for i in range(mutation):
-        # mutator = random.randint(1, 3)
-        # mutator = 1
-        # mutator = 2
-        mutator = 3
+        mutator = random.randint(1, 3)
 
         if mutator == 1:
             new_PPT = add_relation(input_PPT)
@@ -241,8 +238,8 @@ if __name__ == "__main__":
     for i in range(1000):
         ppt = constructPPT()
         ppt_list.append(ppt)
-        # mutate_tree = mutator(ppt)
-        # ppt_list = ppt_list + mutate_tree
+        mutate_tree = mutator(ppt)
+        ppt_list = ppt_list + mutate_tree
     
     i = 0
     for ppt in tqdm(ppt_list):
