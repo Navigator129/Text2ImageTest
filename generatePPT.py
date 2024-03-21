@@ -235,7 +235,7 @@ def add_attribute(input_PPT):
 
 if __name__ == "__main__":
     ppt_list = []
-    for i in range(1000):
+    for i in tqdm(range(1000)):
         ppt = constructPPT()
         ppt_list.append(ppt)
         mutate_tree = mutator(ppt)
