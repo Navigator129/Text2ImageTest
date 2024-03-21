@@ -1,0 +1,49 @@
+[
+  {
+    "super": "person",
+    "objects": ["person"]
+  },
+  {
+    "super": "vehicle",
+    "objects": ["car","bicycle","motorcycle","airplane","bus","train","truck","boat"]
+  },
+  {
+    "super": "outdoor",
+    "objects": ["traffic light","fire hydrant","stop sign","parking meter","bench"]
+  },
+  {
+    "super": "animal",
+    "objects": ["bird","cat","dog","horse","sheep","cow","elephant","bear","zebra","giraffe"]
+  },
+  {
+    "super": "accessory",
+    "objects": ["backpack","umbrella","handbag","tie","suitcase"]
+  },{
+    "super": "sports",
+    "objects": ["frisbee","skis","snowboard","sports ball","kite","baseball bat","baseball glove","skateboard","surfboard","tennis racket"]
+  },
+{
+    "super": "kitchen",
+    "objects": ["bottle","wine glass","cup","fork","knife","spoon","bowl"]
+  },
+{
+    "super": "food",
+    "objects": ["banana","apple","sandwich","orange","broccoli","carrot","hot dog","pizza","donut","cake"]
+  },
+{
+    "super": "furniture",
+    "objects": ["chair","couch","potted plant","bed","dining table","toilet"]
+  },
+{
+    "super": "electronic",
+    "objects": ["tv","laptop","mouse","remote","keyboard","cell phone"]
+  },
+{
+    "super": "appliance",
+    "objects": ["microwave","oven","toaster","sink","refrigerator"]
+  },
+{
+    "super": "indoor",
+    "objects": ["book","clock","vase","scissors","teddy bear","hair drier","toothbrush"]
+  }
+]
