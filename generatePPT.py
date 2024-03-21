@@ -3,12 +3,15 @@
 import json
 import random
 
+from tqdm import tqdm
+from generatePrompt import *
+
+
 relation = {"top": ['on top of', 'above', 'Atop', 'Upon'], "bottom": ["Beneath", "Under", "Below", "Underneath"], 
             "left": ["To the left of","On the left side of", "Leftward of", "Adjacent to the left of"], 
             "right": ["To the right of", "On the right side of", "Rightward of", "Adjacent to the right of"]}
 
-color = {'red', 'blue', 'green', 'yellow', 'black', 'white', 'brown', 'purple', 'pink', 'orange'}
-number = {'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'}
+
 
 class PPT:
     def __init__(self, value):
@@ -57,15 +60,22 @@ def select_attribute(obj):
     attr = attr[attr_idx]
     return attr
 
-def select_color(input_PPT):
+def select_color():
+    color = ['red', 'blue', 'green', 'yellow', 'black', 'white', 'brown', 'purple', 'pink', 'orange']
     attr_idx = random.randint(0, len(color)-1)
     color = color[attr_idx]
     return color
     
 
-def select_number(input_PPT):
+def select_number(relation_node, flag):
+    number = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']
     attr_idx = random.randint(0, len(number)-1)
     number = number[attr_idx]
+    #Flag is used to determine if the input node is the second object node in the vertical relation, we don't want see 'one apple is on top of two table'
+    if flag:
+        if relation_node in relation['top'] or relation_node in relation['bottom']:
+            return 'one'
+    
     return number
 
 def constructPPT():
@@ -83,8 +93,8 @@ def constructPPT():
     color1 = select_color()
     color2 = select_color()
     #select number nodes
-    number1 = select_number()
-    number2 = select_number()
+    number1 = select_number(relation_node, False)
+    number2 = select_number(relation_node, True)
 
     #construct the tree
     root = PPT(relation_node)
@@ -95,6 +105,7 @@ def constructPPT():
     child1.add_child(PPT(attr1))
     child1.add_child(PPT(color1))
     child1.add_child(PPT(number1))
+
     child2.add_child(PPT(attr2))
     child2.add_child(PPT(color2))
     child2.add_child(PPT(number2))
@@ -105,7 +116,10 @@ def mutator(input_PPT):
     mutation = random.randint(1, 5)
     mutate_tree = []
     for i in range(mutation):
-        mutator = random.randint(1, 3)
+        # mutator = random.randint(1, 3)
+        # mutator = 1
+        # mutator = 2
+        mutator = 3
 
         if mutator == 1:
             new_PPT = add_relation(input_PPT)
@@ -116,7 +130,7 @@ def mutator(input_PPT):
         elif mutator == 3:
             new_PPT = add_attribute(input_PPT)
             mutate_tree.append(new_PPT)
-    return new_PPT
+    return mutate_tree
 
 def add_relation(input_PPT):
     #combine two tree
@@ -135,7 +149,7 @@ def add_relation(input_PPT):
     child2 = root.get_children()[1]
     attr = select_attribute(obj2)
     color = select_color()
-    number = select_number()
+    number = select_number(relation_node, False)
     child2.add_child(PPT(attr))
     child2.add_child(PPT(color))
     child2.add_child(PPT(number))
@@ -177,39 +191,65 @@ def swap_object(input_PPT):
 
 def add_attribute(input_PPT):
     #add an attribute to a node
+    relation_node = input_PPT.value
     obj1 = input_PPT.get_children()[0]
     obj2 = input_PPT.get_children()[1]
+    obj1_value = obj1.value
+    obj2_value = obj2.value
     new_attr1 = select_attribute(obj1.value)
     new_attr2 = select_attribute(obj2.value)
     attr1 = obj1.get_children()
     attr2 = obj2.get_children()
-    if len(attr1) == 8:
+    attr1_values = get_attribute_values(attr1)
+    attr2_values = get_attribute_values(attr2)
+    #construct the new tree which is the same as the input tree
+    root = PPT(relation_node)
+    root.add_child(PPT(obj1_value))
+    root.add_child(PPT(obj2_value))
+    for attr in attr1_values:
+        root.get_children()[0].add_child(PPT(attr))
+    for attr in attr2_values:
+        root.get_children()[1].add_child(PPT(attr))
+
+    #add new attribute to the tree
+    if len(attr1_values) == 8:
         pass
     else:
-        if new_attr1 not in attr1:
-            obj1.add_child(PPT(new_attr1))
+        if new_attr1 not in attr1_values:
+            root.get_children()[0].add_child(PPT(new_attr1))
         else:
             new_attr1 = select_attribute(obj1.value)
-            while new_attr1 in attr1:
+            while new_attr1 in attr1_values:
                 new_attr1 = select_attribute(obj1.value)
-            obj1.add_child(PPT(new_attr1))
+            root.get_children()[0].add_child(PPT(new_attr1))
 
     if len(attr2) == 8:
         pass
     else:
-        if new_attr2 not in attr2:
-            obj2.add_child(PPT(new_attr2))
+        if new_attr2 not in attr2_values:
+            root.get_children()[1].add_child(PPT(new_attr1))
         else:
             new_attr2 = select_attribute(obj2.value)
-            while new_attr2 in attr2:
+            while new_attr2 in attr2_values:
                 new_attr2 = select_attribute(obj2.value)
-            obj2.add_child(PPT(new_attr2))
-    return input_PPT
+            root.get_children()[1].add_child(PPT(new_attr1))
+    return root
 
 
 if __name__ == "__main__":
     ppt_list = []
     for i in range(1000):
-        ppt_list.append(constructPPT())
+        ppt = constructPPT()
+        ppt_list.append(ppt)
+        # mutate_tree = mutator(ppt)
+        # ppt_list = ppt_list + mutate_tree
     
+    i = 0
+    for ppt in tqdm(ppt_list):
+        generatePrompt(ppt, i)
+        i += 1
+    
+    print("Done!")
+    
+
     
