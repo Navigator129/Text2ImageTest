@@ -2,7 +2,7 @@ import json
 from openai import OpenAI
 from tqdm import tqdm
 import os
-
+import openai
 import requests
 
 # Replace YOUR_API_KEY with your OpenAI API key
@@ -15,17 +15,21 @@ def fetch_prompt():
 def generate():
     prompt_list = fetch_prompt()
     urls = []
-    for i in tqdm(range(10)):
-        response = client.images.generate(
-        model="dall-e-3",
-        prompt = prompt_list[str(i)],
-        size="1024x1024",
-        quality="standard",
-        n=1,
-        )
-        url = response.data[0].url
-        urls.append(url)
-        # time.sleep(0.5)
+    for i in tqdm(range(127, len(prompt_list))):
+        try:
+            response = client.images.generate(
+            model="dall-e-3",
+            prompt = prompt_list[str(i)],
+            size="1024x1024",
+            quality="standard",
+            n=1,
+            )
+            
+            url = response.data[0].url
+            urls.append(url)
+        except openai.BadRequestError as e:
+            print(i)
+            continue
     with open("./results/DALLE3/dall_url.json", "w") as f:
         json.dump(urls, f)
 
@@ -40,7 +44,7 @@ def download():
             handler.write(img_data)
         i += 1
 if __name__ == "__main__":
-    # generate()
-    download()
+    generate()
+    # download()
     
 
