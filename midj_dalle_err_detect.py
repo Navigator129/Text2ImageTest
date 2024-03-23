@@ -172,7 +172,7 @@ def get_component(PPT):
   return obj1, obj2, obj1_num, obj2_num, relation
 
 
-def check_error(PPTs, detect_result, paths):
+def check_error(PPTs, skip_idx, detect_result, paths):
     results = []
     error_detect = {}
     for i in tqdm(range(len(PPTs))):

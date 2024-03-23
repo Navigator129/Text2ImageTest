@@ -116,6 +116,7 @@ def mutator(input_PPT):
     mutation = random.randint(1, 5)
     mutate_tree = []
     for i in range(mutation):
+        #time.sleep(1)
         mutator = random.randint(1, 3)
 
         if mutator == 1:
