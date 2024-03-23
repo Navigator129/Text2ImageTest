@@ -1,56 +1,24 @@
 
-from numpy import array, float32
+import json
 from tqdm import tqdm
 
 
+def get_detect_result(path):
+    with open(path, 'r') as f:
+        results = json.load(f)
+    return results
 
-detect_result = [{'detect cls': ['chair', 'person', 'person', 'chair', 'chair', 'person', 'chair', 'chair', 'chair','chair', 'chair', 'person', 'chair', 'chair',
-   'chair', 'dining table', 'chair', 'chair', 'person', 'train', 'person', 'chair', 'chair', 'chair', 'chair', 'person', 'chair', 'chair', 'chair', 'chair','chair',
-   'chair', 'chair'],
-  'detect box': [[0.12, 333.17, 204.49, 510.53],
-   [249.13, 187.47, 263.21, 218.18],
-   [207.44, 194.96, 226.7, 212.37],
-   [216.42, 215.82, 250.49, 236.88],
-   [135.73, 234.59, 207.68, 263.06],
-   [167.99, 203.64, 193.16, 225.98],
-   [0.02, 294.44, 56.66, 445.33],
-   [350.62, 235.27, 390.47, 309.82],
-   [267.37, 331.42, 467.68, 510.58],
-   [267.03, 257.88, 374.69, 331.58],
-   [376.0, 242.37, 446.13, 311.69],
-   [212.53, 199.12, 234.55, 216.22],
-   [436.04, 290.59, 512.1, 377.61],
-   [374.74, 243.99, 448.05, 353.06],
-   [351.37, 233.68, 388.35, 259.81],
-   [251.8, 206.22, 320.37, 225.4],
-   [38.75, 239.44, 112.79, 308.44],
-   [328.94, 219.32, 354.09, 256.24],
-   [205.58, 194.97, 220.46, 208.93],
-   [-0.13, 0.74, 511.87, 510.43],
-   [183.89, 202.47, 202.75, 221.0],
-   [109.63, 259.4, 222.2, 339.74],
-   [270.23, 231.92, 345.39, 261.72],
-   [269.79, 231.83, 346.6, 262.85],
-   [38.71, 238.08, 126.09, 344.78],
-   [191.87, 203.43, 213.06, 222.17],
-   [424.11, 292.99, 512.1, 510.07],
-   [164.11, 222.56, 221.34, 260.79],
-   [138.98, 218.1, 170.35, 242.64],
-   [216.26, 235.78, 271.94, 294.01],
-   [253.17, 215.74, 318.1, 240.52],
-   [266.08, 224.67, 328.17, 245.78],
-   [187.24, 299.3, 292.08, 427.26]]}]
+def get_PPTs():
+    with open('./files/PPTs.json', 'r') as f:
+        PPTs = json.load(f)
+    return PPTs
 
 relation_dic = {"top": ['on top of', 'above', 'Atop', 'Upon'], "bottom": ["Beneath", "Under", "Below", "Underneath"], 
             "left": ["To the left of","On the left side of", "Leftward of", "Adjacent to the left of"], 
             "right": ["To the right of", "On the right side of", "Rightward of", "Adjacent to the right of"]}
 
 number = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']
-PPTs = [{'relation': 'Underneath',
- 'obj1': 'train',
- 'obj1_attr': ['smoking', 'orange', 'six'],
- 'obj2': 'chair',
- 'obj2_attr': ['comfortable', 'white', 'two']}]
+
 
 #input [Xmin, Ymax] [Xmax, Ymin]
 #middle_point = [(Xmax + Xmin)/2, (Ymax+Ymin)/2]
@@ -167,7 +135,7 @@ def detect_relation(relation, fetch_result, obj1, obj2, dict_):
     object_point = {}
     for axis in axis_list:
         
-        Xmin, Ymax, Xmax, Ymin = axis[0], axis[1], axis[2], axis[3]
+        Xmin, Ymin, Xmax, Ymax = axis[0], axis[1], axis[2], axis[3]
         middle_point = [(Xmax + Xmin)/2, (Ymax+Ymin)/2]
         if not object_point.get(object_list[i]):
             object_point[object_list[i]] = [middle_point]
@@ -204,7 +172,7 @@ def get_component(PPT):
   return obj1, obj2, obj1_num, obj2_num, relation
 
 
-def check_error(PPTs, detect_result):
+def check_error(PPTs, detect_result, paths):
     results = []
     error_detect = {}
     for i in tqdm(range(len(PPTs))):
@@ -214,23 +182,16 @@ def check_error(PPTs, detect_result):
         error_detect = detect_number(obj1, obj2, obj1_num, obj2_num, detect_result[i], error_detect)
         error_detect = detect_relation(relation, detect_result[i], obj1, obj2, error_detect)
         results.append(error_detect)
-    print(results)
-#   file_path = '/content/drive/MyDrive/Image_Test/results.json'
-#   with open(file_path, 'w') as f:
-#     json.dump(results, f, indent=4)
+    save_results(results, paths)
 
 
-# def test():
-#   results = []
-#   error_detect = {}
-#   for i in range(len(list)):
-#     test_case = list[i]
-#     obj1, obj2, obj1_num, obj2_num, relation = get_component(test_case)
-#     error_detect = detect_object(obj1, obj2, detect_result[i])
-#     error_detect = detect_number(obj1, obj2, obj1_num, obj2_num, detect_result[i], error_detect)
-#     error_detect = detect_relation(relation, detect_result[i], obj1, obj2, error_detect)
-#     results.append(error_detect)
+def save_results(results, paths):
+    with open(paths, 'w') as f:
+        json.dump(results, f, indent=4)
+
+if __name__ == '__main__':
+    detect_result = get_detect_result('./results/Stable_Diffusion/v1-4/object_detection.json')
+    PPTs = get_PPTs()
+    check_error(PPTs, detect_result, './results/Stable_Diffusion/v1-4/error_detect.json')
 
     
-
-check_error(PPTs, detect_result)
