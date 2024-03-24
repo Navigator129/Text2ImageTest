@@ -177,15 +177,18 @@ def check_error_DALLE(PPTs, detect_result, paths):
     error_detect = {}
     with open('./files/dalle_miss_index.json', 'r') as f:
         miss_index = json.load(f)
-    for i in tqdm(range(len(PPTs) - len(miss_index))):
+
+    j = 0
+    for i in tqdm(range(3999)):
         if i in miss_index:
             continue
         test_case = PPTs[i]
         obj1, obj2, obj1_num, obj2_num, relation = get_component(test_case)
-        error_detect = detect_object(obj1, obj2, detect_result[i])
-        error_detect = detect_number(obj1, obj2, obj1_num, obj2_num, detect_result[i], error_detect)
-        error_detect = detect_relation(relation, detect_result[i], obj1, obj2, error_detect)
+        error_detect = detect_object(obj1, obj2, detect_result[j])
+        error_detect = detect_number(obj1, obj2, obj1_num, obj2_num, detect_result[j], error_detect)
+        error_detect = detect_relation(relation, detect_result[j], obj1, obj2, error_detect)
         results.append(error_detect)
+        j += 1
     save_results(results, paths)
 
 
