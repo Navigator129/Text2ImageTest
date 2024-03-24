@@ -190,10 +190,14 @@ def save_results(results, paths):
         json.dump(results, f, indent=4)
 
 if __name__ == '__main__':
+    detect_result = get_detect_result('./results/Stable_Diffusion/v1-5/object_detection.json')
+    PPTs = get_PPTs()
+    check_error(PPTs, detect_result, './results/Stable_Diffusion/v1-5/error_detect.json')
+    
     # detect_result = get_detect_result('./results/Stable_Diffusion/v1-4/object_detection.json')
     # PPTs = get_PPTs()
     # check_error(PPTs, detect_result, './results/Stable_Diffusion/v1-4/error_detect.json')
 
-    detect_result = get_detect_result('./results/Stable_Diffusion/v1-0/object_detection.json')
-    PPTs = get_PPTs()
-    check_error(PPTs, detect_result, './results/Stable_Diffusion/v1-0/error_detect.json')
+    # detect_result = get_detect_result('./results/Stable_Diffusion/v1-0/object_detection.json')
+    # PPTs = get_PPTs()
+    # check_error(PPTs, detect_result, './results/Stable_Diffusion/v1-0/error_detect.json')

@@ -172,10 +172,14 @@ def get_component(PPT):
   return obj1, obj2, obj1_num, obj2_num, relation
 
 
-def check_error(PPTs, skip_idx, detect_result, paths):
+def check_error_DALLE(PPTs, detect_result, paths):
     results = []
     error_detect = {}
-    for i in tqdm(range(len(PPTs))):
+    with open('./files/dalle_miss_index.json', 'r') as f:
+        miss_index = json.load(f)
+    for i in tqdm(range(len(PPTs) - len(miss_index))):
+        if i in miss_index:
+            continue
         test_case = PPTs[i]
         obj1, obj2, obj1_num, obj2_num, relation = get_component(test_case)
         error_detect = detect_object(obj1, obj2, detect_result[i])
@@ -190,10 +194,10 @@ def save_results(results, paths):
         json.dump(results, f, indent=4)
 
 if __name__ == '__main__':
-    # detect_result = get_detect_result('./results/Stable_Diffusion/v1-4/object_detection.json')
-    # PPTs = get_PPTs()
-    # check_error(PPTs, detect_result, './results/Stable_Diffusion/v1-4/error_detect.json')
-
-    detect_result = get_detect_result('./results/Stable_Diffusion/v1-0/object_detection.json')
+    detect_result = get_detect_result('./results/DALLE3/object_detection.json')
     PPTs = get_PPTs()
-    check_error(PPTs, detect_result, './results/Stable_Diffusion/v1-0/error_detect.json')
+    check_error_DALLE(PPTs, detect_result, './results/DALLE3/error_detect.json')
+
+    # detect_result = get_detect_result('./results/Stable_Diffusion/v1-0/object_detection.json')
+    # PPTs = get_PPTs()
+    # check_error_DALLE(PPTs, detect_result, './results/Stable_Diffusion/v1-0/error_detect.json')
