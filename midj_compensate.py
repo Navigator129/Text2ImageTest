@@ -1,6 +1,4 @@
-import requests
 import json
-import os
 from tqdm import tqdm
 import midj_generator as mg
 
