@@ -30,8 +30,8 @@ def get_attribute_values():
     for obj_list in objects.values():
         for obj in obj_list:
             user_msg = """
-                I give you an object and you need to attach five attributes of the object.
-                For example, if the object is a car, the return value can be ['big', 'expensive', 'dirty', 'old', 'four-wheeler']
+                I give you an object and you need to attach three attributes of the object.
+                For example, if the object is a car, the return value can be ['big', 'expensive', 'dirty']
                 The attributes are adjectives that describe the object.
                 Don't use colors and numbers as attributes.
                 The object is a {}

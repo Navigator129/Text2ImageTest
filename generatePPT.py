@@ -2,6 +2,7 @@
 # construct a tree with the nodes
 import json
 import random
+import time
 
 from tqdm import tqdm
 from generatePrompt import *
@@ -31,11 +32,15 @@ class PPT:
         for child in self.children:
             child.traverse()
 
-
 def get_object():
-    with open('./files/attribute_datasets.json', 'r') as f:
+    with open('./files/object_datasets.json', 'r') as f:
         objects = json.load(f)
     return objects
+
+def get_attribute():
+    with open('./files/attribute_datasets.json', 'r') as f:
+        attribute = json.load(f)
+    return attribute
 
 def select_relation():
     #select relation nodes
@@ -46,15 +51,30 @@ def select_relation():
     select_relation = relation[relation_type][relation_idx] #randomly select a relation node
     return select_relation
 
-def select_object():
-    objects = get_object()
-    obj = list(objects.keys())
-    obj_idx = random.randint(0, len(obj)-1)
-    obj = obj[obj_idx]
-    return obj
+def relate_category(category):
+    if category == 'velicle':
+        related_category = 'outdoor'
+    if category == 'outdodr':
+        relate_category = 'velicle'
+    
+
+def select_object(related):
+    if related == False:
+        objects = get_object()
+        obj = list(objects.values())
+        obj_idx = random.randint(0, len(obj)-1)
+        obj = obj[obj_idx]
+        return obj
+    else:
+        objects = get_object()
+        categories = objects.keys()
+        obj_idx = random.randint(0, len(categories)-1)
+        category = categories[obj_idx]
+
+
 
 def select_attribute(obj):
-    objects = get_object()
+    objects = get_attribute()
     attr = objects[obj]
     attr_idx = random.randint(0, len(attr)-1)
     attr = attr[attr_idx]
@@ -68,7 +88,7 @@ def select_color():
     
 
 def select_number(relation_node, flag):
-    number = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']
+    number = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'] 
     attr_idx = random.randint(0, len(number)-1)
     number = number[attr_idx]
     #Flag is used to determine if the input node is the second object node in the vertical relation, we don't want see 'one apple is on top of two table'
@@ -113,10 +133,13 @@ def constructPPT():
     return root 
 
 def mutator(input_PPT):
+    timestamp1 = float(time.time())
+    random.seed(timestamp1)
     mutation = random.randint(1, 5)
     mutate_tree = []
     for i in range(mutation):
-        #time.sleep(1)
+        timestamp2 = float(time.time())
+        random.seed(timestamp2)
         mutator = random.randint(1, 3)
 
         if mutator == 1:
@@ -128,6 +151,7 @@ def mutator(input_PPT):
         elif mutator == 3:
             new_PPT = add_attribute(input_PPT)
             mutate_tree.append(new_PPT)
+
     return mutate_tree
 
 def add_relation(input_PPT):
@@ -186,7 +210,6 @@ def swap_object(input_PPT):
     return root
 
 
-
 def add_attribute(input_PPT):
     #add an attribute to a node
     relation_node = input_PPT.value
@@ -210,8 +233,8 @@ def add_attribute(input_PPT):
         root.get_children()[1].add_child(PPT(attr))
 
     #add new attribute to the tree
-    if len(attr1_values) == 8:
-        pass
+    if len(attr1_values) == 6:
+        mutator(input_PPT)
     else:
         if new_attr1 not in attr1_values:
             root.get_children()[0].add_child(PPT(new_attr1))
@@ -221,9 +244,6 @@ def add_attribute(input_PPT):
                 new_attr1 = select_attribute(obj1.value)
             root.get_children()[0].add_child(PPT(new_attr1))
 
-    if len(attr2) == 8:
-        pass
-    else:
         if new_attr2 not in attr2_values:
             root.get_children()[1].add_child(PPT(new_attr1))
         else:
@@ -236,7 +256,7 @@ def add_attribute(input_PPT):
 
 if __name__ == "__main__":
     ppt_list = []
-    for i in tqdm(range(1000)):
+    for i in tqdm(range(100)):
         ppt = constructPPT()
         ppt_list.append(ppt)
         mutate_tree = mutator(ppt)
