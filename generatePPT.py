@@ -51,11 +51,24 @@ def select_relation():
     select_relation = relation[relation_type][relation_idx] #randomly select a relation node
     return select_relation
 
-def relate_category(category):
+def get_relate_category(category):
     if category == 'velicle':
         related_category = 'outdoor'
     if category == 'outdodr':
         relate_category = 'velicle'
+    if category == "food":
+        related_category = "kitchen"
+    if category == "kitchen":
+        related_category = "food"
+    if category == "accessory":
+        related_category = "furniture"
+    if category == "electronic":
+        related_category = "furniture"
+    if category == "appliance":
+        related_category = "furniture"
+    if category == "indoor":
+        related_category = "furniture"
+    return related_category
     
 
 def select_object(related):
@@ -70,6 +83,9 @@ def select_object(related):
         categories = objects.keys()
         obj_idx = random.randint(0, len(categories)-1)
         category = categories[obj_idx]
+        relate_category = get_relate_category(category)
+        obj1_list = objects[category]
+        obj2_list = objects[relate_category]
 
 
 
@@ -143,7 +159,7 @@ def mutator(input_PPT):
         mutator = random.randint(1, 3)
 
         if mutator == 1:
-            new_PPT = add_relation(input_PPT)
+            new_PPT = change_obj(input_PPT)
             mutate_tree.append(new_PPT)
         elif mutator == 2:
             new_PPT = swap_object(input_PPT)
@@ -154,7 +170,7 @@ def mutator(input_PPT):
 
     return mutate_tree
 
-def add_relation(input_PPT):
+def change_obj(input_PPT):
     #combine two tree
     relation_node = select_relation()
     root = PPT(relation_node)
