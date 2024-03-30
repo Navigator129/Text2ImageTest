@@ -39,6 +39,11 @@
         "full-sailed",
         "wooden"
     ],
+    "traffic light": [
+        "metallic",
+        "three-lighted",
+        "street-side"
+    ],
     "fire hydrant": [
         "metallic",
         "Round",

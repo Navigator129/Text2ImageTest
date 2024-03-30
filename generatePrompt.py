@@ -1,7 +1,10 @@
 import json
 import os
-import re
 from openai import OpenAI
+from mutatePPT import *
+from constructPPT import *
+from tqdm import tqdm
+
 
 gpt_value = {"key": "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",
             "org": "org-YGi1QDMf6n1Ptr1pxMZHsYpE"}
@@ -17,15 +20,33 @@ def analyze_PPT(input_PPT):
     return input_PPT.value, obj1.value, obj1_attr, obj2.value, obj2_attr
 
 
-def save_prompt(prompt):
-    filepath = './files/prompts.json'
+def save_prompt(prompt, related):
+    if related:
+        save_related_prompt(prompt)
+    else:
+        save_unrelated_prompt(prompt)
+
+
+def save_unrelated_prompt(prompt):
+    filepath = './files/unrelated_prompts.json'
     att = prompt
     if os.path.exists(filepath):
-        with open('./files/prompts.json', 'r') as f:
+        with open('./files/unrelated_prompts.json', 'r') as f:
             att = json.load(f)
         att.update(prompt)
-    with open('./files/prompts.json', 'w') as f:
+    with open('./files/unrelated_prompts.json', 'w') as f:
         json.dump(att, f)
+
+def save_related_prompt(prompt):
+    filepath = './files/related_prompts.json'
+    att = prompt
+    if os.path.exists(filepath):
+        with open('./files/related_prompts.json', 'r') as f:
+            att = json.load(f)
+        att.update(prompt)
+    with open('./files/related_prompts.json', 'w') as f:
+        json.dump(att, f)
+
 
 def save_PPT(dict_):
     list_ = []
@@ -46,7 +67,7 @@ def get_attribute_values(input_PPT):
         obj_attr.append(attr.value)
     return obj_attr
 
-def generatePrompt(input_PPT, idx):
+def generatePrompt(input_PPT, idx, related):
     PPT = {}
     relation, obj1, obj1_attr, obj2, obj2_attr = analyze_PPT(input_PPT)
     PPT['relation'] = relation
@@ -61,7 +82,7 @@ def generatePrompt(input_PPT, idx):
     user_msg = """
         I will give you several nodes, and you need to fuse them together to form a prompt.
         the format should be attribute1 + object1 + relation + attribute2 + object2,
-        for example, if the nodes are [['two','big'], 'apple', 'on top of', ['one','fancy'], 'table'], the return value can be 'Two big apple is on top of One fancy table'
+        for example, if the nodes are [['one','big'], 'apple', 'on top of', ['one','fancy'], 'table'], the return value can be 'Two big apple is on top of One fancy table'
         the attributes are always adjectives and in the list.
         Always put the number in front of any other attributes.
         attribute1 is {}, object1 is {}, relation is {}, attribute2 is {}, object2 is {}
@@ -77,4 +98,37 @@ def generatePrompt(input_PPT, idx):
     prompt_pair = {idx: prompt}
     save_prompt(prompt_pair)
 
+if __name__ == "__main__":
+    unrelated_ppt_list = []
+    for i in tqdm(range(1)):
+        ppt = constructUnrelatedPPT()
+        unrelated_ppt_list.append(ppt)
+        mutate_tree = mutator(ppt)
+        unrelated_ppt_list = unrelated_ppt_list + mutate_tree
+    
+    for ppt in tqdm(unrelated_ppt_list):
+        mutate_tree = mutator(ppt)
+        unrelated_ppt_list = unrelated_ppt_list + mutate_tree
+   
+    related_ppt_list = []
+    for i in tqdm(range(1)):
+        ppt = constructRelatedPPT()
+        related_ppt_list.append(ppt)
+        mutate_tree = mutator(ppt)
+        related_ppt_list = related_ppt_list + mutate_tree
+
+    for ppt in tqdm(related_ppt_list):
+        mutate_tree = mutator(ppt)
+        related_ppt_list = related_ppt_list + mutate_tree
+
+    i = 0
+    for ppt in tqdm(related_ppt_list):
+        generatePrompt(ppt, i, False)
+        i += 1
+    i = 0
+    for ppt in tqdm(unrelated_ppt_list):
+        generatePrompt(ppt, i, True)
+        i += 1
+
+    print("Done!")
     
