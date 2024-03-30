@@ -1,6 +1,6 @@
 import random
 import json
-
+import time
 
 
 relation = {"top": ['on top of', 'above', 'Atop', 'Upon'], "bottom": ["Beneath", "Under", "Below", "Underneath"], 
@@ -50,7 +50,7 @@ def get_relate_category(category):
     if category == 'velicle':
         related_category = 'outdoor'
     if category == 'outdodr':
-        relate_category = 'velicle'
+        related_category = 'velicle'
     if category == "food":
         related_category = "kitchen"
     if category == "kitchen":
@@ -63,12 +63,16 @@ def get_relate_category(category):
         related_category = "furniture"
     if category == "indoor":
         related_category = "furniture"
+    if category == "furniture":
+        related_category = "indoor"
     return related_category
     
 
 def select_object():
     objects = get_attribute()
     obj_list = list(objects.keys())
+    timestamp = float(time.time())
+    random.seed(timestamp)
     obj_idx = random.randint(0, len(obj_list)-1)
     obj = obj_list[obj_idx]
     return obj
@@ -76,14 +80,17 @@ def select_object():
 def select_related_object(obj):
     obj_dict = get_object()
     for key, value in obj_dict.items():
-        if value == obj:
+        if obj in value:
             obj_type = key
             break
-    related_category = get_relate_category(obj_type)
-    related_obj_list = get_object()[related_category]
-    rand_idx = random.randint(0, len(related_obj_list)-1)
-    related_obj = related_obj_list[rand_idx]
-    return related_obj
+    if obj_type:
+        related_category = get_relate_category(obj_type)
+        related_obj_list = get_object()[related_category]
+        rand_idx = random.randint(0, len(related_obj_list)-1)
+        related_obj = related_obj_list[rand_idx]
+        return related_obj
+    else:
+        return None
 
 def select_attribute(obj):
     objects = get_attribute()

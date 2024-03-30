@@ -12,8 +12,7 @@ from constructPPT import *
 def mutator(input_PPT):
     timestamp1 = float(time.time())
     random.seed(timestamp1)
-    # mutation = random.randint(1, 4)
-    mutation = 4
+    mutation = random.randint(1, 4)
     mutate_tree = []
 
     for i in range(mutation):
