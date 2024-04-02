@@ -38,7 +38,13 @@ def mutator(input_PPT, related):
     return mutate_tree
 
 def duplicate_subtree(input_PPT):
-    pass
+    obj = input_PPT.value
+    attr = input_PPT.get_children()
+    root = PPT(obj)
+    for a in attr:
+        a = PPT(a.value)
+        root.add_child(a)
+    return root
 
 def change_obj(input_PPT, related):
     #check if the input tree has multiple relation nodes
@@ -51,6 +57,7 @@ def change_obj(input_PPT, related):
             #randomly select one of the children as obj1
             rand_idx = random.randint(0, 1)
             old_child = old_children[rand_idx]
+            old_child = duplicate_subtree(old_child)
             #construct the new obj node
             if related:
                 new_child_value = select_related_object(old_child.value)
@@ -76,6 +83,7 @@ def change_obj(input_PPT, related):
         old_children = relation_node.get_children()
         rand_idx = random.randint(0, 1)
         old_child = old_children[rand_idx]
+        old_child = duplicate_subtree(old_child)
         #construct the new obj node
         if related:
             new_child_value = select_related_object(old_child.value)
@@ -261,6 +269,7 @@ def add_relation(input_PPT, related):
         #randomly select a related object node to the new relation node
         rand_idx = random.randint(0, 1)
         related_obj = last_relation_node.get_children()[rand_idx]
+        related_obj = duplicate_subtree(related_obj)
         #avoid ambiguity
         if check_ambiguity(last_relation_node, rand_idx):
             related_obj = last_relation_node.get_children()[1]
@@ -288,7 +297,14 @@ def add_relation(input_PPT, related):
         #randomly select a related object node to the new relation node
         rand_idx = random.randint(0, 1)
         related_obj = old_relation_node.get_children()[rand_idx]
-        new_obj = PPT(select_object())
+        related_obj = duplicate_subtree(related_obj)
+        #avoid ambiguity
+        if check_ambiguity(old_relation_node, rand_idx):
+            related_obj = old_relation_node.get_children()[1]
+        if related:
+            new_obj = PPT(select_related_object(related_obj.value))
+        else:
+            new_obj = PPT(select_object())
         new_attr = select_attribute(new_obj.value)
         new_color = select_color()
         new_number = select_number()
