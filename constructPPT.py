@@ -47,7 +47,7 @@ def select_relation():
     return select_relation
 
 def get_relate_category(category):
-    if category == 'velicle':
+    if category == 'vehicle':
         related_category = 'outdoor'
     if category == 'outdodr':
         related_category = 'velicle'

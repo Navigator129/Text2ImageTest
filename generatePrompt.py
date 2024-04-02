@@ -6,14 +6,25 @@ from constructPPT import *
 from tqdm import tqdm
 
 
-gpt_value = {"key": "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",
+gpt_value = {"key": "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",
             "org": "org-YGi1QDMf6n1Ptr1pxMZHsYpE"}
 
 def analyze_PPT(input_PPT):
     #analyze the PPT and return the object and the attributes
     M_check = input_PPT.value
     if M_check:
-        pass
+        relation_nodes = input_PPT.get_children()
+        subtrees = []
+        for relation_node in relation_nodes:
+            obj1 = relation_node.get_children()[0]
+            obj2 = relation_node.get_children()[1]
+            attr1 = obj1.get_children()
+            attr2 = obj2.get_children()
+            obj1_attr = get_attribute_values(attr1)
+            obj2_attr = get_attribute_values(attr2)
+            subtree = construct_PPT_dict(input_PPT.value, obj1.value, obj1_attr, obj2.value, obj2_attr)
+            subtrees.append(subtree)
+        return subtrees
     else:
         relation_node = input_PPT.get_children()[0]
         obj1 = relation_node.get_children()[0]
@@ -22,7 +33,8 @@ def analyze_PPT(input_PPT):
         attr2 = obj2.get_children()
         obj1_attr = get_attribute_values(attr1)
         obj2_attr = get_attribute_values(attr2)
-        return M_check, input_PPT.value, obj1.value, obj1_attr, obj2.value, obj2_attr
+        subtree = construct_PPT_dict(input_PPT.value, obj1.value, obj1_attr, obj2.value, obj2_attr)
+        return subtree
 
 
 def save_prompt(prompt, related):
@@ -52,18 +64,30 @@ def save_related_prompt(prompt):
     with open('./files/related_prompts.json', 'w') as f:
         json.dump(att, f)
 
+def construct_PPT_dict(relation, obj1, obj1_attr, obj2, obj2_attr):
+    PPT = {}
+    PPT['relation'] = relation
+    PPT['obj1'] = obj1
+    PPT['obj1_attr'] = obj1_attr
+    PPT['obj2'] = obj2
+    PPT['obj2_attr'] = obj2_attr
+    return PPT
 
-def save_PPT(dict_):
+
+def save_PPT(dict_, related):
     list_ = []
-    filepath = './files/PPTs.json'
+    if related:
+        filepath = './files/related_PPTs.json'
+    else:
+        filepath = './files/unrelated_PPTs.json'
 
     if os.path.exists(filepath):
-        with open('./files/PPTs.json', 'r') as f:
+        with open(filepath, 'r') as f:
             list_ = json.load(f)
         list_.append(dict_)
     else:
         list_.append(dict_)
-    with open('./files/PPTs.json', 'w') as f:
+    with open(filepath, 'w') as f:
         json.dump(list_, f)
 
 def get_attribute_values(input_PPT):
@@ -72,22 +96,54 @@ def get_attribute_values(input_PPT):
         obj_attr.append(attr.value)
     return obj_attr
 
-def generatePrompt(input_PPT, idx):
+def generatePrompt(input_PPT, idx, related):
     client = OpenAI(api_key=gpt_value['key'])
     system_msg = 'You are an expert in the field of prompt generation.'
-    PPT = {}
-    M_check, relation, obj1, obj1_attr, obj2, obj2_attr = analyze_PPT(input_PPT)
+    M_check = input_PPT.value
     if M_check:
-        pass
+        subtrees = analyze_PPT(input_PPT)
+        save_PPT(subtrees, related)
+        total_subtree = len(subtrees)
+        user_msg_base = """
+            I will offer you {} sets of nodes and you need to fuse them together to form a prompt.
+            each set is consist of one relation node, two object nodes obj1 and obj2, and corresponding attribute nodes for each obj.
+            you need to combine the five nodes together, in a format of attribute1 + object1 + relation + attribute2 + object2.
+            for example, if the nodes are [['one','big'], 'apple', 'on top of', ['one','fancy'], 'table'], the return value can be 'Two big apple is on top of One fancy table'
+            the attributes are always adjectives and in the list.
+            Always put the number in front of any other attributes.
+        """.format(total_subtree)
+        user_msg_cont = """
+            the obj in different sets are related, if obj1 and obj2 in the first set is 'apple' and 'table', and obj1 and obj2 in the second set is 'banana' and 'apple',
+            then prompt you generate should be 'one apple is relation one table, one banana is relation the apple' to emphasize the apple in both sentences are the same apple.
+        """
+        for subtree in subtrees:
+            relation = subtree['relation']
+            obj1 = subtree['obj1']
+            obj1_attr = subtree['obj1_attr']
+            obj2 = subtree['obj2']
+            obj2_attr = subtree['obj2_attr']
+            user_msg_input = """
+            relation: {}, obj1: {}, obj_attr1: {}, obj2: {}, obj_attr2: {}
+        """.format(relation, obj1, obj1_attr, obj2, obj2_attr)
+
+            response = client.chat.completions.create(
+            model = "gpt-4",
+            messages=[
+            {"role": "system", "content": system_msg},
+            {"role": "user", "content": user_msg_base},
+            {"role": "user", "content": user_msg_cont},
+            {"role": "user", "content": user_msg_input}]
+            )
+            prompt = response.choices[0].message.content
+            time.sleep(0.5)
     else:
-        PPT['relation'] = relation
-        PPT['obj1'] = obj1
-        PPT['obj1_attr'] = obj1_attr
-        PPT['obj2'] = obj2
-        PPT['obj2_attr'] = obj2_attr
-        save_PPT(PPT)
-
-
+        subtree = analyze_PPT(input_PPT)
+        save_PPT(subtree, related)
+        relation = subtree['relation']
+        obj1 = subtree['obj1']
+        obj1_attr = subtree['obj1_attr']
+        obj2 = subtree['obj2']
+        obj2_attr = subtree['obj2_attr']
         user_msg = """
             I will give you several nodes, and you need to fuse them together to form a prompt.
             the format should be attribute1 + object1 + relation + attribute2 + object2,
@@ -97,15 +153,20 @@ def generatePrompt(input_PPT, idx):
             attribute1 is {}, object1 is {}, relation is {}, attribute2 is {}, object2 is {}
         """.format(obj1_attr, obj1, relation, obj2_attr, obj2)
 
-    response = client.chat.completions.create(
-        model = "gpt-4",
-        messages=[
-        {"role": "system", "content": system_msg},
-        {"role": "user", "content": user_msg}]
-    )
-    prompt = response.choices[0].message.content
+
+        response = client.chat.completions.create(
+            model = "gpt-4",
+            messages=[
+            {"role": "system", "content": system_msg},
+            {"role": "user", "content": user_msg}]
+        )
+        prompt = response.choices[0].message.content
+        time.sleep(0.5)
     prompt_pair = {idx: prompt}
-    save_prompt(prompt_pair)
+    if related:
+        save_related_prompt(prompt_pair)
+    else:
+        save_unrelated_prompt(prompt_pair)
 
 if __name__ == "__main__":
     unrelated_ppt_list = []
@@ -132,11 +193,11 @@ if __name__ == "__main__":
 
     i = 0
     for ppt in tqdm(unrelated_ppt_list):
-        generatePrompt(ppt, i)
+        generatePrompt(ppt, i, False)
         i += 1
     i = 0
     for ppt in tqdm(related_ppt_list):
-        generatePrompt(ppt, i)
+        generatePrompt(ppt, i, True)
         i += 1
 
     print("Done!")
