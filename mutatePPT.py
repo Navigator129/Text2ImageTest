@@ -1,6 +1,5 @@
 # select nodes from object categories
 # construct a tree with the nodes
-import json
 import random
 import time
 
@@ -9,7 +8,7 @@ from generatePrompt import get_attribute_values
 from constructPPT import *
 
 
-def mutator(input_PPT):
+def mutator(input_PPT, related):
     timestamp1 = float(time.time())
     random.seed(timestamp1)
     mutation = random.randint(1, 4)
@@ -22,7 +21,7 @@ def mutator(input_PPT):
 
 
         if mutator == 1:
-            new_PPT = change_obj(input_PPT)
+            new_PPT = change_obj(input_PPT, related)
             mutate_tree.append(new_PPT)
         elif mutator == 2:
             new_PPT = swap_object(input_PPT)
@@ -33,12 +32,15 @@ def mutator(input_PPT):
                 continue
             mutate_tree.append(new_PPT)
         elif mutator == 4:
-            new_PPT = add_relation(input_PPT)
+            new_PPT = add_relation(input_PPT, related)
             mutate_tree.append(new_PPT)
 
     return mutate_tree
 
-def change_obj(input_PPT):
+def duplicate_subtree(input_PPT):
+    pass
+
+def change_obj(input_PPT, related):
     #check if the input tree has multiple relation nodes
     M_check = input_PPT.value
     if M_check:
@@ -50,7 +52,10 @@ def change_obj(input_PPT):
             rand_idx = random.randint(0, 1)
             old_child = old_children[rand_idx]
             #construct the new obj node
-            new_child_value = select_object()
+            if related:
+                new_child_value = select_related_object(old_child.value)
+            else:
+                new_child_value = select_object()
             new_child = PPT(new_child_value)
             new_attr = select_attribute(new_child_value)
             new_color = select_color()
@@ -72,7 +77,10 @@ def change_obj(input_PPT):
         rand_idx = random.randint(0, 1)
         old_child = old_children[rand_idx]
         #construct the new obj node
-        new_child_value = select_object()
+        if related:
+            new_child_value = select_related_object(old_child.value)
+        else:
+            new_child_value = select_object()
         new_child = PPT(new_child_value)
         new_attr = select_attribute(new_child_value)
         new_color = select_color()
@@ -233,8 +241,18 @@ def add_attribute(input_PPT):
                 new_attr2 = select_attribute(new_obj2.value)
             new_obj2.add_child(PPT(new_attr2))
         return root
+    
+def check_ambiguity(relation_node, idx):
+    if idx != 0:
+        return False
+    else:
+        if relation_node.value in relation['top'] or relation_node in relation['bottom']:
+            return True
+        else:
+            return False
 
-def add_relation(input_PPT):
+
+def add_relation(input_PPT, related):
     #add a new relation subtree to the tree
     M_check = input_PPT.value
     if M_check:
@@ -243,7 +261,13 @@ def add_relation(input_PPT):
         #randomly select a related object node to the new relation node
         rand_idx = random.randint(0, 1)
         related_obj = last_relation_node.get_children()[rand_idx]
-        new_obj = PPT(select_object())
+        #avoid ambiguity
+        if check_ambiguity(last_relation_node, rand_idx):
+            related_obj = last_relation_node.get_children()[1]
+        if related:
+            new_obj = PPT(select_related_object(related_obj.value))
+        else:
+            new_obj = PPT(select_object())
         new_attr = select_attribute(new_obj.value)
         new_color = select_color()
         new_number = select_number()

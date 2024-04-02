@@ -6,7 +6,7 @@ from constructPPT import *
 from tqdm import tqdm
 
 
-gpt_value = {"key": "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",
+gpt_value = {"key": "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",
             "org": "org-YGi1QDMf6n1Ptr1pxMZHsYpE"}
 
 def analyze_PPT(input_PPT):
@@ -22,7 +22,7 @@ def analyze_PPT(input_PPT):
             attr2 = obj2.get_children()
             obj1_attr = get_attribute_values(attr1)
             obj2_attr = get_attribute_values(attr2)
-            subtree = construct_PPT_dict(input_PPT.value, obj1.value, obj1_attr, obj2.value, obj2_attr)
+            subtree = construct_PPT_dict(relation_node.value, obj1.value, obj1_attr, obj2.value, obj2_attr)
             subtrees.append(subtree)
         return subtrees
     else:
@@ -33,7 +33,7 @@ def analyze_PPT(input_PPT):
         attr2 = obj2.get_children()
         obj1_attr = get_attribute_values(attr1)
         obj2_attr = get_attribute_values(attr2)
-        subtree = construct_PPT_dict(input_PPT.value, obj1.value, obj1_attr, obj2.value, obj2_attr)
+        subtree = construct_PPT_dict(relation_node.value, obj1.value, obj1_attr, obj2.value, obj2_attr)
         return subtree
 
 
@@ -114,28 +114,37 @@ def generatePrompt(input_PPT, idx, related):
         """.format(total_subtree)
         user_msg_cont = """
             the obj in different sets are related, if obj1 and obj2 in the first set is 'apple' and 'table', and obj1 and obj2 in the second set is 'banana' and 'apple',
-            then prompt you generate should be 'one apple is relation one table, one banana is relation the apple' to emphasize the apple in both sentences are the same apple.
+            then prompt you generate should be 
+            'one apple is on one table, one banana is to the right of the apple'
+            we replace the number one with 'the' to express that the apple in the second sentence is the same as the apple in the first sentence.
+            Don't return anything but the prompt.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
         """
+        i = 0
         for subtree in subtrees:
             relation = subtree['relation']
             obj1 = subtree['obj1']
             obj1_attr = subtree['obj1_attr']
             obj2 = subtree['obj2']
             obj2_attr = subtree['obj2_attr']
-            user_msg_input = """
-            relation: {}, obj1: {}, obj_attr1: {}, obj2: {}, obj_attr2: {}
-        """.format(relation, obj1, obj1_attr, obj2, obj2_attr)
-
-            response = client.chat.completions.create(
-            model = "gpt-4",
-            messages=[
-            {"role": "system", "content": system_msg},
-            {"role": "user", "content": user_msg_base},
-            {"role": "user", "content": user_msg_cont},
-            {"role": "user", "content": user_msg_input}]
-            )
-            prompt = response.choices[0].message.content
-            time.sleep(0.5)
+            if i == 0:
+                user_msg_input = """
+                set {}: attribute1: {}, object1: {}, relation: {}, attribute2: {}, object2: {}
+            """.format(i, relation, obj1, obj1_attr, obj2, obj2_attr)
+            else:
+                user_msg_input = """
+                set {}: attribute1: {}, object1: {}, relation: {}, attribute2: {}, object2: {}
+            """.format(i, relation, obj1, obj1_attr, obj2, obj2_attr) + pre_user_msg_input
+            pre_user_msg_input = user_msg_input  
+            i += 1
+        response = client.chat.completions.create(
+        model = "gpt-4",
+        messages=[
+        {"role": "system", "content": system_msg},
+        {"role": "user", "content": user_msg_base},
+        {"role": "user", "content": user_msg_cont},
+        {"role": "user", "content": user_msg_input}]
+        )
+        prompt = response.choices[0].message.content
     else:
         subtree = analyze_PPT(input_PPT)
         save_PPT(subtree, related)
@@ -147,9 +156,11 @@ def generatePrompt(input_PPT, idx, related):
         user_msg = """
             I will give you several nodes, and you need to fuse them together to form a prompt.
             the format should be attribute1 + object1 + relation + attribute2 + object2,
-            for example, if the nodes are [['one','big'], 'apple', 'on top of', ['one','fancy'], 'table'], the return value can be 'Two big apple is on top of One fancy table'
+            for example, if the nodes are [['one','big'], 'apple', 'on top of', ['one','fancy'], 'table'], the return value should be:  
+            Two big apple is on top of One fancy table
             the attributes are always adjectives and in the list.
             Always put the number in front of any other attributes.
+            Don't return anything but the prompt.
             attribute1 is {}, object1 is {}, relation is {}, attribute2 is {}, object2 is {}
         """.format(obj1_attr, obj1, relation, obj2_attr, obj2)
 
@@ -161,7 +172,6 @@ def generatePrompt(input_PPT, idx, related):
             {"role": "user", "content": user_msg}]
         )
         prompt = response.choices[0].message.content
-        time.sleep(0.5)
     prompt_pair = {idx: prompt}
     if related:
         save_related_prompt(prompt_pair)
@@ -173,22 +183,22 @@ if __name__ == "__main__":
     for i in tqdm(range(1)):
         ppt = constructUnrelatedPPT()
         unrelated_ppt_list.append(ppt)
-        mutate_tree = mutator(ppt)
+        mutate_tree = mutator(ppt, False)
         unrelated_ppt_list = unrelated_ppt_list + mutate_tree
     
     for ppt in tqdm(unrelated_ppt_list):
-        mutate_tree = mutator(ppt)
+        mutate_tree = mutator(ppt, False)
         unrelated_ppt_list = unrelated_ppt_list + mutate_tree
    
     related_ppt_list = []
     for i in tqdm(range(1)):
         ppt = constructRelatedPPT()
         related_ppt_list.append(ppt)
-        mutate_tree = mutator(ppt)
+        mutate_tree = mutator(ppt, True)
         related_ppt_list = related_ppt_list + mutate_tree
 
     for ppt in tqdm(related_ppt_list):
-        mutate_tree = mutator(ppt)
+        mutate_tree = mutator(ppt, True)
         related_ppt_list = related_ppt_list + mutate_tree
 
     i = 0
