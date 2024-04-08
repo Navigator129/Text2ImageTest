@@ -4,20 +4,25 @@ from tqdm import tqdm
 
 
 prompts = []
+PPTs = []
 relate_seed_path = './files/exp1/related_seed_prompts.json'
 unrelated_seed_path = './files//exp1/unrelated_seed_prompts.json'
 related_mutate_path = './files/exp1/related_mutate_prompts.json'
 unrelated_mutate_path = './files/exp1/unrelated_mutate_prompts.json'
+
+def fetch_prompt_and_PPTs(path):
+    with open(path, 'r') as f:
+        dict_ = json.load(f)
+    for prompt_dict in dict_:
+        if prompt_dict['validity'].lower() == 'valid':
+            prompts.append(prompt_dict['prompt'])
+            PPTs.append(prompt_dict['PPT'])
 
 def get_detect_result(path):
     with open(path, 'r') as f:
         results = json.load(f)
     return results
 
-def get_PPTs():
-    with open('./files/PPTs.json', 'r') as f:
-        PPTs = json.load(f)
-    return PPTs
 
 relation_dic = {"top": ['on top of', 'above', 'Atop', 'Upon'], "bottom": ["Beneath", "Under", "Below", "Underneath"], 
             "left": ["To the left of","On the left side of", "Leftward of", "Adjacent to the left of"], 
@@ -131,8 +136,6 @@ def detect_relation(relation, fetch_result, obj1, obj2, dict_):
     return dict_
        
 
-
-
 def get_component(PPT):
   obj1 = PPT['obj1']
   obj2 = PPT['obj2']
@@ -146,10 +149,17 @@ def check_error(PPTs, detect_result, paths):
     error_detect = {}
     for i in tqdm(range(len(PPTs))):
         test_case = PPTs[i]
-        obj1, obj2, relation = get_component(test_case)
-        error_detect = detect_object(obj1, obj2, detect_result[i])
-        error_detect = detect_relation(relation, detect_result[i], obj1, obj2, error_detect)
-        results.append(error_detect)
+        if type(test_case) == list:
+            for tc in test_case:
+                obj1, obj2, relation = get_component(tc)
+                error_detect = detect_object(obj1, obj2, detect_result[i])
+                error_detect = detect_relation(relation, detect_result[i], obj1, obj2, error_detect)
+                results.append(error_detect)
+        else:
+            obj1, obj2, relation = get_component(test_case)
+            error_detect = detect_object(obj1, obj2, detect_result[i])
+            error_detect = detect_relation(relation, detect_result[i], obj1, obj2, error_detect)
+            results.append(error_detect)
     save_results(results, paths)
 
 
@@ -158,14 +168,16 @@ def save_results(results, paths):
         json.dump(results, f, indent=4)
 
 if __name__ == '__main__':
-    # detect_result = get_detect_result('./results/Stable_Diffusion/v1-5/object_detection.json')
-    # PPTs = get_PPTs()
-    # check_error(PPTs, detect_result, './results/Stable_Diffusion/v1-5/error_detect.json')
+    fetch_prompt_and_PPTs(relate_seed_path)
+    fetch_prompt_and_PPTs(unrelated_seed_path)
+    fetch_prompt_and_PPTs(related_mutate_path)
+    fetch_prompt_and_PPTs(unrelated_mutate_path)
+    detect_result = get_detect_result('./results/Stable_Diffusion/v1-5/object_detection.json')
+    check_error(PPTs, detect_result, './results/Stable_Diffusion/v1-5/error_detect.json')
     
-    # # detect_result = get_detect_result('./results/Stable_Diffusion/v1-4/object_detection.json')
-    # # PPTs = get_PPTs()
-    # # check_error(PPTs, detect_result, './results/Stable_Diffusion/v1-4/error_detect.json')
+    detect_result = get_detect_result('./results/Stable_Diffusion/v1-4/object_detection.json')
+    check_error(PPTs, detect_result, './results/Stable_Diffusion/v1-4/error_detect.json')
 
-    # # detect_result = get_detect_result('./results/Stable_Diffusion/v1-0/object_detection.json')
-    # # PPTs = get_PPTs()
-    # # check_error(PPTs, detect_result, './results/Stable_Diffusion/v1-0/error_detect.json')
+    detect_result = get_detect_result('./results/Stable_Diffusion/v1-0/object_detection.json')
+    check_error(PPTs, detect_result, './results/Stable_Diffusion/v1-0/error_detect.json')
+    print('Done!')

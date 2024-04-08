@@ -17,7 +17,6 @@ relation_dic = {"top": ['on top of', 'above', 'Atop', 'Upon'], "bottom": ["Benea
             "left": ["To the left of","On the left side of", "Leftward of", "Adjacent to the left of"], 
             "right": ["To the right of", "On the right side of", "Rightward of", "Adjacent to the right of"]}
 
-number = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']
 
 
 #input [Xmin, Ymax] [Xmax, Ymin]
@@ -151,25 +150,13 @@ def detect_relation(relation, fetch_result, obj1, obj2, dict_):
     return dict_
        
 
-def get_number(list_):
-  for element in list_:
-    if element in number:
-      num = number.index(element) + 1
-      return num
-  
-  return False
-
 
 def get_component(PPT):
   obj1 = PPT['obj1']
   obj2 = PPT['obj2']
-  obj1_attr = PPT['obj1_attr']
-  obj2_attr = PPT['obj2_attr']
-  obj1_num = get_number(obj1_attr)
-  obj2_num = get_number(obj2_attr)
   relation = PPT['relation']
 
-  return obj1, obj2, obj1_num, obj2_num, relation
+  return obj1, obj2, relation
 
 
 def check_error_DALLE(PPTs, detect_result, paths):
