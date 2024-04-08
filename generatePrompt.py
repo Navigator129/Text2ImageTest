@@ -37,31 +37,37 @@ def analyze_PPT(input_PPT):
         return subtree
 
 
-def save_prompt(prompt, related):
+def save_prompt(prompt, related, type_):
     if related:
-        save_related_prompt(prompt)
+        save_related_prompt(prompt, type_)
     else:
-        save_unrelated_prompt(prompt)
+        save_unrelated_prompt(prompt, type_)
 
 
-def save_unrelated_prompt(prompt):
-    filepath = './files/unrelated_prompts.json'
+def save_unrelated_prompt(prompt, type_):
+    if type_ == 'seed':
+        filepath = './files/unrelated_seed_prompts.json'
+    else:
+        filepath = './files/unrelated_prompts.json'
     att = prompt
     if os.path.exists(filepath):
-        with open('./files/unrelated_prompts.json', 'r') as f:
+        with open(filepath, 'r') as f:
             att = json.load(f)
-        att.update(prompt)
-    with open('./files/unrelated_prompts.json', 'w') as f:
+        att += prompt
+    with open(filepath, 'w') as f:
         json.dump(att, f)
 
-def save_related_prompt(prompt):
-    filepath = './files/related_prompts.json'
+def save_related_prompt(prompt, type_):
+    if type_ == 'seed':
+        filepath = './files/related_seed_prompts.json'
+    else:
+        filepath = './files/related_prompts.json'
     att = prompt
     if os.path.exists(filepath):
-        with open('./files/related_prompts.json', 'r') as f:
+        with open(filepath, 'r') as f:
             att = json.load(f)
-        att.update(prompt)
-    with open('./files/related_prompts.json', 'w') as f:
+        att += prompt
+    with open(filepath, 'w') as f:
         json.dump(att, f)
 
 def construct_PPT_dict(relation, obj1, obj1_attr, obj2, obj2_attr):
@@ -74,21 +80,25 @@ def construct_PPT_dict(relation, obj1, obj1_attr, obj2, obj2_attr):
     return PPT
 
 
-def save_PPT(dict_, related):
-    list_ = []
-    if related:
-        filepath = './files/related_PPTs.json'
-    else:
-        filepath = './files/unrelated_PPTs.json'
+# def save_PPT(dict_, related, type_):
+#     list_ = []
+#     if related:
+#         filepath = './files/related_PPTs.json'
+#         if type_ == 'seed':
+#             filepath = './files/related_seed_PPTs.json'
+#     else:
+#         filepath = './files/unrelated_PPTs.json'
+#         if type_ == 'seed':
+#             filepath = './files/unrelated_seed_PPTs.json'
 
-    if os.path.exists(filepath):
-        with open(filepath, 'r') as f:
-            list_ = json.load(f)
-        list_.append(dict_)
-    else:
-        list_.append(dict_)
-    with open(filepath, 'w') as f:
-        json.dump(list_, f)
+#     if os.path.exists(filepath):
+#         with open(filepath, 'r') as f:
+#             list_ = json.load(f)
+#         list_.append(dict_)
+#     else:
+#         list_.append(dict_)
+#     with open(filepath, 'w') as f:
+#         json.dump(list_, f)
 
 def get_attribute_values(input_PPT):
     obj_attr = []
@@ -96,13 +106,13 @@ def get_attribute_values(input_PPT):
         obj_attr.append(attr.value)
     return obj_attr
 
-def generatePrompt(input_PPT, idx, related):
+def generatePrompt(input_PPT, related, type_):
     client = OpenAI(api_key=gpt_value['key'])
     system_msg = 'You are an expert in the field of prompt generation.'
     M_check = input_PPT.value
     if M_check:
         subtrees = analyze_PPT(input_PPT)
-        save_PPT(subtrees, related)
+        # save_PPT(subtrees, related, type_)
         total_subtree = len(subtrees)
         user_msg_base = """
             I will offer you {} sets of nodes and you need to fuse them together to form a prompt.
@@ -145,9 +155,10 @@ def generatePrompt(input_PPT, idx, related):
         {"role": "user", "content": user_msg_input}]
         )
         prompt = response.choices[0].message.content
+        prompt_pair = [{'prompt': prompt, 'PPT': subtrees}]
     else:
         subtree = analyze_PPT(input_PPT)
-        save_PPT(subtree, related)
+        # save_PPT(subtree, related, type_)
         relation = subtree['relation']
         obj1 = subtree['obj1']
         obj1_attr = subtree['obj1_attr']
@@ -172,43 +183,113 @@ def generatePrompt(input_PPT, idx, related):
             {"role": "user", "content": user_msg}]
         )
         prompt = response.choices[0].message.content
-    prompt_pair = {idx: prompt}
+        prompt_pair = [{'prompt': prompt, 'PPT': subtree}]
     if related:
-        save_related_prompt(prompt_pair)
+        save_related_prompt(prompt_pair, type_)
     else:
-        save_unrelated_prompt(prompt_pair)
+        save_unrelated_prompt(prompt_pair, type_)
+
+def generate_seed(related):
+    ppt_list = []
+    total_seed = 5
+    for i in range(total_seed):
+        if related:
+            ppt = constructRelatedPPT()
+        else:
+            ppt = constructUnrelatedPPT()
+        ppt_list.append(ppt)
+    
+    for ppt in tqdm(ppt_list):
+        if related:
+            generatePrompt(ppt, True, 'seed')
+        else:
+            generatePrompt(ppt, False, 'seed')
+    
+    return ppt_list
+
+def check_valid(path):
+    with open(path) as f:
+        prompt_dicts = json.load(f)
+    client = OpenAI(api_key=gpt_value['key'])
+    sys_msg = "You are an expert in the field of prompt valid check."
+    result_list = []
+    for prompt_dict in prompt_dicts:
+        prompt = prompt_dict['prompt']
+        usr_msg = """
+            I will offer you a prompt and you need to check if the location relation is valid or not. for example,
+            'an apple is on top of a table' is valid, 'a table is on an apple' is invalid.
+            The return value should be a simple 'valid' or 'invalid'.
+            This is the prompt: {}
+        """.format(prompt)
+        response = client.chat.completions.create(
+            model = "gpt-4",
+            messages=[
+            {"role": "system", "content": sys_msg},
+            {"role": "user", "content": usr_msg}]
+        )
+        result = response.choices[0].message.content.strip()
+        prompt_dict['validity'] = result
+        result_list.append(prompt_dict)
+    with open(path, 'w') as f:
+        json.dump(result_list, f)
+    return result_list
+
 
 if __name__ == "__main__":
-    unrelated_ppt_list = []
-    for i in tqdm(range(1)):
-        ppt = constructUnrelatedPPT()
-        unrelated_ppt_list.append(ppt)
-        mutate_tree = mutator(ppt, False)
-        unrelated_ppt_list = unrelated_ppt_list + mutate_tree
+    # unrelated_ppt_list = []
+    # for i in tqdm(range(1)):
+    #     ppt = constructUnrelatedPPT()
+    #     unrelated_ppt_list.append(ppt)
+    #     mutate_tree = mutator(ppt, False)
+    #     unrelated_ppt_list = unrelated_ppt_list + mutate_tree
     
-    for ppt in tqdm(unrelated_ppt_list):
-        mutate_tree = mutator(ppt, False)
-        unrelated_ppt_list = unrelated_ppt_list + mutate_tree
+    # for ppt in tqdm(unrelated_ppt_list):
+    #     mutate_tree = mutator(ppt, False)
+    #     unrelated_ppt_list = unrelated_ppt_list + mutate_tree
    
-    related_ppt_list = []
-    for i in tqdm(range(1)):
-        ppt = constructRelatedPPT()
-        related_ppt_list.append(ppt)
-        mutate_tree = mutator(ppt, True)
-        related_ppt_list = related_ppt_list + mutate_tree
+    # related_ppt_list = []
+    # for i in tqdm(range(1)):
+    #     ppt = constructRelatedPPT()
+    #     related_ppt_list.append(ppt)
+    #     mutate_tree = mutator(ppt, True)
+    #     related_ppt_list = related_ppt_list + mutate_tree
 
-    for ppt in tqdm(related_ppt_list):
-        mutate_tree = mutator(ppt, True)
-        related_ppt_list = related_ppt_list + mutate_tree
+    # for ppt in tqdm(related_ppt_list):
+    #     mutate_tree = mutator(ppt, True)
+    #     related_ppt_list = related_ppt_list + mutate_tree
 
-    i = 0
-    for ppt in tqdm(unrelated_ppt_list):
-        generatePrompt(ppt, i, False)
-        i += 1
-    i = 0
-    for ppt in tqdm(related_ppt_list):
-        generatePrompt(ppt, i, True)
-        i += 1
+    # i = 0
+    # for ppt in tqdm(unrelated_ppt_list):
+    #     generatePrompt(ppt, i, False)
+    #     i += 1
+    # i = 0
+    # for ppt in tqdm(related_ppt_list):
+    #     generatePrompt(ppt, i, True)
+    #     i += 1
+
+    # related_seed_ppt = generate_seed(True)
+    # unrelated_seed_ppt = generate_seed(False)
+    related_seed_prompt = './files/related_seed_prompts.json'
+    unrelated_seed_prompt = './files/unrelated_seed_prompts.json'
+
+    # related_seed_result = check_valid(related_seed_prompt)
+    # unrelated_seed_result = check_valid(unrelated_seed_prompt)
+
+    with open(related_seed_prompt) as f:
+        related_seed_result = json.load(f)
+    with open(unrelated_seed_prompt) as f:
+        unrelated_seed_result = json.load(f)
+
+    for related_seed in related_seed_result:
+        if related_seed['validity'] == 'valid':
+            mutate_tree = mutator(related_seed['PPT'], True)
+            generatePrompt(mutate_tree, True, 'mutate')
+    
+    for unrelated_seed in unrelated_seed_result:
+        if unrelated_seed['validity'] == 'valid':
+            mutate_tree = mutator(unrelated_seed['PPT'], False)
+            generatePrompt(mutate_tree, False, 'mutate')
+
 
     print("Done!")
     

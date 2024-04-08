@@ -1,0 +1,97 @@
+[
+    {
+        "prompt": "One electric pink refrigerator is below one wooden pink chair.",
+        "PPT": {
+            "relation": "Below",
+            "obj1": "refrigerator",
+            "obj1_attr": [
+                "electric",
+                "pink",
+                "one"
+            ],
+            "obj2": "chair",
+            "obj2_attr": [
+                "wooden",
+                "pink",
+                "one"
+            ]
+        },
+        "validity": "invalid"
+    },
+    {
+        "prompt": "One clean yellow toothbrush is under one flourishing purple potted plant.",
+        "PPT": {
+            "relation": "Under",
+            "obj1": "toothbrush",
+            "obj1_attr": [
+                "clean",
+                "yellow",
+                "one"
+            ],
+            "obj2": "potted plant",
+            "obj2_attr": [
+                "flourishing",
+                "purple",
+                "one"
+            ]
+        },
+        "validity": "Valid"
+    },
+    {
+        "prompt": "One brand new pink bowl is underneath one round brown donut.",
+        "PPT": {
+            "relation": "Underneath",
+            "obj1": "bowl",
+            "obj1_attr": [
+                "brand new",
+                "pink",
+                "one"
+            ],
+            "obj2": "donut",
+            "obj2_attr": [
+                "round",
+                "brown",
+                "one"
+            ]
+        },
+        "validity": "valid"
+    },
+    {
+        "prompt": "One street-side black traffic light is leftward of one heavy green truck.",
+        "PPT": {
+            "relation": "Leftward of",
+            "obj1": "traffic light",
+            "obj1_attr": [
+                "street-side",
+                "black",
+                "one"
+            ],
+            "obj2": "truck",
+            "obj2_attr": [
+                "heavy",
+                "green",
+                "one"
+            ]
+        },
+        "validity": "Valid"
+    },
+    {
+        "prompt": "One modern pink TV is underneath one large white bed.",
+        "PPT": {
+            "relation": "Underneath",
+            "obj1": "tv",
+            "obj1_attr": [
+                "modern",
+                "pink",
+                "one"
+            ],
+            "obj2": "bed",
+            "obj2_attr": [
+                "large",
+                "white",
+                "one"
+            ]
+        },
+        "validity": "valid"
+    }
+]
