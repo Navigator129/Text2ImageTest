@@ -48,7 +48,7 @@ def save_unrelated_prompt(prompt, type_):
     if type_ == 'seed':
         filepath = './files/unrelated_seed_prompts.json'
     else:
-        filepath = './files/unrelated_prompts.json'
+        filepath = './files/unrelated_mutate_prompts.json'
     att = prompt
     if os.path.exists(filepath):
         with open(filepath, 'r') as f:
@@ -61,7 +61,7 @@ def save_related_prompt(prompt, type_):
     if type_ == 'seed':
         filepath = './files/related_seed_prompts.json'
     else:
-        filepath = './files/related_prompts.json'
+        filepath = './files/related_mutate_prompts.json'
     att = prompt
     if os.path.exists(filepath):
         with open(filepath, 'r') as f:
@@ -80,56 +80,34 @@ def construct_PPT_dict(relation, obj1, obj1_attr, obj2, obj2_attr):
     return PPT
 
 
-# def save_PPT(dict_, related, type_):
-#     list_ = []
-#     if related:
-#         filepath = './files/related_PPTs.json'
-#         if type_ == 'seed':
-#             filepath = './files/related_seed_PPTs.json'
-#     else:
-#         filepath = './files/unrelated_PPTs.json'
-#         if type_ == 'seed':
-#             filepath = './files/unrelated_seed_PPTs.json'
-
-#     if os.path.exists(filepath):
-#         with open(filepath, 'r') as f:
-#             list_ = json.load(f)
-#         list_.append(dict_)
-#     else:
-#         list_.append(dict_)
-#     with open(filepath, 'w') as f:
-#         json.dump(list_, f)
-
 def get_attribute_values(input_PPT):
     obj_attr = []
     for attr in input_PPT:
         obj_attr.append(attr.value)
     return obj_attr
 
-def generatePrompt(input_PPT, related, type_):
+def change_article(prev_obj1, prev_obj2, obj1, obj2, subtree):
+    obj1_attr = subtree['obj1_attr']
+    obj2_attr = subtree['obj2_attr']
+    if prev_obj1 == obj1 or prev_obj2 == obj1:
+        obj1_attr.remove('one')
+        obj1_attr.append('the')
+                
+    if prev_obj2 == obj2 or prev_obj1 == obj2:
+        obj2_attr.remove('one')
+        obj2_attr.append('the')
+
+    return obj1_attr, obj2_attr
+
+
+def generatePrompt(input_PPT, idx, related, type_):
     client = OpenAI(api_key=gpt_value['key'])
     system_msg = 'You are an expert in the field of prompt generation.'
     M_check = input_PPT.value
     if M_check:
         subtrees = analyze_PPT(input_PPT)
-        # save_PPT(subtrees, related, type_)
-        total_subtree = len(subtrees)
-        user_msg_base = """
-            I will offer you {} sets of nodes and you need to fuse them together to form a prompt.
-            each set is consist of one relation node, two object nodes obj1 and obj2, and corresponding attribute nodes for each obj.
-            you need to combine the five nodes together, in a format of attribute1 + object1 + relation + attribute2 + object2.
-            for example, if the nodes are [['one','big'], 'apple', 'on top of', ['one','fancy'], 'table'], the return value can be 'Two big apple is on top of One fancy table'
-            the attributes are always adjectives and in the list.
-            Always put the number in front of any other attributes.
-        """.format(total_subtree)
-        user_msg_cont = """
-            the obj in different sets are related, if obj1 and obj2 in the first set is 'apple' and 'table', and obj1 and obj2 in the second set is 'banana' and 'apple',
-            then prompt you generate should be 
-            'one apple is on one table, one banana is to the right of the apple'
-            we replace the number one with 'the' to express that the apple in the second sentence is the same as the apple in the first sentence.
-            Don't return anything but the prompt.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
-        """
         i = 0
+        prompt = ""
         for subtree in subtrees:
             relation = subtree['relation']
             obj1 = subtree['obj1']
@@ -138,27 +116,43 @@ def generatePrompt(input_PPT, related, type_):
             obj2_attr = subtree['obj2_attr']
             if i == 0:
                 user_msg_input = """
-                set {}: attribute1: {}, object1: {}, relation: {}, attribute2: {}, object2: {}
-            """.format(i, relation, obj1, obj1_attr, obj2, obj2_attr)
+                I will give you several nodes, and you need to fuse them together to form a prompt.
+                the format should be attribute1 + object1 + relation + attribute2 + object2,
+                for example, if the nodes are [['one','big'], 'apple', 'on top of', ['one','fancy'], 'table'], the return value should be:  
+                Two big apple is on top of One fancy table
+                the attributes are always adjectives and in the list.
+                Always put the number in front of any other attributes.
+                Don't return anything but the prompt.
+                attribute1 is {}, object1 is {}, relation is {}, attribute2 is {}, object2 is {}
+                """.format(obj1_attr, obj1, relation, obj2_attr, obj2)
+                i += 1
             else:
+                obj1_attr, obj2_attr = change_article(prev_obj1, prev_obj2, obj1, obj2, subtree)
                 user_msg_input = """
-                set {}: attribute1: {}, object1: {}, relation: {}, attribute2: {}, object2: {}
-            """.format(i, relation, obj1, obj1_attr, obj2, obj2_attr) + pre_user_msg_input
-            pre_user_msg_input = user_msg_input  
-            i += 1
-        response = client.chat.completions.create(
-        model = "gpt-4",
-        messages=[
-        {"role": "system", "content": system_msg},
-        {"role": "user", "content": user_msg_base},
-        {"role": "user", "content": user_msg_cont},
-        {"role": "user", "content": user_msg_input}]
-        )
-        prompt = response.choices[0].message.content
-        prompt_pair = [{'prompt': prompt, 'PPT': subtrees}]
+                I will give you several nodes, and you need to fuse them together to form a prompt.
+                the format should be attribute1 + object1 + relation + attribute2 + object2,
+                for example, if the nodes are [['the', 'big'], 'apple', 'on top of', ['one','fancy'], 'table'], the return value should be:
+                The big apple is on top of One fancy table
+                the attributes are always adjectives and in the list.
+                Always put the number in front of any other attributes if there is.
+                Always put 'the' in front of the any other attributes if there is.
+                Don't return anything but the prompt.
+                attribute1 is {}, object1 is {}, relation is {}, attribute2 is {}, object2 is {}
+                """.format(obj1_attr, obj1, relation, obj2_attr, obj2)
+            prev_obj1 = obj1
+            prev_obj2 = obj2
+            
+            response = client.chat.completions.create(
+            model = "gpt-4",
+            messages=[
+            {"role": "system", "content": system_msg},
+            {"role": "user", "content": user_msg_input}]
+            )
+            result = response.choices[0].message.content.strip()
+            prompt = prompt + result + " "
+        prompt_pair = [{'idx': idx, 'prompt': prompt, 'PPT': subtrees}]
     else:
         subtree = analyze_PPT(input_PPT)
-        # save_PPT(subtree, related, type_)
         relation = subtree['relation']
         obj1 = subtree['obj1']
         obj1_attr = subtree['obj1_attr']
@@ -168,7 +162,7 @@ def generatePrompt(input_PPT, related, type_):
             I will give you several nodes, and you need to fuse them together to form a prompt.
             the format should be attribute1 + object1 + relation + attribute2 + object2,
             for example, if the nodes are [['one','big'], 'apple', 'on top of', ['one','fancy'], 'table'], the return value should be:  
-            Two big apple is on top of One fancy table
+            One big apple is on top of One fancy table
             the attributes are always adjectives and in the list.
             Always put the number in front of any other attributes.
             Don't return anything but the prompt.
@@ -183,7 +177,7 @@ def generatePrompt(input_PPT, related, type_):
             {"role": "user", "content": user_msg}]
         )
         prompt = response.choices[0].message.content
-        prompt_pair = [{'prompt': prompt, 'PPT': subtree}]
+        prompt_pair = [{'idx': idx, 'prompt': prompt, 'PPT': subtree}]
     if related:
         save_related_prompt(prompt_pair, type_)
     else:
@@ -191,7 +185,7 @@ def generatePrompt(input_PPT, related, type_):
 
 def generate_seed(related):
     ppt_list = []
-    total_seed = 5
+    total_seed = 150
     for i in range(total_seed):
         if related:
             ppt = constructRelatedPPT()
@@ -199,11 +193,13 @@ def generate_seed(related):
             ppt = constructUnrelatedPPT()
         ppt_list.append(ppt)
     
+    i = 0
     for ppt in tqdm(ppt_list):
         if related:
-            generatePrompt(ppt, True, 'seed')
+            generatePrompt(ppt, i, True, 'seed')
         else:
-            generatePrompt(ppt, False, 'seed')
+            generatePrompt(ppt, i, False, 'seed')
+        i += 1
     
     return ppt_list
 
@@ -218,7 +214,7 @@ def check_valid(path):
         usr_msg = """
             I will offer you a prompt and you need to check if the location relation is valid or not. for example,
             'an apple is on top of a table' is valid, 'a table is on an apple' is invalid.
-            The return value should be a simple 'valid' or 'invalid'.
+            The return value should be a simple 'valid' or 'invalid', even if there are multiple sets in the prompt.
             This is the prompt: {}
         """.format(prompt)
         response = client.chat.completions.create(
@@ -234,62 +230,42 @@ def check_valid(path):
         json.dump(result_list, f)
     return result_list
 
-
 if __name__ == "__main__":
-    # unrelated_ppt_list = []
-    # for i in tqdm(range(1)):
-    #     ppt = constructUnrelatedPPT()
-    #     unrelated_ppt_list.append(ppt)
-    #     mutate_tree = mutator(ppt, False)
-    #     unrelated_ppt_list = unrelated_ppt_list + mutate_tree
-    
-    # for ppt in tqdm(unrelated_ppt_list):
-    #     mutate_tree = mutator(ppt, False)
-    #     unrelated_ppt_list = unrelated_ppt_list + mutate_tree
-   
-    # related_ppt_list = []
-    # for i in tqdm(range(1)):
-    #     ppt = constructRelatedPPT()
-    #     related_ppt_list.append(ppt)
-    #     mutate_tree = mutator(ppt, True)
-    #     related_ppt_list = related_ppt_list + mutate_tree
-
-    # for ppt in tqdm(related_ppt_list):
-    #     mutate_tree = mutator(ppt, True)
-    #     related_ppt_list = related_ppt_list + mutate_tree
-
-    # i = 0
-    # for ppt in tqdm(unrelated_ppt_list):
-    #     generatePrompt(ppt, i, False)
-    #     i += 1
-    # i = 0
-    # for ppt in tqdm(related_ppt_list):
-    #     generatePrompt(ppt, i, True)
-    #     i += 1
-
-    # related_seed_ppt = generate_seed(True)
-    # unrelated_seed_ppt = generate_seed(False)
+    related_seed_ppt = generate_seed(True)
+    unrelated_seed_ppt = generate_seed(False)
     related_seed_prompt = './files/related_seed_prompts.json'
     unrelated_seed_prompt = './files/unrelated_seed_prompts.json'
 
-    # related_seed_result = check_valid(related_seed_prompt)
-    # unrelated_seed_result = check_valid(unrelated_seed_prompt)
+    related_seed_result = check_valid(related_seed_prompt)
+    unrelated_seed_result = check_valid(unrelated_seed_prompt)
 
-    with open(related_seed_prompt) as f:
-        related_seed_result = json.load(f)
-    with open(unrelated_seed_prompt) as f:
-        unrelated_seed_result = json.load(f)
-
+    i = 0
+    related_mutate_tree = []
     for related_seed in related_seed_result:
-        if related_seed['validity'] == 'valid':
-            mutate_tree = mutator(related_seed['PPT'], True)
-            generatePrompt(mutate_tree, True, 'mutate')
-    
-    for unrelated_seed in unrelated_seed_result:
-        if unrelated_seed['validity'] == 'valid':
-            mutate_tree = mutator(unrelated_seed['PPT'], False)
-            generatePrompt(mutate_tree, False, 'mutate')
+        if related_seed['validity'].lower() == 'valid':
+            idx = related_seed['idx']
+            input_PPT = related_seed_ppt[idx]
+            mutate_tree = mutator(input_PPT, True)
+            related_mutate_tree += mutate_tree
 
+    unrelated_mutate_tree = []
+    for unrelated_seed in unrelated_seed_result:
+        if unrelated_seed['validity'].lower() == 'valid':
+            idx = unrelated_seed['idx']
+            input_PPT = unrelated_seed_ppt[idx]
+            mutate_tree = mutator(input_PPT, False)
+            unrelated_mutate_tree += mutate_tree
+    i = 0
+    for ppt in tqdm(related_mutate_tree):
+        generatePrompt(ppt, i, True, 'mutate')
+        i += 1
+    i = 0
+    for ppt in tqdm(unrelated_mutate_tree):
+        generatePrompt(ppt, i, False, 'mutate')
+        i += 1
+
+    check_valid('./files/related_mutate_prompts.json')
+    check_valid('./files/unrelated_mutate_prompts.json')
 
     print("Done!")
     

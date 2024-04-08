@@ -18,6 +18,7 @@ def mutator(input_PPT, related):
         timestamp2 = float(time.time())
         random.seed(timestamp2)
         mutator = random.randint(1, 4)
+        # mutator = 4
 
 
         if mutator == 1:
@@ -42,8 +43,8 @@ def duplicate_subtree(input_PPT):
     attr = input_PPT.get_children()
     root = PPT(obj)
     for a in attr:
-        a = PPT(a.value)
-        root.add_child(a)
+        new_a = PPT(a.value)
+        root.add_child(new_a)
     return root
 
 def change_obj(input_PPT, related):
@@ -297,10 +298,11 @@ def add_relation(input_PPT, related):
         #randomly select a related object node to the new relation node
         rand_idx = random.randint(0, 1)
         related_obj = old_relation_node.get_children()[rand_idx]
-        related_obj = duplicate_subtree(related_obj)
         #avoid ambiguity
         if check_ambiguity(old_relation_node, rand_idx):
             related_obj = old_relation_node.get_children()[1]
+
+        related_obj = duplicate_subtree(related_obj)
         if related:
             new_obj = PPT(select_related_object(related_obj.value))
         else:

@@ -86,6 +86,8 @@ def select_related_object(obj):
     if obj_type:
         related_category = get_relate_category(obj_type)
         related_obj_list = get_object()[related_category]
+        randseed = float(time.time())
+        random.seed(randseed)
         rand_idx = random.randint(0, len(related_obj_list)-1)
         related_obj = related_obj_list[rand_idx]
         return related_obj
