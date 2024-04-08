@@ -2,9 +2,6 @@ import requests
 import json
 import time
 import random
-from discord.ext import commands
-import midj_compensate as md
-import midj_spliter as ms
 
 prompts = []
 def fetch_prompt(path):
@@ -29,7 +26,7 @@ def generate(input_prompt):
 
     response = requests.post(url, headers=headers, json = payload)
     print(response.status_code)
-    time.sleep(10)
+    time.sleep(7)
     #收尾
     print('Done!')
 
@@ -46,5 +43,3 @@ if __name__ == '__main__':
 
     for prompt in prompts:
         generate(prompt)
-        print('Done!')
-        break

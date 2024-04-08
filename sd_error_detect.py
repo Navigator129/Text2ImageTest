@@ -3,6 +3,12 @@ import json
 from tqdm import tqdm
 
 
+prompts = []
+relate_seed_path = './files/exp1/related_seed_prompts.json'
+unrelated_seed_path = './files//exp1/unrelated_seed_prompts.json'
+related_mutate_path = './files/exp1/related_mutate_prompts.json'
+unrelated_mutate_path = './files/exp1/unrelated_mutate_prompts.json'
+
 def get_detect_result(path):
     with open(path, 'r') as f:
         results = json.load(f)
@@ -17,7 +23,6 @@ relation_dic = {"top": ['on top of', 'above', 'Atop', 'Upon'], "bottom": ["Benea
             "left": ["To the left of","On the left side of", "Leftward of", "Adjacent to the left of"], 
             "right": ["To the right of", "On the right side of", "Rightward of", "Adjacent to the right of"]}
 
-number = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']
 
 
 #input [Xmin, Ymax] [Xmax, Ymin]
@@ -37,31 +42,6 @@ def detect_object(obj1, obj2, fetch_result):
         dict_['obj2'] = True
     return dict_
 
-def detect_number(obj1, obj2, obj1_num, obj2_num, fetch_result, dict_):
-  #check the number of objs correct or not
-    if not dict_['obj1']:
-        dict_['obj1_num'] = False
-    if not dict_['obj2']:
-        dict_['obj2_num'] = False
-
-  
-    object_detected = fetch_result['detect cls']
-    count_ = {}
-    for obj in object_detected:
-      count_[obj] = count_.get(obj, 0) + 1
-    if dict_['obj1']:
-        if count_[obj1] == obj1_num:
-            dict_['obj1_num'] = True
-        else:
-            dict_['obj1_num'] = False
-    
-    if dict_['obj2']:
-        if count_[obj2] == obj2_num:
-            dict_['obj2_num'] = True
-        else:
-            dict_['obj2_num'] = False
-
-    return dict_
 
 def get_relation_type(relation):
     left = relation_dic['left']
@@ -151,25 +131,14 @@ def detect_relation(relation, fetch_result, obj1, obj2, dict_):
     return dict_
        
 
-def get_number(list_):
-  for element in list_:
-    if element in number:
-      num = number.index(element) + 1
-      return num
-  
-  return False
 
 
 def get_component(PPT):
   obj1 = PPT['obj1']
   obj2 = PPT['obj2']
-  obj1_attr = PPT['obj1_attr']
-  obj2_attr = PPT['obj2_attr']
-  obj1_num = get_number(obj1_attr)
-  obj2_num = get_number(obj2_attr)
   relation = PPT['relation']
 
-  return obj1, obj2, obj1_num, obj2_num, relation
+  return obj1, obj2, relation
 
 
 def check_error(PPTs, detect_result, paths):
@@ -177,9 +146,8 @@ def check_error(PPTs, detect_result, paths):
     error_detect = {}
     for i in tqdm(range(len(PPTs))):
         test_case = PPTs[i]
-        obj1, obj2, obj1_num, obj2_num, relation = get_component(test_case)
+        obj1, obj2, relation = get_component(test_case)
         error_detect = detect_object(obj1, obj2, detect_result[i])
-        error_detect = detect_number(obj1, obj2, obj1_num, obj2_num, detect_result[i], error_detect)
         error_detect = detect_relation(relation, detect_result[i], obj1, obj2, error_detect)
         results.append(error_detect)
     save_results(results, paths)
@@ -190,14 +158,14 @@ def save_results(results, paths):
         json.dump(results, f, indent=4)
 
 if __name__ == '__main__':
-    detect_result = get_detect_result('./results/Stable_Diffusion/v1-5/object_detection.json')
-    PPTs = get_PPTs()
-    check_error(PPTs, detect_result, './results/Stable_Diffusion/v1-5/error_detect.json')
+    # detect_result = get_detect_result('./results/Stable_Diffusion/v1-5/object_detection.json')
+    # PPTs = get_PPTs()
+    # check_error(PPTs, detect_result, './results/Stable_Diffusion/v1-5/error_detect.json')
     
-    # detect_result = get_detect_result('./results/Stable_Diffusion/v1-4/object_detection.json')
-    # PPTs = get_PPTs()
-    # check_error(PPTs, detect_result, './results/Stable_Diffusion/v1-4/error_detect.json')
+    # # detect_result = get_detect_result('./results/Stable_Diffusion/v1-4/object_detection.json')
+    # # PPTs = get_PPTs()
+    # # check_error(PPTs, detect_result, './results/Stable_Diffusion/v1-4/error_detect.json')
 
-    # detect_result = get_detect_result('./results/Stable_Diffusion/v1-0/object_detection.json')
-    # PPTs = get_PPTs()
-    # check_error(PPTs, detect_result, './results/Stable_Diffusion/v1-0/error_detect.json')
+    # # detect_result = get_detect_result('./results/Stable_Diffusion/v1-0/object_detection.json')
+    # # PPTs = get_PPTs()
+    # # check_error(PPTs, detect_result, './results/Stable_Diffusion/v1-0/error_detect.json')
