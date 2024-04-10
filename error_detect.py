@@ -150,11 +150,13 @@ def check_error(PPTs, detect_result, paths):
     for i in tqdm(range(len(PPTs))):
         test_case = PPTs[i]
         if type(test_case) == list:
+            tc_results = []
             for tc in test_case:
                 obj1, obj2, relation = get_component(tc)
                 error_detect = detect_object(obj1, obj2, detect_result[i])
                 error_detect = detect_relation(relation, detect_result[i], obj1, obj2, error_detect)
-                results.append(error_detect)
+                tc_results.append(error_detect)
+            results.append(tc_results)
         else:
             obj1, obj2, relation = get_component(test_case)
             error_detect = detect_object(obj1, obj2, detect_result[i])

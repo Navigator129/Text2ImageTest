@@ -2,16 +2,27 @@
 import json
 from tqdm import tqdm
 
+prompts = []
+PPTs = []
+relate_seed_path = './files/exp1/related_seed_prompts.json'
+unrelated_seed_path = './files//exp1/unrelated_seed_prompts.json'
+related_mutate_path = './files/exp1/related_mutate_prompts.json'
+unrelated_mutate_path = './files/exp1/unrelated_mutate_prompts.json'
+
+def fetch_prompt_and_PPTs(path):
+    with open(path, 'r') as f:
+        dict_ = json.load(f)
+    for prompt_dict in dict_:
+        if prompt_dict['validity'].lower() == 'valid':
+            prompts.append(prompt_dict['prompt'])
+            PPTs.append(prompt_dict['PPT'])
+
+
 
 def get_detect_result(path):
     with open(path, 'r') as f:
         results = json.load(f)
     return results
-
-def get_PPTs():
-    with open('./files/PPTs.json', 'r') as f:
-        PPTs = json.load(f)
-    return PPTs
 
 relation_dic = {"top": ['on top of', 'above', 'Atop', 'Upon'], "bottom": ["Beneath", "Under", "Below", "Underneath"], 
             "left": ["To the left of","On the left side of", "Leftward of", "Adjacent to the left of"], 
@@ -36,31 +47,6 @@ def detect_object(obj1, obj2, fetch_result):
         dict_['obj2'] = True
     return dict_
 
-def detect_number(obj1, obj2, obj1_num, obj2_num, fetch_result, dict_):
-  #check the number of objs correct or not
-    if not dict_['obj1']:
-        dict_['obj1_num'] = False
-    if not dict_['obj2']:
-        dict_['obj2_num'] = False
-
-  
-    object_detected = fetch_result['detect cls']
-    count_ = {}
-    for obj in object_detected:
-      count_[obj] = count_.get(obj, 0) + 1
-    if dict_['obj1']:
-        if count_[obj1] == obj1_num:
-            dict_['obj1_num'] = True
-        else:
-            dict_['obj1_num'] = False
-    
-    if dict_['obj2']:
-        if count_[obj2] == obj2_num:
-            dict_['obj2_num'] = True
-        else:
-            dict_['obj2_num'] = False
-
-    return dict_
 
 def get_relation_type(relation):
     left = relation_dic['left']
@@ -148,8 +134,6 @@ def detect_relation(relation, fetch_result, obj1, obj2, dict_):
     dict_ = check_relation(relation_type, obj1_points, obj2_points, dict_)
 
     return dict_
-       
-
 
 def get_component(PPT):
   obj1 = PPT['obj1']
@@ -159,23 +143,26 @@ def get_component(PPT):
   return obj1, obj2, relation
 
 
-def check_error_DALLE(PPTs, detect_result, paths):
+def check_error_Midj(PPTs, detect_result, paths):
     results = []
     error_detect = {}
-    with open('./files/dalle_miss_index.json', 'r') as f:
-        miss_index = json.load(f)
+    total_num = len(PPTs)
 
-    j = 0
-    for i in tqdm(range(3999)):
-        if i in miss_index:
-            continue
+    for i in tqdm(range(total_num)):
         test_case = PPTs[i]
-        obj1, obj2, obj1_num, obj2_num, relation = get_component(test_case)
-        error_detect = detect_object(obj1, obj2, detect_result[j])
-        error_detect = detect_number(obj1, obj2, obj1_num, obj2_num, detect_result[j], error_detect)
-        error_detect = detect_relation(relation, detect_result[j], obj1, obj2, error_detect)
-        results.append(error_detect)
-        j += 1
+        if type(test_case) == list:
+            tc_result = []
+            for tc in test_case:
+                obj1, obj2, relation = get_component(tc)
+                error_detect = detect_object(obj1, obj2, detect_result[i])
+                error_detect = detect_relation(relation, detect_result[i], obj1, obj2, error_detect)
+                tc_result.append(error_detect)
+            results.append(tc_result)
+        else:
+            obj1, obj2, relation = get_component(test_case)
+            error_detect = detect_object(obj1, obj2, detect_result[i])
+            error_detect = detect_relation(relation, detect_result[i], obj1, obj2, error_detect)
+            results.append(error_detect)
     save_results(results, paths)
 
 
@@ -184,10 +171,9 @@ def save_results(results, paths):
         json.dump(results, f, indent=4)
 
 if __name__ == '__main__':
+    fetch_prompt_and_PPTs(relate_seed_path)
+    fetch_prompt_and_PPTs(unrelated_seed_path)
+    fetch_prompt_and_PPTs(related_mutate_path)
+    fetch_prompt_and_PPTs(unrelated_mutate_path)
     detect_result = get_detect_result('./results/DALLE3/object_detection.json')
-    PPTs = get_PPTs()
-    check_error_DALLE(PPTs, detect_result, './results/DALLE3/error_detect.json')
-
-    # detect_result = get_detect_result('./results/Stable_Diffusion/v1-0/object_detection.json')
-    # PPTs = get_PPTs()
-    # check_error_DALLE(PPTs, detect_result, './results/Stable_Diffusion/v1-0/error_detect.json')
+    check_error_Midj(PPTs, detect_result, './results/DALLE3/error_detect.json')
