@@ -3,20 +3,37 @@ import json
 from tqdm import tqdm
 
 
-prompts = []
-PPTs = []
-relate_seed_path = './files/exp1/related_seed_prompts.json'
-unrelated_seed_path = './files//exp1/unrelated_seed_prompts.json'
-related_mutate_path = './files/exp1/related_mutate_prompts.json'
-unrelated_mutate_path = './files/exp1/unrelated_mutate_prompts.json'
+def get_PPTs(i):
+    final_prompts = []
+    final_PPTs = []
+    relate_seed_path = './files/exp{}/related_seed_prompts.json'.format(i)
+    unrelated_seed_path = './files/exp{}/unrelated_seed_prompts.json'.format(i)
+    related_mutate_path = './files/exp{}/related_mutate_prompts.json'.format(i)
+    unrelated_mutate_path = './files/exp{}/unrelated_mutate_prompts.json'.format(i)
+    prompts, PPTs = fetch_prompt_and_PPTs(relate_seed_path)
+    final_prompts.extend(prompts)
+    final_PPTs.extend(PPTs)
+    prompts, PPTs = fetch_prompt_and_PPTs(unrelated_seed_path)
+    final_prompts.extend(prompts)
+    final_PPTs.extend(PPTs)
+    prompts, PPTs = fetch_prompt_and_PPTs(related_mutate_path)
+    final_prompts.extend(prompts)
+    final_PPTs.extend(PPTs)
+    prompts, PPTs = fetch_prompt_and_PPTs(unrelated_mutate_path)
+    final_prompts.extend(prompts)
+    final_PPTs.extend(PPTs)
+    return final_prompts, final_PPTs
 
 def fetch_prompt_and_PPTs(path):
+    prompts = []
+    PPTs = []
     with open(path, 'r') as f:
         dict_ = json.load(f)
     for prompt_dict in dict_:
         if prompt_dict['validity'].lower() == 'valid':
             prompts.append(prompt_dict['prompt'])
             PPTs.append(prompt_dict['PPT'])
+    return prompts, PPTs
 
 def get_detect_result(path):
     with open(path, 'r') as f:
@@ -164,22 +181,69 @@ def check_error(PPTs, detect_result, paths):
             results.append(error_detect)
     save_results(results, paths)
 
+def check_error_with_missing(PPTs, detect_result, paths, missing_idx):
+    results = []
+    error_detect = {}
+    idx = 0
+    for i in tqdm(range(len(PPTs))):
+        if i in missing_idx:
+            continue
+        test_case = PPTs[i]
+        if type(test_case) == list:
+            tc_results = []
+            for tc in test_case:
+                obj1, obj2, relation = get_component(tc)
+                error_detect = detect_object(obj1, obj2, detect_result[idx])
+                error_detect = detect_relation(relation, detect_result[idx], obj1, obj2, error_detect)
+                tc_results.append(error_detect)
+            results.append(tc_results)
+        else:
+            obj1, obj2, relation = get_component(test_case)
+            error_detect = detect_object(obj1, obj2, detect_result[idx])
+            error_detect = detect_relation(relation, detect_result[idx], obj1, obj2, error_detect)
+            results.append(error_detect)
+        idx += 1
+    save_results(results, paths)
+
 
 def save_results(results, paths):
     with open(paths, 'w') as f:
         json.dump(results, f, indent=4)
 
-if __name__ == '__main__':
-    fetch_prompt_and_PPTs(relate_seed_path)
-    fetch_prompt_and_PPTs(unrelated_seed_path)
-    fetch_prompt_and_PPTs(related_mutate_path)
-    fetch_prompt_and_PPTs(unrelated_mutate_path)
-    detect_result = get_detect_result('./results/Stable_Diffusion/v1-5/object_detection.json')
-    check_error(PPTs, detect_result, './results/Stable_Diffusion/v1-5/error_detect.json')
-    
-    detect_result = get_detect_result('./results/Stable_Diffusion/v1-4/object_detection.json')
-    check_error(PPTs, detect_result, './results/Stable_Diffusion/v1-4/error_detect.json')
+def process_stable_diffsuion(model):
+    path = './results/Stable_Diffusion/{}/'.format(model)
+    print('processing {}'.format(model))
+    for i in range(1,5):
+        prompts, PPTs = get_PPTs(i)
+        object_detection_path = path + 'exp{}.json'.format(i)
+        detect_result = get_detect_result(object_detection_path)
+        check_error(PPTs, detect_result, path + 'error_detect{}.json'.format(i))
+        print('Exp{} Done!'.format(i))
 
-    detect_result = get_detect_result('./results/Stable_Diffusion/v1-0/object_detection.json')
-    check_error(PPTs, detect_result, './results/Stable_Diffusion/v1-0/error_detect.json')
+def process_DALLE():
+    path = './results/DALLE3/'
+    print('processing DALLE3')
+    missing_idx1 = [216]
+    missing_idx2 = []
+    missing_idx3 = [72, 167, 424, 438]
+    missing_idx4 = [415]
+    for i in range(1,5):
+        prompts, PPTs = get_PPTs(i)
+        object_detection_path = path + 'exp{}.json'.format(i)
+        detect_result = get_detect_result(object_detection_path)
+        if i == 1:
+            check_error_with_missing(PPTs, detect_result, path + 'error_detect{}.json'.format(i), missing_idx1)
+        elif i == 2:
+            check_error_with_missing(PPTs, detect_result, path + 'error_detect{}.json'.format(i), missing_idx2)
+        elif i == 3:
+            check_error_with_missing(PPTs, detect_result, path + 'error_detect{}.json'.format(i), missing_idx3)
+        else:
+            check_error_with_missing(PPTs, detect_result, path + 'error_detect{}.json'.format(i), missing_idx4)
+        print('Exp{} Done!'.format(i))
+
+if __name__ == '__main__':
+    # process_stable_diffsuion('v1-5')
+    # process_stable_diffsuion('v1-4')
+    # process_stable_diffsuion('v1-0')
+    process_DALLE()
     print('Done!')

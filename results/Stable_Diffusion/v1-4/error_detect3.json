@@ -1,0 +1,4372 @@
+[
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": true
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": true
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": true
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": true
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": true
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": true
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": true
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": true
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": true
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": true
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": true
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": true
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": true
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": true
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": true
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": true
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": true
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": true
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": true
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": true
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": true
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": true
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": true
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        }
+    ],
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        }
+    ],
+    [
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        }
+    ],
+    [
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        }
+    ],
+    [
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": true,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": true
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": true,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": true,
+            "relation": false
+        }
+    ],
+    [
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        }
+    ],
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": true,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": true,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": true
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": true,
+            "obj2": true,
+            "relation": true
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": true
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": true
+    },
+    [
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": true
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": true
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": true,
+            "relation": true
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": true,
+            "obj2": true,
+            "relation": true
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": true
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        }
+    ],
+    [
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    [
+        {
+            "obj1": true,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": true
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    [
+        {
+            "obj1": true,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": true,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    [
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": true,
+            "relation": false
+        }
+    ],
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": true
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": true
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": true,
+            "relation": true
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": true,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": true,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": true,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": true,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": true
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": true
+    },
+    [
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": true
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": true,
+            "relation": false
+        }
+    ],
+    [
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    [
+        {
+            "obj1": true,
+            "obj2": true,
+            "relation": true
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": true,
+            "relation": false
+        }
+    ],
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": true,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    [
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": true,
+            "relation": true
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        }
+    ],
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    [
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        }
+    ],
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    [
+        {
+            "obj1": true,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": true,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    [
+        {
+            "obj1": true,
+            "obj2": true,
+            "relation": true
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": true
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    [
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    [
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": true,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": true,
+            "relation": true
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    [
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        }
+    ],
+    [
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": true
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": true
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    [
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    [
+        {
+            "obj1": true,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": true,
+            "obj2": true,
+            "relation": true
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        }
+    ],
+    [
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": true,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    [
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    [
+        {
+            "obj1": true,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    [
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    [
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": false,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    [
+        {
+            "obj1": true,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ],
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": false,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    {
+        "obj1": true,
+        "obj2": true,
+        "relation": true
+    },
+    {
+        "obj1": true,
+        "obj2": false,
+        "relation": false
+    },
+    [
+        {
+            "obj1": false,
+            "obj2": true,
+            "relation": false
+        },
+        {
+            "obj1": true,
+            "obj2": false,
+            "relation": false
+        }
+    ]
+]
