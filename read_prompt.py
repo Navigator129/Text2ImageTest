@@ -70,6 +70,17 @@ def convert_json_to_df(data):
     df = pd.DataFrame(index_prompt_pairs, columns=['Index', 'Prompts'])
     return df
 
+def quick_test_to_df(data):
+    i = 0
+    dict_ = {}
+    for prompt in data:
+        dict_[i] = prompt['prompt']
+        i += 1
+    index_prompt_pairs = [(k, v) for k, v in dict_.items()]
+    df = pd.DataFrame(index_prompt_pairs, columns=['Index', 'Prompts'])
+    return df
+    
+
 def create_excel_file(df, file_path):
     """Saves the DataFrame to an Excel file."""
     df.to_excel(file_path, index=False)
@@ -82,7 +93,7 @@ def convert_excel_to_json(path):
         json.dump(data, f)
 
 if __name__ == '__main__':
-    match_PPTs()
+    # match_PPTs()
     # for i in range(1, 5):
     #     final_data = []
     #     file_path = './files/exp{}/'.format(i)
@@ -104,3 +115,13 @@ if __name__ == '__main__':
     # convert_excel_to_json('./files/quick_test.xlsx')
         # data_df = convert_json_to_df(final_data)
         # create_excel_file(data_df, './files/exp{}/prompts.xlsx'.format(i))
+    
+    with open('./files/ablation1.json', 'r') as f:
+        ab1 = json.load(f)
+    with open('./files/ablation2.json', 'r') as f:
+        ab2 = json.load(f)
+    df1 = quick_test_to_df(ab1)
+    df2 = quick_test_to_df(ab2)
+    create_excel_file(df1, './files/ablation1.xlsx')
+    create_excel_file(df2, './files/ablation2.xlsx')
+

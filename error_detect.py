@@ -81,20 +81,20 @@ def get_relation_type(relation):
    
 def check_relation(relation_type, obj1_points, obj2_points, dict_):
     if relation_type == 'top':
-        obj1_botmost_point = min(obj1_points, key=lambda point: point[1])
-        obj2_topmost_point = max(obj2_points, key=lambda point: point[1])
+        obj1_topmost_point = max(obj1_points, key=lambda point: point[1])
+        obj2_botmost_point = min(obj2_points, key=lambda point: point[1])
         #Y1min >= Y2max
-        if obj1_botmost_point[1] >= obj2_topmost_point[1]:
+        if obj1_topmost_point[1] <= obj2_botmost_point[1]:
             dict_['relation'] = True
         else:
             dict_['relation'] = False
         return dict_
     
     if relation_type == 'bottom':
-        obj1_topmost_point = max(obj1_points, key=lambda point: point[1])
-        obj2_botmost_point = min(obj2_points, key=lambda point: point[1])
+        obj1_botmost_point = min(obj1_points, key=lambda point: point[1])
+        obj2_topmost_point = max(obj2_points, key=lambda point: point[1])
         #Y1max <= Y2min
-        if obj1_topmost_point[1] <= obj2_botmost_point[1]:
+        if obj1_botmost_point[1] >= obj2_topmost_point[1]:
             dict_['relation'] = True
         else:
             dict_['relation'] = False
@@ -165,7 +165,7 @@ def check_error(PPTs, detect_result, paths):
     results = []
     error_detect = {}
     for i in tqdm(range(len(PPTs))):
-        test_case = PPTs[i]
+        test_case = PPTs[i]['PPT']
         if type(test_case) == list:
             tc_results = []
             for tc in test_case:
@@ -180,6 +180,30 @@ def check_error(PPTs, detect_result, paths):
             error_detect = detect_relation(relation, detect_result[i], obj1, obj2, error_detect)
             results.append(error_detect)
     save_results(results, paths)
+
+def check_error_midj(PPTs, detect_result, paths):
+    results = []
+    error_detect = {}
+    for i in tqdm(range(100)):
+        test_case = PPTs[i]['PPT']
+        if type(test_case) == list:
+            tc_results = []
+            for tc in test_case:
+                obj1, obj2, relation = get_component(tc)
+                for j in range(i*4, (i+1)*4):
+                    error_detect = detect_object(obj1, obj2, detect_result[j])
+                    error_detect = detect_relation(relation, detect_result[j], obj1, obj2, error_detect)
+                    tc_results.append(error_detect)
+            results.append(tc_results)
+        else:
+            for j in range(i*4, (i+1)*4):
+                obj1, obj2, relation = get_component(test_case)
+                error_detect = detect_object(obj1, obj2, detect_result[j])
+                error_detect = detect_relation(relation, detect_result[j], obj1, obj2, error_detect)
+                results.append(error_detect)
+    save_results(results, paths)
+
+
 
 def check_error_with_missing(PPTs, detect_result, paths, missing_idx):
     results = []
@@ -241,9 +265,59 @@ def process_DALLE():
             check_error_with_missing(PPTs, detect_result, path + 'error_detect{}.json'.format(i), missing_idx4)
         print('Exp{} Done!'.format(i))
 
+
+
+def process_quick_test(model):
+    ppt_base_path = './files/test.json'
+    ppt_ab1_pah = './files/ablation1.json'
+    ppt_ab2_path = './files/ablation2.json'
+    if model == 'dalle':
+        file_path0 = './results/DALLE3/quick_test.json'
+        file_path1 = './results/DALLE3/quick_test_ab1.json'
+        file_path2 = './results/DALLE3/quick_test_ab2.json'
+    elif model == 'v1-5' or model == 'v1-4' or model == 'v1-0':
+        file_path0 = './results/Stable_Diffusion/{}/quick_test.json'.format(model)
+        file_path1 = './results/Stable_Diffusion/{}/quick_test_ab1.json'.format(model)
+        file_path2 = './results/Stable_Diffusion/{}/quick_test_ab2.json'.format(model)
+    else:
+        file_path0 = './results/Midjourney/quick_test.json'.format(model)
+        file_path1 = './results/Midjourney/quick_test_ab1.json'.format(model)
+        file_path2 = './results/Midjourney/quick_test_ab2.json'.format(model)
+        
+
+
+    with open(ppt_base_path, 'r') as f:
+        ppt_base = json.load(f)
+    with open(ppt_ab1_pah, 'r') as f:
+        ppt_ab1 = json.load(f)
+    with open(ppt_ab2_path, 'r') as f:
+        ppt_ab2 = json.load(f)
+
+    detect_result0 = get_detect_result(file_path0)
+    detect_result1 = get_detect_result(file_path1)
+    detect_result2 = get_detect_result(file_path2)
+
+    if model == 'midjourney':
+        check_error_midj(ppt_base, detect_result0, file_path0.replace('.json', '_error_detect.json'))
+        check_error_midj(ppt_ab1, detect_result1, file_path1.replace('.json', '_error_detect.json'))
+        check_error_midj(ppt_ab2, detect_result2, file_path2.replace('.json', '_error_detect.json'))
+    else:
+        check_error(ppt_base, detect_result0, file_path0.replace('.json', '_error_detect.json'))
+        check_error(ppt_ab1, detect_result1, file_path1.replace('.json', '_error_detect.json'))
+        check_error(ppt_ab2, detect_result2, file_path2.replace('.json', '_error_detect.json'))
+
+    print('Done!')
+
+
+
 if __name__ == '__main__':
     # process_stable_diffsuion('v1-5')
     # process_stable_diffsuion('v1-4')
     # process_stable_diffsuion('v1-0')
-    process_DALLE()
+    # process_DALLE()
+    # process_quick_test('dalle')
+    # process_quick_test('v1-5')
+    # process_quick_test('v1-4')
+    # process_quick_test('v1-0')
+    process_quick_test('midjourney')
     print('Done!')

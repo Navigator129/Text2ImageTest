@@ -1,0 +1,2450 @@
+[
+    {
+        "idx": 0,
+        "prompt": "One parking meter is adjacent to the left of one boat",
+        "PPT": {
+            "relation": "Adjacent to the left of",
+            "obj1": "parking meter",
+            "obj1_attr": [
+                "metallic",
+                "black",
+                "one"
+            ],
+            "obj2": "boat",
+            "obj2_attr": [
+                "wooden",
+                "brown",
+                "one"
+            ]
+        }
+    },
+    {
+        "idx": 1,
+        "prompt": "One toothbrush is to the right of one couch.",
+        "PPT": {
+            "relation": "To the right of",
+            "obj1": "toothbrush",
+            "obj1_attr": [
+                "clean",
+                "white",
+                "one"
+            ],
+            "obj2": "couch",
+            "obj2_attr": [
+                "padded",
+                "blue",
+                "one"
+            ]
+        }
+    },
+    {
+        "idx": 2,
+        "prompt": "One handbag is beneath one chair. The handbag is atop the chair. ",
+        "PPT": [
+            {
+                "relation": "Beneath",
+                "obj1": "handbag",
+                "obj1_attr": [
+                    "Leather",
+                    "yellow",
+                    "one"
+                ],
+                "obj2": "chair",
+                "obj2_attr": [
+                    "sturdy",
+                    "yellow",
+                    "one"
+                ]
+            },
+            {
+                "relation": "Atop",
+                "obj1": "handbag",
+                "obj1_attr": [
+                    "Leather",
+                    "yellow",
+                    "the"
+                ],
+                "obj2": "chair",
+                "obj2_attr": [
+                    "upholstered",
+                    "blue",
+                    "the"
+                ]
+            }
+        ]
+    },
+    {
+        "idx": 3,
+        "prompt": "One handbag is beneath one chair. The handbag is adjacent to the right of one dining table. ",
+        "PPT": [
+            {
+                "relation": "Beneath",
+                "obj1": "handbag",
+                "obj1_attr": [
+                    "Leather",
+                    "yellow",
+                    "one"
+                ],
+                "obj2": "chair",
+                "obj2_attr": [
+                    "sturdy",
+                    "yellow",
+                    "one"
+                ]
+            },
+            {
+                "relation": "Adjacent to the right of",
+                "obj1": "handbag",
+                "obj1_attr": [
+                    "Leather",
+                    "yellow",
+                    "the"
+                ],
+                "obj2": "dining table",
+                "obj2_attr": [
+                    "large",
+                    "yellow",
+                    "one"
+                ]
+            }
+        ]
+    },
+    {
+        "idx": 4,
+        "prompt": "One fork is on top of one cake. The cake is below one bowl. ",
+        "PPT": [
+            {
+                "relation": "on top of",
+                "obj1": "fork",
+                "obj1_attr": [
+                    "pronged",
+                    "white",
+                    "one"
+                ],
+                "obj2": "cake",
+                "obj2_attr": [
+                    "frosting-covered",
+                    "white",
+                    "one"
+                ]
+            },
+            {
+                "relation": "Below",
+                "obj1": "cake",
+                "obj1_attr": [
+                    "frosting-covered",
+                    "white",
+                    "the"
+                ],
+                "obj2": "bowl",
+                "obj2_attr": [
+                    "rounded",
+                    "purple",
+                    "one"
+                ]
+            }
+        ]
+    },
+    {
+        "idx": 5,
+        "prompt": "One sandwich is on the left side of one bottle. The sandwich is on the right side of one spoon. ",
+        "PPT": [
+            {
+                "relation": "On the left side of",
+                "obj1": "sandwich",
+                "obj1_attr": [
+                    "toasted",
+                    "brown",
+                    "one"
+                ],
+                "obj2": "bottle",
+                "obj2_attr": [
+                    "cylindrical",
+                    "white",
+                    "one"
+                ]
+            },
+            {
+                "relation": "On the right side of",
+                "obj1": "sandwich",
+                "obj1_attr": [
+                    "toasted",
+                    "brown",
+                    "the"
+                ],
+                "obj2": "spoon",
+                "obj2_attr": [
+                    "smooth",
+                    "brown",
+                    "one"
+                ]
+            }
+        ]
+    },
+    {
+        "idx": 6,
+        "prompt": "One parking meter is beneath one airplane.",
+        "PPT": {
+            "relation": "Beneath",
+            "obj1": "parking meter",
+            "obj1_attr": [
+                "rectangular",
+                "blue",
+                "one"
+            ],
+            "obj2": "airplane",
+            "obj2_attr": [
+                "jet",
+                "yellow",
+                "one"
+            ]
+        }
+    },
+    {
+        "idx": 7,
+        "prompt": "One bicycle is on top of one parking meter.",
+        "PPT": {
+            "relation": "on top of",
+            "obj1": "bicycle",
+            "obj1_attr": [
+                "Portable",
+                "purple",
+                "one",
+                "Professional"
+            ],
+            "obj2": "parking meter",
+            "obj2_attr": [
+                "metallic",
+                "white",
+                "one",
+                "solar-powered"
+            ]
+        }
+    },
+    {
+        "idx": 8,
+        "prompt": "One suitcase is on top of one couch.",
+        "PPT": {
+            "relation": "on top of",
+            "obj1": "suitcase",
+            "obj1_attr": [
+                "portable",
+                "yellow",
+                "one"
+            ],
+            "obj2": "couch",
+            "obj2_attr": [
+                "long",
+                "green",
+                "one"
+            ]
+        }
+    },
+    {
+        "idx": 9,
+        "prompt": "One suitcase is on top of one chair.",
+        "PPT": {
+            "relation": "on top of",
+            "obj1": "suitcase",
+            "obj1_attr": [
+                "portable",
+                "yellow",
+                "one",
+                "zippered"
+            ],
+            "obj2": "chair",
+            "obj2_attr": [
+                "upholstered",
+                "white",
+                "one",
+                "wooden"
+            ]
+        }
+    },
+    {
+        "idx": 10,
+        "prompt": "One suitcase is on top of one chair. The chair is below one clock. ",
+        "PPT": [
+            {
+                "relation": "on top of",
+                "obj1": "suitcase",
+                "obj1_attr": [
+                    "portable",
+                    "yellow",
+                    "one"
+                ],
+                "obj2": "chair",
+                "obj2_attr": [
+                    "upholstered",
+                    "white",
+                    "one"
+                ]
+            },
+            {
+                "relation": "Below",
+                "obj1": "chair",
+                "obj1_attr": [
+                    "upholstered",
+                    "white",
+                    "the"
+                ],
+                "obj2": "clock",
+                "obj2_attr": [
+                    "round",
+                    "black",
+                    "one"
+                ]
+            }
+        ]
+    },
+    {
+        "idx": 11,
+        "prompt": "One bed is on the right side of one vase.",
+        "PPT": {
+            "relation": "On the right side of",
+            "obj1": "bed",
+            "obj1_attr": [
+                "soft",
+                "green",
+                "one"
+            ],
+            "obj2": "vase",
+            "obj2_attr": [
+                "ceramic",
+                "pink",
+                "one"
+            ]
+        }
+    },
+    {
+        "idx": 12,
+        "prompt": "One bed is on the right side of one clock.",
+        "PPT": {
+            "relation": "On the right side of",
+            "obj1": "bed",
+            "obj1_attr": [
+                "soft",
+                "green",
+                "one"
+            ],
+            "obj2": "clock",
+            "obj2_attr": [
+                "decorative",
+                "blue",
+                "one"
+            ]
+        }
+    },
+    {
+        "idx": 13,
+        "prompt": "One bed is adjacent to the left of one remote.",
+        "PPT": {
+            "relation": "Adjacent to the left of",
+            "obj1": "bed",
+            "obj1_attr": [
+                "soft",
+                "green",
+                "one"
+            ],
+            "obj2": "remote",
+            "obj2_attr": [
+                "modern",
+                "brown",
+                "one"
+            ]
+        }
+    },
+    {
+        "idx": 14,
+        "prompt": "One bed is to the left of one remote.",
+        "PPT": {
+            "relation": "To the left of",
+            "obj1": "bed",
+            "obj1_attr": [
+                "soft",
+                "green",
+                "one"
+            ],
+            "obj2": "remote",
+            "obj2_attr": [
+                "modern",
+                "brown",
+                "one"
+            ]
+        }
+    },
+    {
+        "idx": 15,
+        "prompt": "One toothbrush is to the left of one chair. The toothbrush is to the left of one bed. ",
+        "PPT": [
+            {
+                "relation": "To the left of",
+                "obj1": "toothbrush",
+                "obj1_attr": [
+                    "compact",
+                    "white",
+                    "one"
+                ],
+                "obj2": "chair",
+                "obj2_attr": [
+                    "wooden",
+                    "green",
+                    "one"
+                ]
+            },
+            {
+                "relation": "To the left of",
+                "obj1": "toothbrush",
+                "obj1_attr": [
+                    "compact",
+                    "white",
+                    "the"
+                ],
+                "obj2": "bed",
+                "obj2_attr": [
+                    "large",
+                    "pink",
+                    "one"
+                ]
+            }
+        ]
+    },
+    {
+        "idx": 16,
+        "prompt": "One chair is rightward of one toothbrush.",
+        "PPT": {
+            "relation": "Rightward of",
+            "obj1": "chair",
+            "obj1_attr": [
+                "wooden",
+                "green",
+                "one"
+            ],
+            "obj2": "toothbrush",
+            "obj2_attr": [
+                "compact",
+                "white",
+                "one"
+            ]
+        }
+    },
+    {
+        "idx": 17,
+        "prompt": "One toothbrush is to the left of one chair.",
+        "PPT": {
+            "relation": "To the left of",
+            "obj1": "toothbrush",
+            "obj1_attr": [
+                "compact",
+                "white",
+                "one",
+                "electric"
+            ],
+            "obj2": "chair",
+            "obj2_attr": [
+                "wooden",
+                "green",
+                "one",
+                "upholstered"
+            ]
+        }
+    },
+    {
+        "idx": 18,
+        "prompt": "One broccoli is atop one bottle. The bottle is below one sandwich. ",
+        "PPT": [
+            {
+                "relation": "Atop",
+                "obj1": "broccoli",
+                "obj1_attr": [
+                    "leafy",
+                    "pink",
+                    "one"
+                ],
+                "obj2": "bottle",
+                "obj2_attr": [
+                    "cylindrical",
+                    "pink",
+                    "one"
+                ]
+            },
+            {
+                "relation": "Below",
+                "obj1": "bottle",
+                "obj1_attr": [
+                    "cylindrical",
+                    "pink",
+                    "the"
+                ],
+                "obj2": "sandwich",
+                "obj2_attr": [
+                    "stacked",
+                    "yellow",
+                    "one"
+                ]
+            }
+        ]
+    },
+    {
+        "idx": 19,
+        "prompt": "One bench is to the right of one bus.",
+        "PPT": {
+            "relation": "To the right of",
+            "obj1": "bench",
+            "obj1_attr": [
+                "polished",
+                "pink",
+                "one"
+            ],
+            "obj2": "bus",
+            "obj2_attr": [
+                "dirty",
+                "black",
+                "one"
+            ]
+        }
+    },
+    {
+        "idx": 20,
+        "prompt": "One bus is to the right of one bench. The bench is below one airplane. ",
+        "PPT": [
+            {
+                "relation": "To the right of",
+                "obj1": "bus",
+                "obj1_attr": [
+                    "double-decker",
+                    "yellow",
+                    "one"
+                ],
+                "obj2": "bench",
+                "obj2_attr": [
+                    "polished",
+                    "pink",
+                    "one"
+                ]
+            },
+            {
+                "relation": "Below",
+                "obj1": "bench",
+                "obj1_attr": [
+                    "polished",
+                    "pink",
+                    "the"
+                ],
+                "obj2": "airplane",
+                "obj2_attr": [
+                    "metallic",
+                    "green",
+                    "one"
+                ]
+            }
+        ]
+    },
+    {
+        "idx": 21,
+        "prompt": "One fire hydrant is on the left side of one boat.",
+        "PPT": {
+            "relation": "On the left side of",
+            "obj1": "fire hydrant",
+            "obj1_attr": [
+                "Round",
+                "white",
+                "one"
+            ],
+            "obj2": "boat",
+            "obj2_attr": [
+                "full-sailed",
+                "blue",
+                "one"
+            ]
+        }
+    },
+    {
+        "idx": 22,
+        "prompt": "One boat is adjacent to the right of one fire hydrant. The boat is above one bench. ",
+        "PPT": [
+            {
+                "relation": "Adjacent to the right of",
+                "obj1": "boat",
+                "obj1_attr": [
+                    "full-sailed",
+                    "blue",
+                    "one"
+                ],
+                "obj2": "fire hydrant",
+                "obj2_attr": [
+                    "Round",
+                    "white",
+                    "one"
+                ]
+            },
+            {
+                "relation": "above",
+                "obj1": "boat",
+                "obj1_attr": [
+                    "full-sailed",
+                    "blue",
+                    "the"
+                ],
+                "obj2": "bench",
+                "obj2_attr": [
+                    "long",
+                    "yellow",
+                    "one"
+                ]
+            }
+        ]
+    },
+    {
+        "idx": 23,
+        "prompt": "One fire hydrant is to the left of one boat.",
+        "PPT": {
+            "relation": "To the left of",
+            "obj1": "fire hydrant",
+            "obj1_attr": [
+                "Round",
+                "white",
+                "one"
+            ],
+            "obj2": "boat",
+            "obj2_attr": [
+                "full-sailed",
+                "blue",
+                "one"
+            ]
+        }
+    },
+    {
+        "idx": 24,
+        "prompt": "One boat is adjacent to the right of one bench.",
+        "PPT": {
+            "relation": "Adjacent to the right of",
+            "obj1": "boat",
+            "obj1_attr": [
+                "full-sailed",
+                "blue",
+                "one"
+            ],
+            "obj2": "bench",
+            "obj2_attr": [
+                "wooden",
+                "white",
+                "one"
+            ]
+        }
+    },
+    {
+        "idx": 25,
+        "prompt": "One stop sign is on the right side of one bus. The stop sign is above one train. ",
+        "PPT": [
+            {
+                "relation": "On the right side of",
+                "obj1": "stop sign",
+                "obj1_attr": [
+                    "muddy",
+                    "black",
+                    "one"
+                ],
+                "obj2": "bus",
+                "obj2_attr": [
+                    "large",
+                    "brown",
+                    "one"
+                ]
+            },
+            {
+                "relation": "above",
+                "obj1": "stop sign",
+                "obj1_attr": [
+                    "muddy",
+                    "black",
+                    "the"
+                ],
+                "obj2": "train",
+                "obj2_attr": [
+                    "dusty",
+                    "white",
+                    "one"
+                ]
+            }
+        ]
+    },
+    {
+        "idx": 26,
+        "prompt": "One carrot is adjacent to the left of one spoon.",
+        "PPT": {
+            "relation": "Adjacent to the left of",
+            "obj1": "carrot",
+            "obj1_attr": [
+                "muddy",
+                "green",
+                "one",
+                "fresh"
+            ],
+            "obj2": "spoon",
+            "obj2_attr": [
+                "shiny",
+                "purple",
+                "one",
+                "metallic"
+            ]
+        }
+    },
+    {
+        "idx": 27,
+        "prompt": "One carrot is adjacent to the left of one knife.",
+        "PPT": {
+            "relation": "Adjacent to the left of",
+            "obj1": "carrot",
+            "obj1_attr": [
+                "muddy",
+                "green",
+                "one"
+            ],
+            "obj2": "knife",
+            "obj2_attr": [
+                "sharp",
+                "green",
+                "one"
+            ]
+        }
+    },
+    {
+        "idx": 28,
+        "prompt": "One fire hydrant is adjacent to the left of one car.",
+        "PPT": {
+            "relation": "Adjacent to the left of",
+            "obj1": "fire hydrant",
+            "obj1_attr": [
+                "Round",
+                "green",
+                "one",
+                "metallic"
+            ],
+            "obj2": "car",
+            "obj2_attr": [
+                "futuristic",
+                "green",
+                "one",
+                "brand new"
+            ]
+        }
+    },
+    {
+        "idx": 29,
+        "prompt": "One car is adjacent to the left of one stop sign.",
+        "PPT": {
+            "relation": "Adjacent to the left of",
+            "obj1": "car",
+            "obj1_attr": [
+                "futuristic",
+                "green",
+                "one"
+            ],
+            "obj2": "stop sign",
+            "obj2_attr": [
+                "muddy",
+                "brown",
+                "one"
+            ]
+        }
+    },
+    {
+        "idx": 30,
+        "prompt": "One fire hydrant is adjacent to the left of one car. The car is on the right side of one parking meter. ",
+        "PPT": [
+            {
+                "relation": "Adjacent to the left of",
+                "obj1": "fire hydrant",
+                "obj1_attr": [
+                    "Round",
+                    "green",
+                    "one"
+                ],
+                "obj2": "car",
+                "obj2_attr": [
+                    "futuristic",
+                    "green",
+                    "one"
+                ]
+            },
+            {
+                "relation": "On the right side of",
+                "obj1": "car",
+                "obj1_attr": [
+                    "futuristic",
+                    "green",
+                    "the"
+                ],
+                "obj2": "parking meter",
+                "obj2_attr": [
+                    "rectangular",
+                    "brown",
+                    "one"
+                ]
+            }
+        ]
+    },
+    {
+        "idx": 31,
+        "prompt": "One fire hydrant is adjacent to the left of one car. The fire hydrant is underneath one bus. ",
+        "PPT": [
+            {
+                "relation": "Adjacent to the left of",
+                "obj1": "fire hydrant",
+                "obj1_attr": [
+                    "Round",
+                    "green",
+                    "one"
+                ],
+                "obj2": "car",
+                "obj2_attr": [
+                    "futuristic",
+                    "green",
+                    "one"
+                ]
+            },
+            {
+                "relation": "Underneath",
+                "obj1": "fire hydrant",
+                "obj1_attr": [
+                    "Round",
+                    "green",
+                    "the"
+                ],
+                "obj2": "bus",
+                "obj2_attr": [
+                    "large",
+                    "yellow",
+                    "one"
+                ]
+            }
+        ]
+    },
+    {
+        "idx": 32,
+        "prompt": "One bed is below one tv.",
+        "PPT": {
+            "relation": "Below",
+            "obj1": "bed",
+            "obj1_attr": [
+                "soft",
+                "brown",
+                "one"
+            ],
+            "obj2": "tv",
+            "obj2_attr": [
+                "large",
+                "green",
+                "one"
+            ]
+        }
+    },
+    {
+        "idx": 33,
+        "prompt": "One TV is upon one chair.",
+        "PPT": {
+            "relation": "Upon",
+            "obj1": "tv",
+            "obj1_attr": [
+                "large",
+                "green",
+                "one"
+            ],
+            "obj2": "chair",
+            "obj2_attr": [
+                "wooden",
+                "white",
+                "one"
+            ]
+        }
+    },
+    {
+        "idx": 34,
+        "prompt": "One TV is upon one bed.",
+        "PPT": {
+            "relation": "Upon",
+            "obj1": "tv",
+            "obj1_attr": [
+                "large",
+                "green",
+                "one",
+                "modern"
+            ],
+            "obj2": "bed",
+            "obj2_attr": [
+                "soft",
+                "brown",
+                "one",
+                "large"
+            ]
+        }
+    },
+    {
+        "idx": 35,
+        "prompt": "One bicycle is adjacent to the left of one parking meter.",
+        "PPT": {
+            "relation": "Adjacent to the left of",
+            "obj1": "bicycle",
+            "obj1_attr": [
+                "Portable",
+                "blue",
+                "one",
+                "Professional"
+            ],
+            "obj2": "parking meter",
+            "obj2_attr": [
+                "rectangular",
+                "yellow",
+                "one",
+                "solar-powered"
+            ]
+        }
+    },
+    {
+        "idx": 36,
+        "prompt": "One bicycle is adjacent to the left of one parking meter.",
+        "PPT": {
+            "relation": "Adjacent to the left of",
+            "obj1": "bicycle",
+            "obj1_attr": [
+                "Portable",
+                "blue",
+                "one",
+                "Professional"
+            ],
+            "obj2": "parking meter",
+            "obj2_attr": [
+                "rectangular",
+                "yellow",
+                "one",
+                "solar-powered"
+            ]
+        }
+    },
+    {
+        "idx": 37,
+        "prompt": "One teddy bear is on the right side of one couch.",
+        "PPT": {
+            "relation": "On the right side of",
+            "obj1": "teddy bear",
+            "obj1_attr": [
+                "adorable",
+                "yellow",
+                "one"
+            ],
+            "obj2": "couch",
+            "obj2_attr": [
+                "leather",
+                "purple",
+                "one"
+            ]
+        }
+    },
+    {
+        "idx": 38,
+        "prompt": "One airplane is leftward of one parking meter.",
+        "PPT": {
+            "relation": "Leftward of",
+            "obj1": "airplane",
+            "obj1_attr": [
+                "jet",
+                "purple",
+                "one"
+            ],
+            "obj2": "parking meter",
+            "obj2_attr": [
+                "solar-powered",
+                "red",
+                "one"
+            ]
+        }
+    },
+    {
+        "idx": 39,
+        "prompt": "One airplane is leftward of one bench.",
+        "PPT": {
+            "relation": "Leftward of",
+            "obj1": "airplane",
+            "obj1_attr": [
+                "jet",
+                "purple",
+                "one",
+                "metallic"
+            ],
+            "obj2": "bench",
+            "obj2_attr": [
+                "polished",
+                "red",
+                "one",
+                "wooden"
+            ]
+        }
+    },
+    {
+        "idx": 40,
+        "prompt": "One airplane is leftward of one bench. The bench is atop one train. ",
+        "PPT": [
+            {
+                "relation": "Leftward of",
+                "obj1": "airplane",
+                "obj1_attr": [
+                    "jet",
+                    "purple",
+                    "one"
+                ],
+                "obj2": "bench",
+                "obj2_attr": [
+                    "polished",
+                    "red",
+                    "one"
+                ]
+            },
+            {
+                "relation": "Atop",
+                "obj1": "bench",
+                "obj1_attr": [
+                    "polished",
+                    "red",
+                    "the"
+                ],
+                "obj2": "train",
+                "obj2_attr": [
+                    "coal-fired",
+                    "black",
+                    "one"
+                ]
+            }
+        ]
+    },
+    {
+        "idx": 41,
+        "prompt": "One airplane is leftward of one bench. The bench is underneath one truck. ",
+        "PPT": [
+            {
+                "relation": "Leftward of",
+                "obj1": "airplane",
+                "obj1_attr": [
+                    "jet",
+                    "purple",
+                    "one"
+                ],
+                "obj2": "bench",
+                "obj2_attr": [
+                    "polished",
+                    "red",
+                    "one"
+                ]
+            },
+            {
+                "relation": "Underneath",
+                "obj1": "bench",
+                "obj1_attr": [
+                    "polished",
+                    "red",
+                    "the"
+                ],
+                "obj2": "truck",
+                "obj2_attr": [
+                    "cargo-carrier",
+                    "purple",
+                    "one"
+                ]
+            }
+        ]
+    },
+    {
+        "idx": 42,
+        "prompt": "One apple is on the left side of one bowl. The bowl is rightward of one pizza. ",
+        "PPT": [
+            {
+                "relation": "On the left side of",
+                "obj1": "apple",
+                "obj1_attr": [
+                    "round",
+                    "yellow",
+                    "one"
+                ],
+                "obj2": "bowl",
+                "obj2_attr": [
+                    "brand new",
+                    "brown",
+                    "one"
+                ]
+            },
+            {
+                "relation": "Rightward of",
+                "obj1": "bowl",
+                "obj1_attr": [
+                    "brand new",
+                    "brown",
+                    "the"
+                ],
+                "obj2": "pizza",
+                "obj2_attr": [
+                    "round",
+                    "yellow",
+                    "one"
+                ]
+            }
+        ]
+    },
+    {
+        "idx": 43,
+        "prompt": "One sink is adjacent to the right of one dining table.",
+        "PPT": {
+            "relation": "Adjacent to the right of",
+            "obj1": "sink",
+            "obj1_attr": [
+                "draining",
+                "green",
+                "one",
+                "clean"
+            ],
+            "obj2": "dining table",
+            "obj2_attr": [
+                "wooden",
+                "red",
+                "one",
+                "large"
+            ]
+        }
+    },
+    {
+        "idx": 44,
+        "prompt": "One vase is to the left of one dining table. The vase is to the right of one couch. ",
+        "PPT": [
+            {
+                "relation": "To the left of",
+                "obj1": "vase",
+                "obj1_attr": [
+                    "ceramic",
+                    "purple",
+                    "one"
+                ],
+                "obj2": "dining table",
+                "obj2_attr": [
+                    "polished",
+                    "green",
+                    "one"
+                ]
+            },
+            {
+                "relation": "To the right of",
+                "obj1": "vase",
+                "obj1_attr": [
+                    "ceramic",
+                    "purple",
+                    "the"
+                ],
+                "obj2": "couch",
+                "obj2_attr": [
+                    "leather",
+                    "blue",
+                    "one"
+                ]
+            }
+        ]
+    },
+    {
+        "idx": 45,
+        "prompt": "One dining table is to the right of one vase.",
+        "PPT": {
+            "relation": "To the right of",
+            "obj1": "dining table",
+            "obj1_attr": [
+                "polished",
+                "green",
+                "one"
+            ],
+            "obj2": "vase",
+            "obj2_attr": [
+                "ceramic",
+                "purple",
+                "one"
+            ]
+        }
+    },
+    {
+        "idx": 46,
+        "prompt": "One vase is to the left of one dining table.",
+        "PPT": {
+            "relation": "To the left of",
+            "obj1": "vase",
+            "obj1_attr": [
+                "ceramic",
+                "purple",
+                "one",
+                "curvy"
+            ],
+            "obj2": "dining table",
+            "obj2_attr": [
+                "polished",
+                "green",
+                "one",
+                "large"
+            ]
+        }
+    },
+    {
+        "idx": 47,
+        "prompt": "One vase is to the left of one dining table.",
+        "PPT": {
+            "relation": "To the left of",
+            "obj1": "vase",
+            "obj1_attr": [
+                "ceramic",
+                "purple",
+                "one",
+                "shiny"
+            ],
+            "obj2": "dining table",
+            "obj2_attr": [
+                "polished",
+                "green",
+                "one",
+                "wooden"
+            ]
+        }
+    },
+    {
+        "idx": 48,
+        "prompt": "One apple is adjacent to the left of one fork.",
+        "PPT": {
+            "relation": "Adjacent to the left of",
+            "obj1": "apple",
+            "obj1_attr": [
+                "round",
+                "pink",
+                "one"
+            ],
+            "obj2": "fork",
+            "obj2_attr": [
+                "metallic",
+                "purple",
+                "one"
+            ]
+        }
+    },
+    {
+        "idx": 49,
+        "prompt": "One fork is adjacent to the right of one apple. The apple is on the left side of one knife. ",
+        "PPT": [
+            {
+                "relation": "Adjacent to the right of",
+                "obj1": "fork",
+                "obj1_attr": [
+                    "metallic",
+                    "purple",
+                    "one"
+                ],
+                "obj2": "apple",
+                "obj2_attr": [
+                    "round",
+                    "pink",
+                    "one"
+                ]
+            },
+            {
+                "relation": "On the left side of",
+                "obj1": "apple",
+                "obj1_attr": [
+                    "round",
+                    "pink",
+                    "the"
+                ],
+                "obj2": "knife",
+                "obj2_attr": [
+                    "sharp",
+                    "pink",
+                    "one"
+                ]
+            }
+        ]
+    },
+    {
+        "idx": 50,
+        "prompt": "One remote is on top of one bed.",
+        "PPT": {
+            "relation": "on top of",
+            "obj1": "remote",
+            "obj1_attr": [
+                "button-filled",
+                "yellow",
+                "one",
+                "modern"
+            ],
+            "obj2": "bed",
+            "obj2_attr": [
+                "soft",
+                "white",
+                "one",
+                "large"
+            ]
+        }
+    },
+    {
+        "idx": 51,
+        "prompt": "One remote is on top of one bed. The bed is on the left side of one hair drier. ",
+        "PPT": [
+            {
+                "relation": "on top of",
+                "obj1": "remote",
+                "obj1_attr": [
+                    "button-filled",
+                    "yellow",
+                    "one"
+                ],
+                "obj2": "bed",
+                "obj2_attr": [
+                    "soft",
+                    "white",
+                    "one"
+                ]
+            },
+            {
+                "relation": "On the left side of",
+                "obj1": "bed",
+                "obj1_attr": [
+                    "soft",
+                    "white",
+                    "the"
+                ],
+                "obj2": "hair drier",
+                "obj2_attr": [
+                    "wired",
+                    "yellow",
+                    "one"
+                ]
+            }
+        ]
+    },
+    {
+        "idx": 52,
+        "prompt": "One remote is on top of one bed.",
+        "PPT": {
+            "relation": "on top of",
+            "obj1": "remote",
+            "obj1_attr": [
+                "button-filled",
+                "yellow",
+                "one",
+                "portable"
+            ],
+            "obj2": "bed",
+            "obj2_attr": [
+                "soft",
+                "white",
+                "one",
+                "wooden"
+            ]
+        }
+    },
+    {
+        "idx": 53,
+        "prompt": "One fire hydrant is adjacent to the right of one train.",
+        "PPT": {
+            "relation": "Adjacent to the right of",
+            "obj1": "fire hydrant",
+            "obj1_attr": [
+                "Round",
+                "green",
+                "one"
+            ],
+            "obj2": "train",
+            "obj2_attr": [
+                "smoking",
+                "blue",
+                "one"
+            ]
+        }
+    },
+    {
+        "idx": 54,
+        "prompt": "One train is leftward of one fire hydrant.",
+        "PPT": {
+            "relation": "Leftward of",
+            "obj1": "train",
+            "obj1_attr": [
+                "smoking",
+                "blue",
+                "one",
+                "coal-fired"
+            ],
+            "obj2": "fire hydrant",
+            "obj2_attr": [
+                "Round",
+                "green",
+                "one",
+                "street-side"
+            ]
+        }
+    },
+    {
+        "idx": 55,
+        "prompt": "One train is leftward of one bench.",
+        "PPT": {
+            "relation": "Leftward of",
+            "obj1": "train",
+            "obj1_attr": [
+                "smoking",
+                "blue",
+                "one"
+            ],
+            "obj2": "bench",
+            "obj2_attr": [
+                "wooden",
+                "black",
+                "one"
+            ]
+        }
+    },
+    {
+        "idx": 56,
+        "prompt": "One knife is beneath one orange. The knife is rightward of one donut. ",
+        "PPT": [
+            {
+                "relation": "Beneath",
+                "obj1": "knife",
+                "obj1_attr": [
+                    "metallic",
+                    "yellow",
+                    "one"
+                ],
+                "obj2": "orange",
+                "obj2_attr": [
+                    "ripe",
+                    "pink",
+                    "one"
+                ]
+            },
+            {
+                "relation": "Rightward of",
+                "obj1": "knife",
+                "obj1_attr": [
+                    "metallic",
+                    "yellow",
+                    "the"
+                ],
+                "obj2": "donut",
+                "obj2_attr": [
+                    "decorated",
+                    "yellow",
+                    "one"
+                ]
+            }
+        ]
+    },
+    {
+        "idx": 57,
+        "prompt": "One banana is leftward of one knife. The knife is adjacent to the left of one pizza. ",
+        "PPT": [
+            {
+                "relation": "Leftward of",
+                "obj1": "banana",
+                "obj1_attr": [
+                    "curved",
+                    "white",
+                    "one"
+                ],
+                "obj2": "knife",
+                "obj2_attr": [
+                    "shiny",
+                    "brown",
+                    "one"
+                ]
+            },
+            {
+                "relation": "Adjacent to the left of",
+                "obj1": "knife",
+                "obj1_attr": [
+                    "shiny",
+                    "brown",
+                    "the"
+                ],
+                "obj2": "pizza",
+                "obj2_attr": [
+                    "round",
+                    "yellow",
+                    "one"
+                ]
+            }
+        ]
+    },
+    {
+        "idx": 58,
+        "prompt": "One potted plant is rightward of one scissors.",
+        "PPT": {
+            "relation": "Rightward of",
+            "obj1": "potted plant",
+            "obj1_attr": [
+                "flourishing",
+                "brown",
+                "one"
+            ],
+            "obj2": "scissors",
+            "obj2_attr": [
+                "portable",
+                "brown",
+                "one"
+            ]
+        }
+    },
+    {
+        "idx": 59,
+        "prompt": "One hair drier is rightward of one potted plant.",
+        "PPT": {
+            "relation": "Rightward of",
+            "obj1": "hair drier",
+            "obj1_attr": [
+                "compact",
+                "blue",
+                "one",
+                "wired"
+            ],
+            "obj2": "potted plant",
+            "obj2_attr": [
+                "flourishing",
+                "brown",
+                "one",
+                "potted"
+            ]
+        }
+    },
+    {
+        "idx": 60,
+        "prompt": "One donut is to the right of one fork.",
+        "PPT": {
+            "relation": "To the right of",
+            "obj1": "donut",
+            "obj1_attr": [
+                "decorated",
+                "black",
+                "one"
+            ],
+            "obj2": "fork",
+            "obj2_attr": [
+                "pronged",
+                "yellow",
+                "one"
+            ]
+        }
+    },
+    {
+        "idx": 61,
+        "prompt": "One fork is adjacent to the left of one donut.",
+        "PPT": {
+            "relation": "Adjacent to the left of",
+            "obj1": "fork",
+            "obj1_attr": [
+                "pronged",
+                "yellow",
+                "one",
+                "metallic"
+            ],
+            "obj2": "donut",
+            "obj2_attr": [
+                "decorated",
+                "black",
+                "one",
+                "glazed"
+            ]
+        }
+    },
+    {
+        "idx": 62,
+        "prompt": "One chair is leftward of one clock.",
+        "PPT": {
+            "relation": "Leftward of",
+            "obj1": "chair",
+            "obj1_attr": [
+                "upholstered",
+                "yellow",
+                "one"
+            ],
+            "obj2": "clock",
+            "obj2_attr": [
+                "decorative",
+                "red",
+                "one"
+            ]
+        }
+    },
+    {
+        "idx": 63,
+        "prompt": "One clock is to the right of one chair.",
+        "PPT": {
+            "relation": "To the right of",
+            "obj1": "clock",
+            "obj1_attr": [
+                "decorative",
+                "red",
+                "one",
+                "classic"
+            ],
+            "obj2": "chair",
+            "obj2_attr": [
+                "upholstered",
+                "yellow",
+                "one",
+                "sturdy"
+            ]
+        }
+    },
+    {
+        "idx": 64,
+        "prompt": "One clock is to the right of one chair.",
+        "PPT": {
+            "relation": "To the right of",
+            "obj1": "clock",
+            "obj1_attr": [
+                "decorative",
+                "red",
+                "one",
+                "classic"
+            ],
+            "obj2": "chair",
+            "obj2_attr": [
+                "upholstered",
+                "yellow",
+                "one",
+                "sturdy"
+            ]
+        }
+    },
+    {
+        "idx": 65,
+        "prompt": "One dining table has upon it one vase.",
+        "PPT": {
+            "relation": "Upon",
+            "obj1": "dining table",
+            "obj1_attr": [
+                "large",
+                "purple",
+                "one"
+            ],
+            "obj2": "vase",
+            "obj2_attr": [
+                "ceramic",
+                "yellow",
+                "one"
+            ]
+        }
+    },
+    {
+        "idx": 66,
+        "prompt": "One vase is below one dining table.",
+        "PPT": {
+            "relation": "Below",
+            "obj1": "vase",
+            "obj1_attr": [
+                "ceramic",
+                "yellow",
+                "one",
+                "shiny"
+            ],
+            "obj2": "dining table",
+            "obj2_attr": [
+                "large",
+                "purple",
+                "one",
+                "wooden"
+            ]
+        }
+    },
+    {
+        "idx": 67,
+        "prompt": "One hair drier is under one chair.",
+        "PPT": {
+            "relation": "Under",
+            "obj1": "hair drier",
+            "obj1_attr": [
+                "wired",
+                "pink",
+                "one",
+                "portable"
+            ],
+            "obj2": "chair",
+            "obj2_attr": [
+                "wooden",
+                "purple",
+                "one",
+                "sturdy"
+            ]
+        }
+    },
+    {
+        "idx": 68,
+        "prompt": "One hair drier is under one chair.",
+        "PPT": {
+            "relation": "Under",
+            "obj1": "hair drier",
+            "obj1_attr": [
+                "wired",
+                "pink",
+                "one",
+                "portable"
+            ],
+            "obj2": "chair",
+            "obj2_attr": [
+                "wooden",
+                "purple",
+                "one",
+                "upholstered"
+            ]
+        }
+    },
+    {
+        "idx": 69,
+        "prompt": "One hair drier is under one chair.",
+        "PPT": {
+            "relation": "Under",
+            "obj1": "hair drier",
+            "obj1_attr": [
+                "wired",
+                "pink",
+                "one",
+                "portable"
+            ],
+            "obj2": "chair",
+            "obj2_attr": [
+                "wooden",
+                "purple",
+                "one",
+                "sturdy"
+            ]
+        }
+    },
+    {
+        "idx": 70,
+        "prompt": "One microwave is adjacent to the left of one chair. The microwave is below the chair. ",
+        "PPT": [
+            {
+                "relation": "Adjacent to the left of",
+                "obj1": "microwave",
+                "obj1_attr": [
+                    "compact",
+                    "green",
+                    "one"
+                ],
+                "obj2": "chair",
+                "obj2_attr": [
+                    "sturdy",
+                    "green",
+                    "one"
+                ]
+            },
+            {
+                "relation": "Below",
+                "obj1": "microwave",
+                "obj1_attr": [
+                    "compact",
+                    "green",
+                    "the"
+                ],
+                "obj2": "chair",
+                "obj2_attr": [
+                    "sturdy",
+                    "pink",
+                    "the"
+                ]
+            }
+        ]
+    },
+    {
+        "idx": 71,
+        "prompt": "One microwave is adjacent to the left of one chair. The chair is atop one book. ",
+        "PPT": [
+            {
+                "relation": "Adjacent to the left of",
+                "obj1": "microwave",
+                "obj1_attr": [
+                    "compact",
+                    "green",
+                    "one"
+                ],
+                "obj2": "chair",
+                "obj2_attr": [
+                    "sturdy",
+                    "green",
+                    "one"
+                ]
+            },
+            {
+                "relation": "Atop",
+                "obj1": "chair",
+                "obj1_attr": [
+                    "sturdy",
+                    "green",
+                    "the"
+                ],
+                "obj2": "book",
+                "obj2_attr": [
+                    "heavy",
+                    "blue",
+                    "one"
+                ]
+            }
+        ]
+    },
+    {
+        "idx": 72,
+        "prompt": "One microwave is adjacent to the left of one chair. The chair is to the left of one vase. ",
+        "PPT": [
+            {
+                "relation": "Adjacent to the left of",
+                "obj1": "microwave",
+                "obj1_attr": [
+                    "compact",
+                    "green",
+                    "one"
+                ],
+                "obj2": "chair",
+                "obj2_attr": [
+                    "sturdy",
+                    "green",
+                    "one"
+                ]
+            },
+            {
+                "relation": "To the left of",
+                "obj1": "chair",
+                "obj1_attr": [
+                    "sturdy",
+                    "green",
+                    "the"
+                ],
+                "obj2": "vase",
+                "obj2_attr": [
+                    "ceramic",
+                    "purple",
+                    "one"
+                ]
+            }
+        ]
+    },
+    {
+        "idx": 73,
+        "prompt": "One chair is adjacent to the left of one teddy bear.",
+        "PPT": {
+            "relation": "Adjacent to the left of",
+            "obj1": "chair",
+            "obj1_attr": [
+                "sturdy",
+                "green",
+                "one"
+            ],
+            "obj2": "teddy bear",
+            "obj2_attr": [
+                "fluffy",
+                "green",
+                "one"
+            ]
+        }
+    },
+    {
+        "idx": 74,
+        "prompt": "One wine glass is rightward of one carrot. The carrot is adjacent to the left of one knife. ",
+        "PPT": [
+            {
+                "relation": "Rightward of",
+                "obj1": "wine glass",
+                "obj1_attr": [
+                    "transparent",
+                    "white",
+                    "one"
+                ],
+                "obj2": "carrot",
+                "obj2_attr": [
+                    "fresh",
+                    "yellow",
+                    "one"
+                ]
+            },
+            {
+                "relation": "Adjacent to the left of",
+                "obj1": "carrot",
+                "obj1_attr": [
+                    "fresh",
+                    "yellow",
+                    "the"
+                ],
+                "obj2": "knife",
+                "obj2_attr": [
+                    "sharp",
+                    "black",
+                    "one"
+                ]
+            }
+        ]
+    },
+    {
+        "idx": 75,
+        "prompt": "One wine glass is rightward of one carrot. The carrot is on the left side of one cup. ",
+        "PPT": [
+            {
+                "relation": "Rightward of",
+                "obj1": "wine glass",
+                "obj1_attr": [
+                    "transparent",
+                    "white",
+                    "one"
+                ],
+                "obj2": "carrot",
+                "obj2_attr": [
+                    "fresh",
+                    "yellow",
+                    "one"
+                ]
+            },
+            {
+                "relation": "On the left side of",
+                "obj1": "carrot",
+                "obj1_attr": [
+                    "fresh",
+                    "yellow",
+                    "the"
+                ],
+                "obj2": "cup",
+                "obj2_attr": [
+                    "ceramic",
+                    "purple",
+                    "one"
+                ]
+            }
+        ]
+    },
+    {
+        "idx": 76,
+        "prompt": "One fire hydrant is adjacent to the left of one car.",
+        "PPT": {
+            "relation": "Adjacent to the left of",
+            "obj1": "fire hydrant",
+            "obj1_attr": [
+                "Round",
+                "pink",
+                "one"
+            ],
+            "obj2": "car",
+            "obj2_attr": [
+                "Luxurious",
+                "pink",
+                "one"
+            ]
+        }
+    },
+    {
+        "idx": 77,
+        "prompt": "One car is on the right side of one fire hydrant.",
+        "PPT": {
+            "relation": "On the right side of",
+            "obj1": "car",
+            "obj1_attr": [
+                "Luxurious",
+                "pink",
+                "one",
+                "brand new"
+            ],
+            "obj2": "fire hydrant",
+            "obj2_attr": [
+                "Round",
+                "pink",
+                "one",
+                "metallic"
+            ]
+        }
+    },
+    {
+        "idx": 78,
+        "prompt": "One fire hydrant is on the left side of one car.",
+        "PPT": {
+            "relation": "On the left side of",
+            "obj1": "fire hydrant",
+            "obj1_attr": [
+                "Round",
+                "pink",
+                "one"
+            ],
+            "obj2": "car",
+            "obj2_attr": [
+                "Luxurious",
+                "pink",
+                "one"
+            ]
+        }
+    },
+    {
+        "idx": 79,
+        "prompt": "One vase is rightward of one dining table. The vase is rightward of one bed. ",
+        "PPT": [
+            {
+                "relation": "Rightward of",
+                "obj1": "vase",
+                "obj1_attr": [
+                    "shiny",
+                    "white",
+                    "one"
+                ],
+                "obj2": "dining table",
+                "obj2_attr": [
+                    "wooden",
+                    "pink",
+                    "one"
+                ]
+            },
+            {
+                "relation": "Rightward of",
+                "obj1": "vase",
+                "obj1_attr": [
+                    "shiny",
+                    "white",
+                    "the"
+                ],
+                "obj2": "bed",
+                "obj2_attr": [
+                    "soft",
+                    "blue",
+                    "one"
+                ]
+            }
+        ]
+    },
+    {
+        "idx": 80,
+        "prompt": "One dining table is to the left of one vase.",
+        "PPT": {
+            "relation": "To the left of",
+            "obj1": "dining table",
+            "obj1_attr": [
+                "wooden",
+                "pink",
+                "one"
+            ],
+            "obj2": "vase",
+            "obj2_attr": [
+                "shiny",
+                "white",
+                "one"
+            ]
+        }
+    },
+    {
+        "idx": 81,
+        "prompt": "One pizza is rightward of one wine glass. The pizza is rightward of one bottle. ",
+        "PPT": [
+            {
+                "relation": "Rightward of",
+                "obj1": "pizza",
+                "obj1_attr": [
+                    "cheesy",
+                    "pink",
+                    "one"
+                ],
+                "obj2": "wine glass",
+                "obj2_attr": [
+                    "fragile",
+                    "white",
+                    "one"
+                ]
+            },
+            {
+                "relation": "Rightward of",
+                "obj1": "pizza",
+                "obj1_attr": [
+                    "cheesy",
+                    "pink",
+                    "the"
+                ],
+                "obj2": "bottle",
+                "obj2_attr": [
+                    "glass",
+                    "pink",
+                    "one"
+                ]
+            }
+        ]
+    },
+    {
+        "idx": 82,
+        "prompt": "One pizza is rightward of one bowl.",
+        "PPT": {
+            "relation": "Rightward of",
+            "obj1": "pizza",
+            "obj1_attr": [
+                "cheesy",
+                "pink",
+                "one"
+            ],
+            "obj2": "bowl",
+            "obj2_attr": [
+                "ceramic",
+                "red",
+                "one"
+            ]
+        }
+    },
+    {
+        "idx": 83,
+        "prompt": "One pizza is rightward of one cup.",
+        "PPT": {
+            "relation": "Rightward of",
+            "obj1": "pizza",
+            "obj1_attr": [
+                "cheesy",
+                "pink",
+                "one"
+            ],
+            "obj2": "cup",
+            "obj2_attr": [
+                "hollow",
+                "white",
+                "one"
+            ]
+        }
+    },
+    {
+        "idx": 84,
+        "prompt": "One stop sign is leftward of one boat.",
+        "PPT": {
+            "relation": "Leftward of",
+            "obj1": "stop sign",
+            "obj1_attr": [
+                "octagonal",
+                "blue",
+                "one",
+                "muddy"
+            ],
+            "obj2": "boat",
+            "obj2_attr": [
+                "luxurious",
+                "yellow",
+                "one",
+                "wooden"
+            ]
+        }
+    },
+    {
+        "idx": 85,
+        "prompt": "One stop sign is leftward of one bus.",
+        "PPT": {
+            "relation": "Leftward of",
+            "obj1": "stop sign",
+            "obj1_attr": [
+                "octagonal",
+                "blue",
+                "one"
+            ],
+            "obj2": "bus",
+            "obj2_attr": [
+                "dirty",
+                "white",
+                "one"
+            ]
+        }
+    },
+    {
+        "idx": 86,
+        "prompt": "One refrigerator is to the left of one bed.",
+        "PPT": {
+            "relation": "To the left of",
+            "obj1": "refrigerator",
+            "obj1_attr": [
+                "electric",
+                "purple",
+                "one",
+                "large"
+            ],
+            "obj2": "bed",
+            "obj2_attr": [
+                "wooden",
+                "black",
+                "one",
+                "large"
+            ]
+        }
+    },
+    {
+        "idx": 87,
+        "prompt": "One broccoli is adjacent to the right of one wine glass.",
+        "PPT": {
+            "relation": "Adjacent to the right of",
+            "obj1": "broccoli",
+            "obj1_attr": [
+                "leafy",
+                "blue",
+                "one",
+                "fresh"
+            ],
+            "obj2": "wine glass",
+            "obj2_attr": [
+                "transparent",
+                "red",
+                "one",
+                "elegant"
+            ]
+        }
+    },
+    {
+        "idx": 88,
+        "prompt": "One bottle is above one carrot. The carrot is atop one fork. ",
+        "PPT": [
+            {
+                "relation": "above",
+                "obj1": "bottle",
+                "obj1_attr": [
+                    "glass",
+                    "pink",
+                    "one"
+                ],
+                "obj2": "carrot",
+                "obj2_attr": [
+                    "fresh",
+                    "purple",
+                    "one"
+                ]
+            },
+            {
+                "relation": "Atop",
+                "obj1": "carrot",
+                "obj1_attr": [
+                    "fresh",
+                    "purple",
+                    "the"
+                ],
+                "obj2": "fork",
+                "obj2_attr": [
+                    "pronged",
+                    "white",
+                    "one"
+                ]
+            }
+        ]
+    },
+    {
+        "idx": 89,
+        "prompt": "One bottle is above one carrot.",
+        "PPT": {
+            "relation": "above",
+            "obj1": "bottle",
+            "obj1_attr": [
+                "glass",
+                "pink",
+                "one",
+                "empty"
+            ],
+            "obj2": "carrot",
+            "obj2_attr": [
+                "fresh",
+                "purple",
+                "one",
+                "long"
+            ]
+        }
+    },
+    {
+        "idx": 90,
+        "prompt": "One banana is adjacent to the right of one cup.",
+        "PPT": {
+            "relation": "Adjacent to the right of",
+            "obj1": "banana",
+            "obj1_attr": [
+                "curved",
+                "black",
+                "one",
+                "ripe"
+            ],
+            "obj2": "cup",
+            "obj2_attr": [
+                "cylindrical",
+                "white",
+                "one",
+                "hollow"
+            ]
+        }
+    },
+    {
+        "idx": 91,
+        "prompt": "One backpack is above one chair.",
+        "PPT": {
+            "relation": "above",
+            "obj1": "backpack",
+            "obj1_attr": [
+                "nylon",
+                "yellow",
+                "one",
+                "sturdy"
+            ],
+            "obj2": "chair",
+            "obj2_attr": [
+                "upholstered",
+                "purple",
+                "one",
+                "sturdy"
+            ]
+        }
+    },
+    {
+        "idx": 92,
+        "prompt": "One backpack is above one chair.",
+        "PPT": {
+            "relation": "above",
+            "obj1": "backpack",
+            "obj1_attr": [
+                "nylon",
+                "yellow",
+                "one",
+                "zippered"
+            ],
+            "obj2": "chair",
+            "obj2_attr": [
+                "upholstered",
+                "purple",
+                "one",
+                "wooden"
+            ]
+        }
+    },
+    {
+        "idx": 93,
+        "prompt": "One carrot is leftward of one fork.",
+        "PPT": {
+            "relation": "Leftward of",
+            "obj1": "carrot",
+            "obj1_attr": [
+                "long",
+                "green",
+                "one",
+                "fresh"
+            ],
+            "obj2": "fork",
+            "obj2_attr": [
+                "shiny",
+                "green",
+                "one",
+                "pronged"
+            ]
+        }
+    },
+    {
+        "idx": 94,
+        "prompt": "One fork is leftward of one broccoli.",
+        "PPT": {
+            "relation": "Leftward of",
+            "obj1": "fork",
+            "obj1_attr": [
+                "shiny",
+                "green",
+                "one"
+            ],
+            "obj2": "broccoli",
+            "obj2_attr": [
+                "tender",
+                "black",
+                "one"
+            ]
+        }
+    },
+    {
+        "idx": 95,
+        "prompt": "One carrot is leftward of one fork.",
+        "PPT": {
+            "relation": "Leftward of",
+            "obj1": "carrot",
+            "obj1_attr": [
+                "long",
+                "green",
+                "one",
+                "fresh"
+            ],
+            "obj2": "fork",
+            "obj2_attr": [
+                "shiny",
+                "green",
+                "one",
+                "pronged"
+            ]
+        }
+    },
+    {
+        "idx": 96,
+        "prompt": "One keyboard is below one dining table.",
+        "PPT": {
+            "relation": "Below",
+            "obj1": "keyboard",
+            "obj1_attr": [
+                "sleek",
+                "pink",
+                "one",
+                "rectangular"
+            ],
+            "obj2": "dining table",
+            "obj2_attr": [
+                "wooden",
+                "green",
+                "one",
+                "large"
+            ]
+        }
+    },
+    {
+        "idx": 97,
+        "prompt": "One keyboard is below one dining table.",
+        "PPT": {
+            "relation": "Below",
+            "obj1": "keyboard",
+            "obj1_attr": [
+                "sleek",
+                "pink",
+                "one",
+                "rectangular"
+            ],
+            "obj2": "dining table",
+            "obj2_attr": [
+                "wooden",
+                "green",
+                "one",
+                "large"
+            ]
+        }
+    },
+    {
+        "idx": 98,
+        "prompt": "One bicycle is to the right of one traffic light.",
+        "PPT": {
+            "relation": "To the right of",
+            "obj1": "bicycle",
+            "obj1_attr": [
+                "Lightweight",
+                "purple",
+                "one",
+                "Professional"
+            ],
+            "obj2": "traffic light",
+            "obj2_attr": [
+                "three-lighted",
+                "brown",
+                "one",
+                "metallic"
+            ]
+        }
+    },
+    {
+        "idx": 99,
+        "prompt": "One traffic light is to the right of one truck.",
+        "PPT": {
+            "relation": "To the right of",
+            "obj1": "traffic light",
+            "obj1_attr": [
+                "three-lighted",
+                "brown",
+                "one"
+            ],
+            "obj2": "truck",
+            "obj2_attr": [
+                "heavy",
+                "red",
+                "one"
+            ]
+        }
+    }
+]

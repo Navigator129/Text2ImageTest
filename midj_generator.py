@@ -46,22 +46,22 @@ def compensate(input_prompt, channel_id):
 
     response = requests.post(url, headers=headers, json = payload)
     print(response.status_code)
-    time.sleep(7)
+    time.sleep(5)
     #收尾
     print('Done!')
 
 
-if __name__ == '__main__':
-    relate_seed_path = './files/exp3/related_seed_prompts.json'
-    unrelated_seed_path = './files//exp3/unrelated_seed_prompts.json'
-    related_mutate_path = './files/exp3/related_mutate_prompts.json'
-    unrelated_mutate_path = './files/exp3/unrelated_mutate_prompts.json'
-    fetch_prompt(relate_seed_path)
-    fetch_prompt(unrelated_seed_path)
-    fetch_prompt(related_mutate_path)
-    fetch_prompt(unrelated_mutate_path)
+# if __name__ == '__main__':
+#     relate_seed_path = './files/exp3/related_seed_prompts.json'
+#     unrelated_seed_path = './files//exp3/unrelated_seed_prompts.json'
+#     related_mutate_path = './files/exp3/related_mutate_prompts.json'
+#     unrelated_mutate_path = './files/exp3/unrelated_mutate_prompts.json'
+#     fetch_prompt(relate_seed_path)
+#     fetch_prompt(unrelated_seed_path)
+#     fetch_prompt(related_mutate_path)
+#     fetch_prompt(unrelated_mutate_path)
 
-    for prompt in prompts:
-        generate(prompt)
+#     for prompt in prompts:
+#         generate(prompt)
 
-    print('finish')
+#     print('finish')

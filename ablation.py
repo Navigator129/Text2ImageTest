@@ -41,6 +41,7 @@ def ablation1():
         idx = 0
         PPT_list = []
         for PPT in tqdm(total_PPTs):
+            prompt = ""
             if type(PPT) == list:
                 for ppt in PPT:
                     obj1 = ppt['obj1']
@@ -153,6 +154,7 @@ def quick_ab1():
     PPT_list = []
     for test_dict in tqdm(quick_test_cases):
         test_ppt = test_dict['PPT']
+        prompt = ""
         if type(test_ppt) == list:
             for ppt in test_ppt:
                 obj1 = ppt['obj1']
@@ -181,6 +183,7 @@ def quick_ab1():
                 result = response.choices[0].message.content.strip()
                 prompt = prompt + result + " "
             prompt_pair = {'idx': idx, 'prompt': prompt, 'PPT': test_ppt}
+            prompt = ""
         else:
             obj1 = test_ppt['obj1']
             obj2 = test_ppt['obj2']
@@ -195,6 +198,7 @@ def quick_ab1():
                 for example, if the nodes are 'one ', 'apple', 'on top of','one', 'table', the return value should be 'one apple is on top of one table'
                 if attribute exists, the attributes are always adjectives and in the list.
                 if there is a number in the attribute, always put the number in front of any other attributes.
+                Don't return anything but the prompt.
                 object1 attribute is {}, object1 is {}, relation is {}, object2 attribute is {}, object2 is {}
             """.format(obj1_attr, obj1, relation, obj2_attr, obj2)
 
@@ -206,6 +210,7 @@ def quick_ab1():
             )
             prompt = response.choices[0].message.content
             prompt_pair = {'idx': idx, 'prompt': prompt, 'PPT': test_ppt}
+            prompt = ""
         PPT_list.append(prompt_pair)
         idx += 1
     path = './files/'
@@ -217,20 +222,25 @@ def quick_ab2():
         quick_test_cases = json.load(f)
     idx = 0
     PPT_list = []
-    for test_ppt in tqdm(quick_test_cases):
+    for test_dict in tqdm(quick_test_cases):
+        test_ppt = test_dict['PPT']
+        prompt = ""
         if type(test_ppt) == list:
             for ppt in test_ppt:
                 obj1 = ppt['obj1']
                 obj2 = ppt['obj2']
+                obj1_attr = filter_attr(ppt['obj1_attr'])
+                obj2_attr = filter_attr(ppt['obj2_attr'])
                 client = OpenAI(api_key=gpt_value['key'])
                 system_msg = 'You are an expert in the field of prompt generation.'      
                 user_msg = """
                     I will give you several nodes, and you need to fuse them together to form a prompt.
                     the format should be object1 attriubte + object1 + relation + object2 attribute + object2,
-                    for example, if the nodes are 'one ', 'apple', 'one', 'table', the return value should be 'one apple and one table'
+                    for example, if the nodes are 'one ', 'apple', 'one', 'table', the return value should be 'one apple and one table.'
                     if attribute exists, the attributes are always adjectives and in the list.
                     if there is a number in the attribute, always put the number in front of any other attributes.
-                    object1 is {}, object2 is {}
+                    Don't return anything but the prompt.
+                    object1 attribute is {}, object1 is {}, object2 attribute is {}, object2 is {}
                 """.format(obj1_attr, obj1, obj2_attr, obj2)
                 response = client.chat.completions.create(
                     model = "gpt-4",
@@ -251,10 +261,11 @@ def quick_ab2():
             user_msg = """
                 I will give you several nodes, and you need to fuse them together to form a prompt.
                 the format should be object1 attriubte + object1 + relation + object2 attribute + object2,
-                for example, if the nodes are 'one ', 'apple', 'one', 'table', the return value should be 'one apple and one table'
+                for example, if the nodes are 'one ', 'apple', 'one', 'table', the return value should be 'one apple and one table.'
                 if attribute exists, the attributes are always adjectives and in the list.
                 if there is a number in the attribute, always put the number in front of any other attributes.
                 object1 attribute is {}, object1 is {}, object2 attribute is {}, object2 is {}
+                Don't return anything but the prompt.
             """.format(obj1_attr, obj1, obj2_attr, obj2)
             response = client.chat.completions.create(
                 model = "gpt-4",
@@ -264,8 +275,8 @@ def quick_ab2():
             )
             prompt = response.choices[0].message.content
             prompt_pair = {'idx': idx, 'prompt': prompt, 'PPT': test_ppt}
-            PPT_list.append(prompt_pair)
-            idx += 1
+        PPT_list.append(prompt_pair)
+        idx += 1
     path = './files/'
     file_path = path + 'ablation2.json'
     save_prompt(PPT_list, file_path)
@@ -277,7 +288,7 @@ if __name__ == "__main__":
     # print('finish ablation1')
     # ablation2()
     # print('finish ablation2')
-    quick_ab1()
-    print('finish quick_ab1')
+    # quick_ab1()
+    # print('finish quick_ab1')
     quick_ab2()
     print('finish quick_ab2')
