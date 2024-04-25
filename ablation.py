@@ -3,8 +3,8 @@ from openai import OpenAI
 import os
 from tqdm import tqdm
 
-gpt_value = {"key": "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",
-            "org": "org-YGi1QDMf6n1Ptr1pxMZHsYpE"}
+gpt_value = {"key": "YOUR_API_KEY",
+            "org": "YOUR_ORG_ID"}
 
 def get_path(i):
     path1 = './files/exp{}/related_seed_prompts.json'

@@ -3,8 +3,8 @@ import os
 import re
 from openai import OpenAI
 
-gpt_value = {"key": "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",
-            "org": "org-YGi1QDMf6n1Ptr1pxMZHsYpE"}
+gpt_value = {"key": "YOUR_API_KEY",
+            "org": "YOUR_ORG_ID",}
 
 with open('./files/object_datasets.json', 'r') as f:
     objects = json.load(f)

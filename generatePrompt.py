@@ -6,8 +6,8 @@ from constructPPT import *
 from tqdm import tqdm
 
 
-gpt_value = {"key": "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",
-            "org": "org-YGi1QDMf6n1Ptr1pxMZHsYpE"}
+gpt_value = {"key": "YOUR_API_KEY",
+            "org": "YOUR_ORG_ID",}
 
 def analyze_PPT(input_PPT):
     #analyze the PPT and return the object and the attributes
