@@ -20,7 +20,6 @@ def mutator(input_PPT, related):
         mutator = random.randint(1, 4)
         # mutator = 4
 
-
         if mutator == 1:
             new_PPT = change_obj(input_PPT, related)
             mutate_tree.append(new_PPT)
@@ -279,9 +278,9 @@ def add_relation(input_PPT, related):
         else:
             new_obj = PPT(select_object())
         new_attr = select_attribute(new_obj.value)
-        new_color = select_color()
+        # new_color = select_color()
         new_number = select_number()
-        obj_node_contruction(new_obj, new_attr, new_color, new_number)
+        obj_node_contruction(new_obj, new_attr, new_number)
         #construct the new subtree
         new_relation_node.add_child(related_obj)
         new_relation_node.add_child(new_obj)

@@ -6,7 +6,7 @@ from constructPPT import *
 from tqdm import tqdm
 
 
-gpt_value = {"key": "YOUR_API_KEY",
+gpt_value = {"key": "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",
             "org": "YOUR_ORG_ID",}
 
 def analyze_PPT(input_PPT):
@@ -185,7 +185,7 @@ def generatePrompt(input_PPT, idx, related, type_):
 
 def generate_seed(related):
     ppt_list = []
-    total_seed = 150
+    total_seed = 5
     for i in range(total_seed):
         if related:
             ppt = constructRelatedPPT()

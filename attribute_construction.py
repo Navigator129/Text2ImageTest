@@ -2,8 +2,9 @@ import json
 import os
 import re
 from openai import OpenAI
+from tqdm import tqdm
 
-gpt_value = {"key": "YOUR_API_KEY",
+gpt_value = {"key": "sk-proj-1BPvHk5XzjyLbAc1UPy5T3BlbkFJSuwD9Ey30jzLFHcL30ZD",
             "org": "YOUR_ORG_ID",}
 
 with open('./files/object_datasets.json', 'r') as f:
@@ -28,13 +29,10 @@ def get_attribute_values():
     client = OpenAI(api_key=gpt_value['key'])
     system_msg = 'You are an expert in the field of attaching attributes to objects.'
     for obj_list in objects.values():
-        for obj in obj_list:
+        for obj in tqdm(obj_list):
             user_msg = """
-                I give you an object and you need to attach three attributes of the object.
-                For example, if the object is a car, the return value can be ['big', 'expensive', 'dirty']
-                The attributes are adjectives that describe the object.
-                Don't use colors and numbers as attributes.
-                The object is a {}
+                generate 10 adjectives for {}, make sure the adjectives you generate can be expressed by drawing.
+                You don't need to explain why you generate the adjectives, and you don't need to add index before the adjectives
             """.format(obj)
 
             response = client.chat.completions.create(
@@ -61,6 +59,6 @@ def parse_attribute_values():
         json.dump(att, f)
 
 if __name__ == "__main__":
-    # get_attribute_values()
+    get_attribute_values()
     parse_attribute_values()
     
