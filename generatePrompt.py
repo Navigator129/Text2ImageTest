@@ -6,7 +6,7 @@ from constructPPT import *
 from tqdm import tqdm
 
 
-gpt_value = {"key": "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",
+gpt_value = {"key": "sk-proj-1BPvHk5XzjyLbAc1UPy5T3BlbkFJSuwD9Ey30jzLFHcL30ZD",
             "org": "YOUR_ORG_ID",}
 
 def analyze_PPT(input_PPT):
@@ -185,7 +185,7 @@ def generatePrompt(input_PPT, idx, related, type_):
 
 def generate_seed(related):
     ppt_list = []
-    total_seed = 5
+    total_seed = 200
     for i in range(total_seed):
         if related:
             ppt = constructRelatedPPT()
@@ -264,8 +264,8 @@ if __name__ == "__main__":
         generatePrompt(ppt, i, False, 'mutate')
         i += 1
 
-    check_valid('./files/related_mutate_prompts.json')
-    check_valid('./files/unrelated_mutate_prompts.json')
+    # check_valid('./files/related_mutate_prompts.json')
+    # check_valid('./files/unrelated_mutate_prompts.json')
 
     print("Done!")
     

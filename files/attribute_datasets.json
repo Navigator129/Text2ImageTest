@@ -2,8 +2,8 @@
     "bicycle": [
         "Sleek",
         "Vintage",
-        "Rustic",
-        "Colorful",
+        "Rusty",
+        "racing",
         "Streamlined",
         "Foldable",
         "Robust",
@@ -15,7 +15,7 @@
         "Sleek",
         "Big",
         "convertible",
-        "Colorful",
+        "Racing",
         "Sporty",
         "Modern",
         "Classic",
@@ -31,14 +31,14 @@
         "sporty",
         "massive",
         "aerodynamic",
-        "colorful",
+        "muscle",
         "embellished",
         "roaring"
     ],
     "airplane": [
         "Gigantic",
         "sleek",
-        "colorful",
+        "military",
         "modern",
         "shiny",
         "Old-fashioned",
@@ -48,7 +48,7 @@
         "streamlined"
     ],
     "bus": [
-        "Colorful",
+        "metal",
         "Large",
         "Double-decked",
         "Modern",
@@ -86,8 +86,8 @@
     "boat": [
         "Large",
         "streamlined",
-        "colorful",
-        "wooden",
+        "metal",
+        "rusty",
         "modern",
         "sleek",
         "luxurious",
@@ -97,9 +97,9 @@
     ],
     "traffic light": [
         "Bright",
-        "Red",
-        "Green",
-        "Yellow",
+        "Towering",
+        "rusty",
+        "horizontal",
         "Vertical",
         "Rectangular",
         "Reflective",
@@ -113,14 +113,14 @@
         "Bright",
         "Weathered",
         "Solid",
-        "Red",
+        "Obvious",
         "Metallic",
         "Round",
         "Glossy",
         "Graffitied"
     ],
     "stop sign": [
-        "Red",
+        "Round",
         "Octagonal",
         "Reflective",
         "Grungy",
@@ -133,7 +133,7 @@
     ],
     "parking meter": [
         "Tall",
-        "Green",
+        "vertical",
         "Rusty",
         "Metallic",
         "Sturdy",
@@ -157,7 +157,7 @@
     ],
     "backpack": [
         "Large",
-        "colorful",
+        "military",
         "patterned",
         "durable",
         "zippered",
@@ -169,7 +169,7 @@
     ],
     "umbrella": [
         "Striped",
-        "colorful",
+        "elegant",
         "oversized",
         "worn-out",
         "frilly",
@@ -181,20 +181,20 @@
     ],
     "handbag": [
         "Leather",
-         "Metallic",
-         "Tiny",
-         "Massive",
-         "Studded",
-         "Multicolored",
-         "Tasselled",
-         "Zipped",
-         "Frilly",
-         "Embossed"
+        "Metallic",
+        "Tiny",
+        "Massive",
+        "Studded",
+        "clean",
+        "Tasselled",
+        "Zipped",
+        "Frilly",
+        "Embossed"
     ],
     "suitcase": [
         "Heavy",
         "large",
-        "colorful",
+        "stable",
         "shiny",
         "patterned",
         "Soft-sided",
@@ -205,7 +205,7 @@
     ],
     "bottle": [
         "Transparent",
-        "Colored",
+        "plastic",
         "Tall",
         "Short",
         "Twisted",
@@ -225,10 +225,10 @@
         "Frosted",
         "Engraved",
         "Lustrous",
-        "Stained"
+        "glass"
     ],
     "cup": [
-        "Colorful",
+        "china",
         "broken",
         "chipped",
         "oversized",
@@ -246,7 +246,7 @@
         "bent",
         "pointed",
         "long",
-        "rustic",
+        "rusty",
         "silver",
         "tarnished",
         "engraved."
@@ -278,7 +278,7 @@
     "bowl": [
         "Ceramic",
         "Patterned",
-        "Colorful",
+        "clean",
         "Transparent",
         "Broken",
         "Deep",
@@ -288,7 +288,7 @@
         "Multilayered"
     ],
     "banana": [
-        "Yellow",
+        "cutted",
         "Curved",
         "Smooth",
         "Ripe",
@@ -300,7 +300,7 @@
         "Sliced"
     ],
     "apple": [
-        "Red",
+        "big",
         "Round",
         "Shiny",
         "Juicy",
@@ -316,7 +316,7 @@
         "toasted",
         "overstuffed",
         "jumbo",
-        "colorful",
+        "hot",
         "Spicy",
         "saucy",
         "fresh",
@@ -336,7 +336,7 @@
         "Textured"
     ],
     "broccoli": [
-        "Green",
+        "Cooked",
         "Rough",
         "Tall",
         "Branchy",
@@ -348,7 +348,7 @@
         "Round"
     ],
     "carrot": [
-        "orange",
+        "cutted",
         "long",
         "thin",
         "crunchy",
@@ -363,7 +363,7 @@
         "Steamy",
         "Long",
         "Juicy",
-        "Colorful",
+        "hot",
         "Greasy",
         "Stuffed",
         "Spicy",
@@ -375,7 +375,7 @@
         "Cheesy",
         "saucy",
         "crispy",
-        "colorful",
+        "hot",
         "sliced",
         "steaming",
         "stuffed",
@@ -384,7 +384,7 @@
         "topped"
     ],
     "donut": [
-        "Colorful",
+        "Chocolate",
         "round",
         "Fondant-covered",
         "frosted",
@@ -396,7 +396,7 @@
         "icing-dripping."
     ],
     "cake": [
-        "Colorful",
+        "large",
         "Fluffy",
         "Frosty",
         "Sprinkled",
@@ -414,7 +414,7 @@
         "small",
         "tall",
         "plush",
-        "colorful",
+        "wooden",
         "broken",
         "modern",
         "ornate"
@@ -460,7 +460,7 @@
         "Polished",
         "Spacious",
         "Carved",
-        "Rustic",
+        "rusty",
         "Ornate",
         "Foldable",
         "Glass-topped",
@@ -470,7 +470,7 @@
     "tv": [
         "Large",
         "Flat",
-        "Colorful",
+        "shinning",
         "Bright",
         "Modern",
         "Glossy",
@@ -482,7 +482,7 @@
     "laptop": [
         "Slim",
         "Glossy",
-        "Colorful",
+        "metal",
         "Compact",
         "Sleek",
         "Portable",
@@ -505,7 +505,7 @@
     ],
     "keyboard": [
         "Shiny",
-        "Colorful",
+        "old-fashion",
         "Sleek",
         "Lightweight",
         "Compact",
@@ -520,7 +520,7 @@
         "Glossy",
         "Metallic",
         "Compact",
-        "Multicolored",
+        "Shinning",
         "Rectangular",
         "Foldable",
         "Massive",
@@ -544,12 +544,12 @@
         "Tall",
         "Shiny",
         "Circular",
-        "Black",
+        "in-cooking",
         "Rusty",
         "Compact",
         "Dirty",
         "Large",
-        "Blue"
+        "lighting"
     ],
     "toaster": [
         "Rectangular",
@@ -560,7 +560,7 @@
         "Two-slot",
         "Buttoned",
         "Heat-emanating",
-        "Silver",
+        "expensive",
         "Glossy"
     ],
     "sink": [
@@ -579,7 +579,7 @@
         "Spacious",
         "Metallic",
         "Shiny",
-        "White",
+        "Clean",
         "Heavy",
         "Modern",
         "Rectangular",
@@ -592,7 +592,7 @@
         "Thin",
         "Large",
         "Small",
-        "Colorful",
+        "Dusty",
         "Torn",
         "Aged",
         "Worn",
@@ -641,7 +641,7 @@
         "oversized",
         "torn",
         "threadbare",
-        "colorful",
+        "cutton",
         "patchwork",
         "soft",
         "smiling",
@@ -663,7 +663,7 @@
         "Curved",
         "Thin",
         "Long",
-        "Colorful",
+        "Electric",
         "Straight",
         "Ribbed",
         "Vibrant",
