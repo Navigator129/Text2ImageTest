@@ -6,7 +6,7 @@ import openai
 import requests
 
 # Replace YOUR_API_KEY with your OpenAI API key
-client = OpenAI(api_key = "YOUR_API_KEY")
+client = OpenAI(api_key = "sk-proj-1BPvHk5XzjyLbAc1UPy5T3BlbkFJSuwD9Ey30jzLFHcL30ZD")
 
 def fetch_prompt():
     with open("./files/prompts.json", "r") as f:
