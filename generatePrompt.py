@@ -206,25 +206,32 @@ def generate_seed(related):
 def check_valid(path):
     with open(path) as f:
         prompt_dicts = json.load(f)
-    client = OpenAI(api_key=gpt_value['key'])
-    sys_msg = "You are an expert in the field of prompt valid check."
     result_list = []
+    # client = OpenAI(api_key=gpt_value['key'])
+    # sys_msg = "You are an expert in the field of prompt valid check."
+    # for prompt_dict in prompt_dicts:
+    #     prompt = prompt_dict['prompt']
+    #     usr_msg = """
+    #         I will offer you a prompt and you need to check if the location relation is valid or not. for example,
+    #         'an apple is on top of a table' is valid, 'a table is on an apple' is invalid.
+    #         The return value should be a simple 'valid' or 'invalid', even if there are multiple sets in the prompt.
+    #         This is the prompt: {}
+    #     """.format(prompt)
+    #     response = client.chat.completions.create(
+    #         model = "gpt-4",
+    #         messages=[
+    #         {"role": "system", "content": sys_msg},
+    #         {"role": "user", "content": usr_msg}]
+    #     )
+    #     result = response.choices[0].message.content.strip()
+    check_result_path = input("Enter the path of the check result: ")
+    with open(check_result_path) as f:
+        check_result = json.load(f)
     for prompt_dict in prompt_dicts:
-        prompt = prompt_dict['prompt']
-        usr_msg = """
-            I will offer you a prompt and you need to check if the location relation is valid or not. for example,
-            'an apple is on top of a table' is valid, 'a table is on an apple' is invalid.
-            The return value should be a simple 'valid' or 'invalid', even if there are multiple sets in the prompt.
-            This is the prompt: {}
-        """.format(prompt)
-        response = client.chat.completions.create(
-            model = "gpt-4",
-            messages=[
-            {"role": "system", "content": sys_msg},
-            {"role": "user", "content": usr_msg}]
-        )
-        result = response.choices[0].message.content.strip()
-        prompt_dict['validity'] = result
+        if prompt_dict['idx'] in check_result:
+            prompt_dict['validity'] = False
+        else:
+            prompt_dict['validity'] = True
         result_list.append(prompt_dict)
     with open(path, 'w') as f:
         json.dump(result_list, f)
@@ -242,7 +249,7 @@ if __name__ == "__main__":
     i = 0
     related_mutate_tree = []
     for related_seed in related_seed_result:
-        if related_seed['validity'].lower() == 'valid':
+        if related_seed['validity']:
             idx = related_seed['idx']
             input_PPT = related_seed_ppt[idx]
             mutate_tree = mutator(input_PPT, True)
@@ -250,7 +257,7 @@ if __name__ == "__main__":
 
     unrelated_mutate_tree = []
     for unrelated_seed in unrelated_seed_result:
-        if unrelated_seed['validity'].lower() == 'valid':
+        if unrelated_seed['validity']:
             idx = unrelated_seed['idx']
             input_PPT = unrelated_seed_ppt[idx]
             mutate_tree = mutator(input_PPT, False)
@@ -264,8 +271,8 @@ if __name__ == "__main__":
         generatePrompt(ppt, i, False, 'mutate')
         i += 1
 
-    # check_valid('./files/related_mutate_prompts.json')
-    # check_valid('./files/unrelated_mutate_prompts.json')
+    check_valid('./files/related_mutate_prompts.json')
+    check_valid('./files/unrelated_mutate_prompts.json')
 
     print("Done!")
     

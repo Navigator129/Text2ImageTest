@@ -1,15 +1,9 @@
-import json
+dict_ = {"1": 'abc', "2": 'def', "3": 'ghi', "141": 'asda'}
 
-file_path  = '/Users/yifanhuang/workspace/Text2ImageTest/files/unrelated_mutate_prompts.json'
-with open(file_path, 'r') as f:
-    datalist = json.load(f)
+for key in dict_:
+    print(key)
 
-new_result = []
-for data in datalist:
-    prompt = data['prompt']
-    idx = data['idx']
-    new_dict = {idx: prompt}
-    new_result.append(new_dict)
+print(list(dict_.keys()))
 
-with open('optimal.json', 'w') as f:
-    json.dump(new_result, f, indent=4)
+if "141" in list(dict_.keys()):
+    print('yes')
