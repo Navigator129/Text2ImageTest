@@ -7,44 +7,71 @@ import requests
 
 # Replace YOUR_API_KEY with your OpenAI API key
 client = OpenAI(api_key = "sk-proj-1BPvHk5XzjyLbAc1UPy5T3BlbkFJSuwD9Ey30jzLFHcL30ZD")
+def fetch_prompt(file_path):
+    prompts = []
+    with open(file_path, "r") as file:
+        data = json.load(file)
+    for dict_ in data:
+        prompts.append(dict_["prompt"])
+    return prompts
 
-def fetch_prompt():
-    with open("./files/prompts.json", "r") as f:
-        return json.load(f)
-
-def generate():
-    prompt_list = fetch_prompt()
+def generate(prompts):
     urls = []
-    for i in tqdm(range(127, len(prompt_list))):
+    i = 0 
+    for p in tqdm(prompts):
         try:
             response = client.images.generate(
             model="dall-e-3",
-            prompt = prompt_list[str(i)],
+            prompt = p,
             size="1024x1024",
             quality="standard",
             n=1,
             )
             
             url = response.data[0].url
-            urls.append(url)
+            dict_ = {'index': i, 'url': url}
+            urls.append(dict_)
         except openai.BadRequestError as e:
-            print(i)
+            print('Error at index:', i)
             continue
-    with open("./results/DALLE3/dall_url.json", "w") as f:
-        json.dump(urls, f)
+        i += 1
+    return urls
 
-def download():
-    with open("./results/DALLE3/dall_url.json", "r") as file:
-        urls = json.load(file)
-    i = 0
-    for url in urls:
-        file_path = os.path.join("./results/DALLE3/images", "test_case_{}.png".format(i))
+def save_urls(urls, file_path):
+    with open(file_path, "w") as file:
+        json.dump(urls, file)
+
+def download(urls, check):
+    if check:
+        save_path = "./images/images/DALLE3/exp1/related/"
+    else:
+        save_path = "./images/images/DALLE3/exp1/unrelated/"
+    for dict_ in urls:
+        index = dict_['index']
+        url = dict_['url']
+        file_path = os.path.join(save_path, "{}.jpg".format(index))
         img_data = requests.get(url).content
         with open(file_path, 'wb') as handler:
             handler.write(img_data)
         i += 1
 if __name__ == "__main__":
-    generate()
-    # download()
+    file_path1 = './files/exp{}/related_seed_prompts.json'.format(1)
+    file_path2 = './files/exp{}/related_mutate_prompts.json'.format(1)
+    file_path3 = './files/exp{}/unrelated_seed_prompts.json'.format(1)
+    file_path4 = './files/exp{}/unrelated_mutate_prompts.json'.format(1)
+    prompt_list1 = fetch_prompt(file_path1)
+    prompt_list2 = fetch_prompt(file_path2)
+    prompt_list3 = fetch_prompt(file_path3)
+    prompt_list4 = fetch_prompt(file_path4)
+    
+    related_prompts = prompt_list1 + prompt_list2
+    unrelated_prompts = prompt_list3 + prompt_list4
+
+    related_urls = generate(related_prompts)
+    unrelated_urls = generate(unrelated_prompts)
+    save_urls(related_urls, './images/DALLE3/exp1/related_urls.json')
+    save_urls(unrelated_urls, './images/DALLE3/exp1/unrelated_urls.json')
+    download(related_urls, True)
+    download(unrelated_urls, False)
     
 
