@@ -1,9 +1,9 @@
 import json
 
-file_path1 = "./files/exp{}/related_seed_prompts.json".format(1)
-file_path2 = "./files/exp{}/unrelated_seed_prompts.json".format(1)
-file_path3 = "./files/exp{}/related_mutate_prompts.json".format(1)
-file_path4 = "./files/exp{}/unrelated_mutate_prompts.json".format(1)
+file_path1 = "./files/exp{}/related_seed_prompts.json".format(3)
+file_path2 = "./files/exp{}/unrelated_seed_prompts.json".format(3)
+file_path3 = "./files/exp{}/related_mutate_prompts.json".format(3)
+file_path4 = "./files/exp{}/unrelated_mutate_prompts.json".format(3)
 
 for i in range(4):
     file_path = eval('file_path{}'.format(i+1))
