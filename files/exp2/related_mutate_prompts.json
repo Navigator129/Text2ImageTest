@@ -33,7 +33,8 @@
                     "the"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
         "idx": 1,
@@ -54,7 +55,8 @@
                 "one",
                 "Spicy"
             ]
-        }
+        },
+        "validity": true
     },
     {
         "idx": 2,
@@ -73,7 +75,8 @@
                 "green",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
         "idx": 3,
@@ -94,7 +97,8 @@
                 "one",
                 "saucy"
             ]
-        }
+        },
+        "validity": true
     },
     {
         "idx": 4,
@@ -115,7 +119,8 @@
                 "one",
                 "steamy."
             ]
-        }
+        },
+        "validity": true
     },
     {
         "idx": 5,
@@ -136,7 +141,8 @@
                 "one",
                 "layered"
             ]
-        }
+        },
+        "validity": true
     },
     {
         "idx": 6,
@@ -155,7 +161,8 @@
                 "blue",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
         "idx": 7,
@@ -176,7 +183,8 @@
                 "one",
                 "hot"
             ]
-        }
+        },
+        "validity": true
     },
     {
         "idx": 8,
@@ -195,7 +203,8 @@
                 "black",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
         "idx": 9,
@@ -214,7 +223,8 @@
                 "brown",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
         "idx": 10,
@@ -235,7 +245,8 @@
                 "one",
                 "Large"
             ]
-        }
+        },
+        "validity": true
     },
     {
         "idx": 11,
@@ -254,7 +265,8 @@
                 "red",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
         "idx": 12,
@@ -273,7 +285,8 @@
                 "pink",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
         "idx": 13,
@@ -309,7 +322,8 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
         "idx": 14,
@@ -330,7 +344,8 @@
                 "one",
                 "Curved"
             ]
-        }
+        },
+        "validity": true
     },
     {
         "idx": 15,
@@ -349,7 +364,8 @@
                 "purple",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
         "idx": 16,
@@ -370,7 +386,8 @@
                 "one",
                 "Curved"
             ]
-        }
+        },
+        "validity": true
     },
     {
         "idx": 17,
@@ -389,7 +406,8 @@
                 "blue",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
         "idx": 18,
@@ -425,7 +443,8 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
         "idx": 19,
@@ -446,7 +465,8 @@
                 "one",
                 "Long"
             ]
-        }
+        },
+        "validity": true
     },
     {
         "idx": 20,
@@ -482,7 +502,8 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
         "idx": 21,
@@ -501,7 +522,8 @@
                 "yellow",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
         "idx": 22,
@@ -520,7 +542,8 @@
                 "white",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
         "idx": 23,
@@ -556,7 +579,8 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
         "idx": 24,
@@ -577,7 +601,8 @@
                 "one",
                 "Layered"
             ]
-        }
+        },
+        "validity": true
     },
     {
         "idx": 25,
@@ -596,7 +621,8 @@
                 "purple",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
         "idx": 26,
@@ -617,7 +643,8 @@
                 "one",
                 "Transparent"
             ]
-        }
+        },
+        "validity": true
     },
     {
         "idx": 27,
@@ -638,7 +665,8 @@
                 "one",
                 "Shallow"
             ]
-        }
+        },
+        "validity": true
     },
     {
         "idx": 28,
@@ -674,29 +702,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
         "idx": 29,
-        "prompt": "One rectangular pink dining table is on top of one rectangular black TV.",
-        "PPT": {
-            "relation": "on top of",
-            "obj1": "dining table",
-            "obj1_attr": [
-                "Rectangular",
-                "pink",
-                "one"
-            ],
-            "obj2": "tv",
-            "obj2_attr": [
-                "Rectangular",
-                "black",
-                "one"
-            ]
-        }
-    },
-    {
-        "idx": 30,
         "prompt": "One rectangular black flat TV is beneath one ornate rectangular pink dining table.",
         "PPT": {
             "relation": "Beneath",
@@ -714,10 +724,11 @@
                 "one",
                 "Ornate"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 31,
+        "idx": 30,
         "prompt": "One worn-out, yellow umbrella is leftward of one quilted, red bed.",
         "PPT": {
             "relation": "Leftward of",
@@ -733,10 +744,11 @@
                 "red",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 32,
+        "idx": 31,
         "prompt": "One worn-out yellow umbrella is leftward of one metal blue bed. The Metal blue bed is to the left of one thin yellow toothbrush. ",
         "PPT": [
             {
@@ -769,10 +781,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 33,
+        "idx": 32,
         "prompt": "One worn-out yellow umbrella is leftward of one metal blue bed. The worn-out yellow umbrella is above the rectangular red bed. ",
         "PPT": [
             {
@@ -805,10 +818,11 @@
                     "the"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 34,
+        "idx": 33,
         "prompt": "One worn-out, yellow, patterned umbrella is leftward of one metal, blue, quilted bed.",
         "PPT": {
             "relation": "Leftward of",
@@ -826,10 +840,11 @@
                 "one",
                 "Quilted"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 35,
+        "idx": 34,
         "prompt": "One modern red car is rightward of one wooden blue bench. The wooden blue bench is Atop the sleek black car. ",
         "PPT": [
             {
@@ -862,10 +877,11 @@
                     "the"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 36,
+        "idx": 35,
         "prompt": "One gigantic, pink, high-flying airplane is rightward of one sturdy, green, reflective parking meter.",
         "PPT": {
             "relation": "Rightward of",
@@ -883,10 +899,11 @@
                 "one",
                 "Reflective"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 37,
+        "idx": 36,
         "prompt": "One gigantic pink airplane is rightward of one curvy white bench.",
         "PPT": {
             "relation": "Rightward of",
@@ -902,10 +919,11 @@
                 "white",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 38,
+        "idx": 37,
         "prompt": "One tall green bottle is beneath one tangy yellow orange.",
         "PPT": {
             "relation": "Beneath",
@@ -921,10 +939,11 @@
                 "yellow",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 39,
+        "idx": 38,
         "prompt": "One compact, white, multi-pocketed backpack is adjacent to the right of one rusty, green, ornate dining table.",
         "PPT": {
             "relation": "Adjacent to the right of",
@@ -942,10 +961,11 @@
                 "one",
                 "Ornate"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 40,
+        "idx": 39,
         "prompt": "One icing-dripping, blue donut is adjacent to the right of one tarnished, blue fork.",
         "PPT": {
             "relation": "Adjacent to the right of",
@@ -961,10 +981,11 @@
                 "blue",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 41,
+        "idx": 40,
         "prompt": "One icing-dripping, blue donut is to the left of one pointed, pink spoon.",
         "PPT": {
             "relation": "To the left of",
@@ -980,10 +1001,11 @@
                 "pink",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 42,
+        "idx": 41,
         "prompt": "One icing-dripping, blue donut is on the left side of one pointed, pink spoon.",
         "PPT": {
             "relation": "On the left side of",
@@ -999,10 +1021,11 @@
                 "pink",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 43,
+        "idx": 42,
         "prompt": "\"One icing-dripping, blue donut is on the left side of one pointed, pink spoon.\"",
         "PPT": {
             "relation": "On the left side of",
@@ -1018,10 +1041,11 @@
                 "pink",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 44,
+        "idx": 43,
         "prompt": "One hot purple hot dog is on top of one silver red fork.",
         "PPT": {
             "relation": "on top of",
@@ -1037,10 +1061,11 @@
                 "red",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 45,
+        "idx": 44,
         "prompt": "One hot purple hot dog is on top of one short white bottle.",
         "PPT": {
             "relation": "on top of",
@@ -1056,10 +1081,11 @@
                 "white",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 46,
+        "idx": 45,
         "prompt": "One hot purple hot dog is on top of one rusty green fork. The rusty green fork is Atop one cutted red carrot ",
         "PPT": [
             {
@@ -1092,10 +1118,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 47,
+        "idx": 46,
         "prompt": "One bitten blue hot dog is to the left of one tall white bottle.",
         "PPT": {
             "relation": "To the left of",
@@ -1111,10 +1138,11 @@
                 "white",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 48,
+        "idx": 47,
         "prompt": "One tall white bottle is adjacent to the right of one bitten blue hot dog. The bitten blue hot dog is to the right of one ceramic blue bowl ",
         "PPT": [
             {
@@ -1147,10 +1175,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 49,
+        "idx": 48,
         "prompt": "One bitten blue hot dog is leftward of one tall white bottle.",
         "PPT": {
             "relation": "Leftward of",
@@ -1166,10 +1195,11 @@
                 "white",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 50,
+        "idx": 49,
         "prompt": "One quilted, white, soft bed is rightward of one bulbous, purple, glossy vase.",
         "PPT": {
             "relation": "Rightward of",
@@ -1187,10 +1217,11 @@
                 "one",
                 "glossy"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 51,
+        "idx": 50,
         "prompt": "One quilted, white bed is rightward of one lightweight, white hair drier.",
         "PPT": {
             "relation": "Rightward of",
@@ -1206,10 +1237,11 @@
                 "white",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 52,
+        "idx": 51,
         "prompt": "One long green hot dog is to the left of one engraved red fork. The engraved, red fork is under one bumpy, pink broccoli. ",
         "PPT": [
             {
@@ -1242,10 +1274,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 53,
+        "idx": 52,
         "prompt": "One engraved, red fork is to the left of one crunchy, green apple.",
         "PPT": {
             "relation": "To the left of",
@@ -1261,10 +1294,11 @@
                 "green",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 54,
+        "idx": 53,
         "prompt": "One bright blue fire hydrant is leftward of one rugged red truck.",
         "PPT": {
             "relation": "Leftward of",
@@ -1280,10 +1314,11 @@
                 "red",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 55,
+        "idx": 54,
         "prompt": "One sprinkled blue cake is on the left side of one painted white bowl.",
         "PPT": {
             "relation": "On the left side of",
@@ -1299,10 +1334,11 @@
                 "white",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 56,
+        "idx": 55,
         "prompt": "One painted white bowl is rightward of one smooth black banana.",
         "PPT": {
             "relation": "Rightward of",
@@ -1318,10 +1354,11 @@
                 "black",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 57,
+        "idx": 56,
         "prompt": "One sprinkled blue cake is adjacent to the left of one painted white bowl.",
         "PPT": {
             "relation": "Adjacent to the left of",
@@ -1337,10 +1374,11 @@
                 "white",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 58,
+        "idx": 57,
         "prompt": "One painted white clean bowl is rightward of one sprinkled blue drizzled cake.",
         "PPT": {
             "relation": "Rightward of",
@@ -1358,10 +1396,11 @@
                 "one",
                 "Drizzled"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 59,
+        "idx": 58,
         "prompt": "One mustard-coated, purple, juicy hot dog is under one engraved, purple, flat spoon.",
         "PPT": {
             "relation": "Under",
@@ -1379,10 +1418,11 @@
                 "one",
                 "flat"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 60,
+        "idx": 59,
         "prompt": "One mustard-coated, purple, toppings-laden hot dog is under one engraved, purple, silver spoon.",
         "PPT": {
             "relation": "Under",
@@ -1400,10 +1440,11 @@
                 "one",
                 "silver"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 61,
+        "idx": 60,
         "prompt": "One spacious brown bed is rightward of one simple green microwave.",
         "PPT": {
             "relation": "Rightward of",
@@ -1419,10 +1460,11 @@
                 "green",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 62,
+        "idx": 61,
         "prompt": "One simple green microwave is adjacent to the left of one broken pink chair.",
         "PPT": {
             "relation": "Adjacent to the left of",
@@ -1438,10 +1480,11 @@
                 "pink",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 63,
+        "idx": 62,
         "prompt": "One large, purple, shinning TV is underneath one ornate, red, foldable dining table.",
         "PPT": {
             "relation": "Underneath",
@@ -1459,10 +1502,11 @@
                 "one",
                 "Foldable"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 64,
+        "idx": 63,
         "prompt": "One fresh yellow carrot is rightward of one shallow blue bowl. The shallow blue bowl is on the right side of the toasted purple sandwich. ",
         "PPT": [
             {
@@ -1495,10 +1539,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 65,
+        "idx": 64,
         "prompt": "One shallow blue bowl is leftward of one fresh yellow carrot.",
         "PPT": {
             "relation": "Leftward of",
@@ -1514,10 +1559,11 @@
                 "yellow",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 66,
+        "idx": 65,
         "prompt": "One fresh yellow mature carrot is rightward of one shallow blue broken bowl.",
         "PPT": {
             "relation": "Rightward of",
@@ -1535,10 +1581,11 @@
                 "one",
                 "Broken"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 67,
+        "idx": 66,
         "prompt": "One shallow blue bowl is on the left side of one fresh yellow carrot.",
         "PPT": {
             "relation": "On the left side of",
@@ -1554,10 +1601,11 @@
                 "yellow",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 68,
+        "idx": 67,
         "prompt": "One bulbous, blue vase is underneath one indoor, red potted plant.",
         "PPT": {
             "relation": "Underneath",
@@ -1573,10 +1621,11 @@
                 "red",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 69,
+        "idx": 68,
         "prompt": "One indoor red potted plant is upon one bulbous blue vase. The bulbous blue vase is to the left of one ornate purple bed. ",
         "PPT": [
             {
@@ -1609,10 +1658,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 70,
+        "idx": 69,
         "prompt": "One bulbous blue vase is underneath one indoor red potted plant.",
         "PPT": {
             "relation": "Underneath",
@@ -1628,10 +1678,11 @@
                 "red",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 71,
+        "idx": 70,
         "prompt": "One leather-bound black couch is adjacent to the left of one porcelain yellow sink.",
         "PPT": {
             "relation": "Adjacent to the left of",
@@ -1647,10 +1698,11 @@
                 "yellow",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 72,
+        "idx": 71,
         "prompt": "One porcelain, yellow, wall-mounted sink is on the right side of one comfortable, leather-bound, black couch.",
         "PPT": {
             "relation": "On the right side of",
@@ -1668,10 +1720,11 @@
                 "one",
                 "comfortable"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 73,
+        "idx": 72,
         "prompt": "One porcelain, yellow sink is on the right side of one stained, black couch.",
         "PPT": {
             "relation": "On the right side of",
@@ -1687,10 +1740,11 @@
                 "black",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 74,
+        "idx": 73,
         "prompt": "One porcelain yellow wall-mounted sink is on the right side of one stained black leather-bound couch.",
         "PPT": {
             "relation": "On the right side of",
@@ -1708,10 +1762,11 @@
                 "one",
                 "stained"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 75,
+        "idx": 74,
         "prompt": "One modern purple rusty train is adjacent to the right of one long blue antique bench.",
         "PPT": {
             "relation": "Adjacent to the right of",
@@ -1729,10 +1784,11 @@
                 "one",
                 "Antique"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 76,
+        "idx": 75,
         "prompt": "One curved, brown, broken knife is to the right of one round, pink, tangy orange.",
         "PPT": {
             "relation": "To the right of",
@@ -1750,10 +1806,11 @@
                 "one",
                 "Tangy"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 77,
+        "idx": 76,
         "prompt": "One round, pink orange is to the right of one engraved, blue wine glass.",
         "PPT": {
             "relation": "To the right of",
@@ -1769,10 +1826,11 @@
                 "blue",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 78,
+        "idx": 77,
         "prompt": "One patterned green umbrella is on the left side of one polished green dining table.",
         "PPT": {
             "relation": "On the left side of",
@@ -1788,10 +1846,11 @@
                 "green",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 79,
+        "idx": 78,
         "prompt": "One patterned green umbrella is on the left side of one wooden brown bed. The patterned green umbrella is underneath one broken yellow chair. ",
         "PPT": [
             {
@@ -1824,10 +1883,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 80,
+        "idx": 79,
         "prompt": "One wooden, brown bed is on the right side of one patterned, green umbrella.",
         "PPT": {
             "relation": "On the right side of",
@@ -1843,10 +1903,11 @@
                 "green",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 81,
+        "idx": 80,
         "prompt": "One wooden brown bed is rightward of one patterned green umbrella.",
         "PPT": {
             "relation": "Rightward of",
@@ -1862,10 +1923,11 @@
                 "green",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 82,
+        "idx": 81,
         "prompt": "One crunchy blue apple is to the right of one ceramic yellow bowl.",
         "PPT": {
             "relation": "To the right of",
@@ -1881,10 +1943,11 @@
                 "yellow",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 83,
+        "idx": 82,
         "prompt": "One curved blue wine glass is to the right of one cutted red banana.",
         "PPT": {
             "relation": "To the right of",
@@ -1900,10 +1963,11 @@
                 "red",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 84,
+        "idx": 83,
         "prompt": "One crunchy blue apple is adjacent to the left of one curved blue wine glass.",
         "PPT": {
             "relation": "Adjacent to the left of",
@@ -1919,10 +1983,11 @@
                 "blue",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 85,
+        "idx": 84,
         "prompt": "One illustrated green worn book is upon one sunlit pink rootbound potted plant.",
         "PPT": {
             "relation": "Upon",
@@ -1940,10 +2005,11 @@
                 "one",
                 "Rootbound"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 86,
+        "idx": 85,
         "prompt": "One sunlit pink potted plant is under one illustrated green book.",
         "PPT": {
             "relation": "Under",
@@ -1959,10 +2025,11 @@
                 "green",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 87,
+        "idx": 86,
         "prompt": "One illustrated green thick book is upon one sunlit pink pruned potted plant.",
         "PPT": {
             "relation": "Upon",
@@ -1980,10 +2047,11 @@
                 "one",
                 "Pruned"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 88,
+        "idx": 87,
         "prompt": "One sunlit pink potted plant is under one illustrated green book.",
         "PPT": {
             "relation": "Under",
@@ -1999,10 +2067,11 @@
                 "green",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 89,
+        "idx": 88,
         "prompt": "One reflective green parking meter is to the left of one large white boat.",
         "PPT": {
             "relation": "To the left of",
@@ -2018,10 +2087,11 @@
                 "white",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 90,
+        "idx": 89,
         "prompt": "One rusty pink robust bicycle is to the left of one reflective green weathered parking meter.",
         "PPT": {
             "relation": "To the left of",
@@ -2039,10 +2109,11 @@
                 "one",
                 "Weathered"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 91,
+        "idx": 90,
         "prompt": "One rusty pink ornate bicycle is to the left of one reflective green metallic parking meter.",
         "PPT": {
             "relation": "To the left of",
@@ -2060,29 +2131,11 @@
                 "one",
                 "Metallic"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 92,
-        "prompt": "One gigantic brown airplane is atop one graffitied brown fire hydrant.",
-        "PPT": {
-            "relation": "Atop",
-            "obj1": "airplane",
-            "obj1_attr": [
-                "Gigantic",
-                "brown",
-                "one"
-            ],
-            "obj2": "fire hydrant",
-            "obj2_attr": [
-                "Graffitied",
-                "brown",
-                "one"
-            ]
-        }
-    },
-    {
-        "idx": 93,
+        "idx": 91,
         "prompt": "One graffitied, brown, obvious fire hydrant is under one gigantic, modern, brown airplane.",
         "PPT": {
             "relation": "Under",
@@ -2100,65 +2153,11 @@
                 "one",
                 "modern"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 94,
-        "prompt": "One gigantic brown airplane is upon one graffitied brown fire hydrant.",
-        "PPT": {
-            "relation": "Upon",
-            "obj1": "airplane",
-            "obj1_attr": [
-                "Gigantic",
-                "brown",
-                "one"
-            ],
-            "obj2": "fire hydrant",
-            "obj2_attr": [
-                "Graffitied",
-                "brown",
-                "one"
-            ]
-        }
-    },
-    {
-        "idx": 95,
-        "prompt": "One graffitied brown fire hydrant is under one gigantic brown airplane. The Graffitied brown fire hydrant is Beneath one Shiny pink car. ",
-        "PPT": [
-            {
-                "relation": "Under",
-                "obj1": "fire hydrant",
-                "obj1_attr": [
-                    "Graffitied",
-                    "brown",
-                    "one"
-                ],
-                "obj2": "airplane",
-                "obj2_attr": [
-                    "Gigantic",
-                    "brown",
-                    "one"
-                ]
-            },
-            {
-                "relation": "Beneath",
-                "obj1": "fire hydrant",
-                "obj1_attr": [
-                    "Graffitied",
-                    "brown",
-                    "the"
-                ],
-                "obj2": "car",
-                "obj2_attr": [
-                    "Shiny",
-                    "pink",
-                    "one"
-                ]
-            }
-        ]
-    },
-    {
-        "idx": 96,
+        "idx": 92,
         "prompt": "One broken brown cup is on the left side of one frosty pink cake.",
         "PPT": {
             "relation": "On the left side of",
@@ -2174,10 +2173,11 @@
                 "pink",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 97,
+        "idx": 93,
         "prompt": "One engraved, yellow fork is adjacent to the right of one cutted, pink carrot.",
         "PPT": {
             "relation": "Adjacent to the right of",
@@ -2193,10 +2193,11 @@
                 "pink",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 98,
+        "idx": 94,
         "prompt": "One big pink apple is adjacent to the right of one shallow black bowl.",
         "PPT": {
             "relation": "Adjacent to the right of",
@@ -2212,10 +2213,11 @@
                 "black",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 99,
+        "idx": 95,
         "prompt": "One big pink apple is adjacent to the right of one engraved yellow fork. The big pink apple is upon one black-rimmed cup. ",
         "PPT": [
             {
@@ -2248,10 +2250,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 100,
+        "idx": 96,
         "prompt": "One big, pink, smooth apple is adjacent to the right of one engraved, yellow, rusty fork.",
         "PPT": {
             "relation": "Adjacent to the right of",
@@ -2269,10 +2272,11 @@
                 "one",
                 "rusty"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 101,
+        "idx": 97,
         "prompt": "One jumbo black sandwich is adjacent to the left of one transparent blue bowl.",
         "PPT": {
             "relation": "Adjacent to the left of",
@@ -2288,10 +2292,11 @@
                 "blue",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 102,
+        "idx": 98,
         "prompt": "One jumbo black sandwich is to the left of one transparent blue bowl.",
         "PPT": {
             "relation": "To the left of",
@@ -2307,10 +2312,11 @@
                 "blue",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 103,
+        "idx": 99,
         "prompt": "One transparent blue bowl is on the right side of one sculpted brown cake.",
         "PPT": {
             "relation": "On the right side of",
@@ -2326,10 +2332,11 @@
                 "brown",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 104,
+        "idx": 100,
         "prompt": "One robust, metal, brown bicycle is adjacent to the right of one vertical, cylinder-shaped, purple parking meter.",
         "PPT": {
             "relation": "Adjacent to the right of",
@@ -2347,10 +2354,11 @@
                 "one",
                 "vertical"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 105,
+        "idx": 101,
         "prompt": "One massive brown compact cell phone is leftward of one pruned red sunlit potted plant.",
         "PPT": {
             "relation": "Leftward of",
@@ -2368,10 +2376,11 @@
                 "one",
                 "Sunlit"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 106,
+        "idx": 102,
         "prompt": "One pruned red potted plant is leftward of one colorful white vase.",
         "PPT": {
             "relation": "Leftward of",
@@ -2387,10 +2396,11 @@
                 "white",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 107,
+        "idx": 103,
         "prompt": "One jumbo red sandwich is on the left side of one rusty blue fork. The jumbo red sandwich is above one deep black bowl. ",
         "PPT": [
             {
@@ -2423,10 +2433,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 108,
+        "idx": 104,
         "prompt": "One jumbo, red, layered sandwich is on the left side of one rusty, blue, bent fork.",
         "PPT": {
             "relation": "On the left side of",
@@ -2444,10 +2455,11 @@
                 "one",
                 "bent"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 109,
+        "idx": 105,
         "prompt": "One jumbo red sandwich is on the left side of one patterned red cup.",
         "PPT": {
             "relation": "On the left side of",
@@ -2463,10 +2475,11 @@
                 "red",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 110,
+        "idx": 106,
         "prompt": "One rusty blue fork is rightward of one jumbo red sandwich.",
         "PPT": {
             "relation": "Rightward of",
@@ -2482,10 +2495,11 @@
                 "red",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 111,
+        "idx": 107,
         "prompt": "One flowered black bed is to the right of one electric green toothbrush.",
         "PPT": {
             "relation": "To the right of",
@@ -2501,10 +2515,11 @@
                 "green",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 112,
+        "idx": 108,
         "prompt": "One intricate white curved keyboard is to the right of one flowered black quilted bed.",
         "PPT": {
             "relation": "To the right of",
@@ -2522,10 +2537,11 @@
                 "one",
                 "Quilted"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 113,
+        "idx": 109,
         "prompt": "One comfortable pink couch is rightward of one painted black remote.",
         "PPT": {
             "relation": "Rightward of",
@@ -2541,10 +2557,11 @@
                 "black",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 114,
+        "idx": 110,
         "prompt": "One comfortable pink couch is rightward of one painted black remote.",
         "PPT": {
             "relation": "Rightward of",
@@ -2560,10 +2577,11 @@
                 "black",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 115,
+        "idx": 111,
         "prompt": "One comfortable pink couch is rightward of one painted black remote.",
         "PPT": {
             "relation": "Rightward of",
@@ -2579,10 +2597,11 @@
                 "black",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 116,
+        "idx": 112,
         "prompt": "One expensive yellow buttoned toaster is on the right side of one ornate black comfortable couch.",
         "PPT": {
             "relation": "On the right side of",
@@ -2600,10 +2619,11 @@
                 "one",
                 "comfortable"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 117,
+        "idx": 113,
         "prompt": "One ornate black couch is leftward of one expensive yellow toaster.",
         "PPT": {
             "relation": "Leftward of",
@@ -2619,10 +2639,11 @@
                 "yellow",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 118,
+        "idx": 114,
         "prompt": "One expensive yellow toaster is on the right side of one ornate black couch. The ornate black couch is rightward of one patterned purple vase. ",
         "PPT": [
             {
@@ -2655,10 +2676,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 119,
+        "idx": 115,
         "prompt": "One textured red bottle is rightward of one crispy purple pizza.",
         "PPT": {
             "relation": "Rightward of",
@@ -2674,10 +2696,11 @@
                 "purple",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 120,
+        "idx": 116,
         "prompt": "One textured red bottle is rightward of one tall brown broccoli.",
         "PPT": {
             "relation": "Rightward of",
@@ -2693,10 +2716,11 @@
                 "brown",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 121,
+        "idx": 117,
         "prompt": "One textured red tall bottle is rightward of one crispy pink peppered pizza.",
         "PPT": {
             "relation": "Rightward of",
@@ -2714,10 +2738,11 @@
                 "one",
                 "peppered"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 122,
+        "idx": 118,
         "prompt": "One crispy pink pizza is rightward of one decorative brown wine glass.",
         "PPT": {
             "relation": "Rightward of",
@@ -2733,46 +2758,11 @@
                 "brown",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 123,
-        "prompt": "One rusty brown scissors is under one indoor pink potted plant. The rusty brown scissors are underneath one metal yellow bed. ",
-        "PPT": [
-            {
-                "relation": "Under",
-                "obj1": "scissors",
-                "obj1_attr": [
-                    "Rusty",
-                    "brown",
-                    "one"
-                ],
-                "obj2": "potted plant",
-                "obj2_attr": [
-                    "Indoor",
-                    "pink",
-                    "one"
-                ]
-            },
-            {
-                "relation": "Underneath",
-                "obj1": "scissors",
-                "obj1_attr": [
-                    "Rusty",
-                    "brown",
-                    "the"
-                ],
-                "obj2": "bed",
-                "obj2_attr": [
-                    "Metal",
-                    "yellow",
-                    "one"
-                ]
-            }
-        ]
-    },
-    {
-        "idx": 124,
+        "idx": 119,
         "prompt": "One indoor pink potted plant is above one rusty brown scissors.",
         "PPT": {
             "relation": "above",
@@ -2788,10 +2778,11 @@
                 "brown",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 125,
+        "idx": 120,
         "prompt": "One indoor pink potted plant is on top of one rusty brown scissors.",
         "PPT": {
             "relation": "on top of",
@@ -2807,10 +2798,11 @@
                 "brown",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 126,
+        "idx": 121,
         "prompt": "One lightweight black bicycle is beneath one towering white traffic light. The towering white traffic light is rightward of one modern blue boat. ",
         "PPT": [
             {
@@ -2843,10 +2835,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 127,
+        "idx": 122,
         "prompt": "One frosted brown donut is on the left side of one engraved yellow knife.",
         "PPT": {
             "relation": "On the left side of",
@@ -2862,10 +2855,11 @@
                 "yellow",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 128,
+        "idx": 123,
         "prompt": "One rimmed pink cup is on the left side of one frosted brown donut. The frosted brown donut is Atop one curved pink spoon. ",
         "PPT": [
             {
@@ -2898,10 +2892,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 129,
+        "idx": 124,
         "prompt": "One frosted brown donut is rightward of one rimmed pink cup.",
         "PPT": {
             "relation": "Rightward of",
@@ -2917,10 +2912,11 @@
                 "pink",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 130,
+        "idx": 125,
         "prompt": "One large blue drizzled cake is on top of one patterned purple china cup.",
         "PPT": {
             "relation": "on top of",
@@ -2938,10 +2934,11 @@
                 "one",
                 "china"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 131,
+        "idx": 126,
         "prompt": "One drizzled blue cake is on top of one patterned purple cup. The patterned purple cup is above one leafy white carrot. ",
         "PPT": [
             {
@@ -2974,10 +2971,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 132,
+        "idx": 127,
         "prompt": "One broken, black, tall chair is adjacent to the left of one torn, brown, illustrated book.",
         "PPT": {
             "relation": "Adjacent to the left of",
@@ -2995,10 +2993,11 @@
                 "one",
                 "Illustrated"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 133,
+        "idx": 128,
         "prompt": "One deep pink shallow sink is leftward of one indoor pink flourishing potted plant.",
         "PPT": {
             "relation": "Leftward of",
@@ -3016,10 +3015,11 @@
                 "one",
                 "Flourishing"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 134,
+        "idx": 129,
         "prompt": "One studded white handbag is on the left side of one glass-topped black dining table. The Glass-topped black dining table is underneath one worn green book. ",
         "PPT": [
             {
@@ -3052,10 +3052,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 135,
+        "idx": 130,
         "prompt": "One studded white handbag is on the left side of one glass-topped black dining table. The studded white handbag is upon one lumpy black couch. ",
         "PPT": [
             {
@@ -3088,10 +3089,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 136,
+        "idx": 131,
         "prompt": "One glass-topped black dining table is on the left side of one patterned black vase.",
         "PPT": {
             "relation": "On the left side of",
@@ -3107,10 +3109,11 @@
                 "black",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 137,
+        "idx": 132,
         "prompt": "One tall red bottle is under one drizzled pink cake. The tall red bottle is on top of one unripe yellow banana. ",
         "PPT": [
             {
@@ -3143,10 +3146,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 138,
+        "idx": 133,
         "prompt": "One tall, red, engraved bottle is under one drizzled, pink, creamy cake.",
         "PPT": {
             "relation": "Under",
@@ -3164,10 +3168,11 @@
                 "one",
                 "Creamy"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 139,
+        "idx": 134,
         "prompt": "One drizzled pink cake is atop one tall red bottle.",
         "PPT": {
             "relation": "Atop",
@@ -3183,10 +3188,11 @@
                 "red",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 140,
+        "idx": 135,
         "prompt": "One flat pink remote is leftward of one leather-bound pink couch. The flat, pink remote is above the white, wooden couch. ",
         "PPT": [
             {
@@ -3219,10 +3225,11 @@
                     "the"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 141,
+        "idx": 136,
         "prompt": "One flat, pink, long remote is leftward of one leather-bound, pink, old-fashioned couch.",
         "PPT": {
             "relation": "Leftward of",
@@ -3240,10 +3247,11 @@
                 "one",
                 "old-fashioned"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 142,
+        "idx": 137,
         "prompt": "One ornate brown dining table is below one durable black hair drier.",
         "PPT": {
             "relation": "Below",
@@ -3259,10 +3267,11 @@
                 "black",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 143,
+        "idx": 138,
         "prompt": "One metallic blue neon remote is below one ornate brown carved dining table.",
         "PPT": {
             "relation": "Below",
@@ -3280,10 +3289,11 @@
                 "one",
                 "Carved"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 144,
+        "idx": 139,
         "prompt": "One metallic blue remote is below one ornate brown dining table. The ornate, brown dining table is on the right side of one durable, white hair drier. ",
         "PPT": [
             {
@@ -3316,10 +3326,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 145,
+        "idx": 140,
         "prompt": "One metallic blue remote is below one glass-topped white dining table.",
         "PPT": {
             "relation": "Below",
@@ -3335,10 +3346,11 @@
                 "white",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 146,
+        "idx": 141,
         "prompt": "One grungy brown stop sign is rightward of one gigantic pink airplane.",
         "PPT": {
             "relation": "Rightward of",
@@ -3354,10 +3366,11 @@
                 "pink",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 147,
+        "idx": 142,
         "prompt": "One striped red remote is below one metal brown bed.",
         "PPT": {
             "relation": "Below",
@@ -3373,29 +3386,11 @@
                 "brown",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 148,
-        "prompt": "One soft purple couch is atop one striped red remote.",
-        "PPT": {
-            "relation": "Atop",
-            "obj1": "couch",
-            "obj1_attr": [
-                "Soft",
-                "purple",
-                "one"
-            ],
-            "obj2": "remote",
-            "obj2_attr": [
-                "Striped",
-                "red",
-                "one"
-            ]
-        }
-    },
-    {
-        "idx": 149,
+        "idx": 143,
         "prompt": "One soft purple couch is below one child-sized brown toothbrush.",
         "PPT": {
             "relation": "Below",
@@ -3411,10 +3406,11 @@
                 "brown",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 150,
+        "idx": 144,
         "prompt": "One striped, red remote is below one soft, purple couch. The soft purple couch is adjacent to the right of the colorful green vase. ",
         "PPT": [
             {
@@ -3447,10 +3443,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 151,
+        "idx": 145,
         "prompt": "One dappled purple potted plant is below one electric pink toothbrush.",
         "PPT": {
             "relation": "Below",
@@ -3466,10 +3463,11 @@
                 "pink",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 152,
+        "idx": 146,
         "prompt": "One sleek, black, large TV is below one dappled, purple, indoor potted plant.",
         "PPT": {
             "relation": "Below",
@@ -3487,10 +3485,11 @@
                 "one",
                 "Indoor"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 153,
+        "idx": 147,
         "prompt": "One dappled purple potted plant is below one antique red clock.",
         "PPT": {
             "relation": "Below",
@@ -3506,10 +3505,11 @@
                 "red",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 154,
+        "idx": 148,
         "prompt": "One dappled purple potted plant is above one sleek black TV.",
         "PPT": {
             "relation": "above",
@@ -3525,10 +3525,11 @@
                 "black",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 155,
+        "idx": 149,
         "prompt": "One patterned red cup is adjacent to the right of one spherical pink orange. The patterned red cup is upon one branchy black broccoli. ",
         "PPT": [
             {
@@ -3561,10 +3562,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 156,
+        "idx": 150,
         "prompt": "One patterned red cup is adjacent to the right of one spherical pink orange. The patterned red cup is underneath the spherical black orange. ",
         "PPT": [
             {
@@ -3597,10 +3599,11 @@
                     "the"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 157,
+        "idx": 151,
         "prompt": "One oversized green cup is beneath one patterned green donut.",
         "PPT": {
             "relation": "Beneath",
@@ -3616,10 +3619,11 @@
                 "green",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 158,
+        "idx": 152,
         "prompt": "One patterned green donut is on top of one oversized red cup.",
         "PPT": {
             "relation": "on top of",
@@ -3635,46 +3639,11 @@
                 "red",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 159,
-        "prompt": "One patterned green donut is on top of one oversized green cup. The oversized green cup is on top of one sculpted green cake. ",
-        "PPT": [
-            {
-                "relation": "on top of",
-                "obj1": "donut",
-                "obj1_attr": [
-                    "patterned",
-                    "green",
-                    "one"
-                ],
-                "obj2": "cup",
-                "obj2_attr": [
-                    "oversized",
-                    "green",
-                    "one"
-                ]
-            },
-            {
-                "relation": "on top of",
-                "obj1": "cup",
-                "obj1_attr": [
-                    "oversized",
-                    "green",
-                    "the"
-                ],
-                "obj2": "cake",
-                "obj2_attr": [
-                    "Sculpted",
-                    "green",
-                    "one"
-                ]
-            }
-        ]
-    },
-    {
-        "idx": 160,
+        "idx": 153,
         "prompt": "One decorated, purple cup is beneath one fluffy, pink cake.",
         "PPT": {
             "relation": "Beneath",
@@ -3690,10 +3659,11 @@
                 "pink",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 161,
+        "idx": 154,
         "prompt": "One fluffy pink cake is atop one curved white wine glass.",
         "PPT": {
             "relation": "Atop",
@@ -3709,10 +3679,11 @@
                 "white",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 162,
+        "idx": 155,
         "prompt": "One fondant-covered pink donut is underneath one cracked green bottle.",
         "PPT": {
             "relation": "Underneath",
@@ -3728,10 +3699,11 @@
                 "green",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 163,
+        "idx": 156,
         "prompt": "One broken, red, painted bowl is underneath one fondant-covered, pink, patterned donut.",
         "PPT": {
             "relation": "Underneath",
@@ -3749,10 +3721,11 @@
                 "one",
                 "patterned"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 164,
+        "idx": 157,
         "prompt": "One rusty white knife is under one jumbo white sandwich.",
         "PPT": {
             "relation": "Under",
@@ -3768,10 +3741,11 @@
                 "white",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 165,
+        "idx": 158,
         "prompt": "One rusty white knife is under one saucy red pizza. The rusty white knife is on the left side of one crunchy yellow broccoli. ",
         "PPT": [
             {
@@ -3804,10 +3778,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 166,
+        "idx": 159,
         "prompt": "One speckled yellow apple is adjacent to the right of one rimmed blue cup.",
         "PPT": {
             "relation": "Adjacent to the right of",
@@ -3823,10 +3798,11 @@
                 "blue",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 167,
+        "idx": 160,
         "prompt": "One curved brown spoon is under one glossy blue orange.",
         "PPT": {
             "relation": "Under",
@@ -3842,10 +3818,11 @@
                 "blue",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 168,
+        "idx": 161,
         "prompt": "One curved brown spoon is under one glossy blue orange.",
         "PPT": {
             "relation": "Under",
@@ -3861,10 +3838,11 @@
                 "blue",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 169,
+        "idx": 162,
         "prompt": "One glossy, blue, textured orange is atop one curved, brown, pointed spoon.",
         "PPT": {
             "relation": "Atop",
@@ -3882,10 +3860,11 @@
                 "one",
                 "pointed."
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 170,
+        "idx": 163,
         "prompt": "One soft pink couch is adjacent to the right of one ribbed red toothbrush.",
         "PPT": {
             "relation": "Adjacent to the right of",
@@ -3901,10 +3880,11 @@
                 "red",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 171,
+        "idx": 164,
         "prompt": "One soft pink couch is on the left side of one rusty purple scissors.",
         "PPT": {
             "relation": "On the left side of",
@@ -3920,10 +3900,11 @@
                 "purple",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 172,
+        "idx": 165,
         "prompt": "One leather-bound green couch is above one luminous white clock.",
         "PPT": {
             "relation": "above",
@@ -3939,10 +3920,11 @@
                 "white",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 173,
+        "idx": 166,
         "prompt": "One leather-bound green couch is underneath one old-fashion black keyboard.",
         "PPT": {
             "relation": "Underneath",
@@ -3958,10 +3940,11 @@
                 "black",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 174,
+        "idx": 167,
         "prompt": "One leather-bound green couch is beneath one old-fashion black keyboard.",
         "PPT": {
             "relation": "Beneath",
@@ -3977,31 +3960,11 @@
                 "black",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 175,
-        "prompt": "One old-fashion, black, sleek keyboard is above one leather-bound, green, soft couch.",
-        "PPT": {
-            "relation": "above",
-            "obj1": "keyboard",
-            "obj1_attr": [
-                "old-fashion",
-                "black",
-                "one",
-                "Sleek"
-            ],
-            "obj2": "couch",
-            "obj2_attr": [
-                "leather-bound",
-                "green",
-                "one",
-                "Soft"
-            ]
-        }
-    },
-    {
-        "idx": 176,
+        "idx": 168,
         "prompt": "One polished blue dining table is to the right of one bulky pink microwave.",
         "PPT": {
             "relation": "To the right of",
@@ -4017,10 +3980,11 @@
                 "pink",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 177,
+        "idx": 169,
         "prompt": "One sealed green twisted bottle is leftward of one whole blue cutted banana.",
         "PPT": {
             "relation": "Leftward of",
@@ -4038,10 +4002,11 @@
                 "one",
                 "cutted"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 178,
+        "idx": 170,
         "prompt": "One sealed, green, textured bottle is leftward of one whole, blue, sliced banana.",
         "PPT": {
             "relation": "Leftward of",
@@ -4059,10 +4024,11 @@
                 "one",
                 "Sliced"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 179,
+        "idx": 171,
         "prompt": "One glossy blue laptop is leftward of one sturdy white chair. The sturdy white chair is leftward of one soft pink teddy bear. ",
         "PPT": [
             {
@@ -4095,10 +4061,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 180,
+        "idx": 172,
         "prompt": "One glossy blue laptop is leftward of one sturdy white chair. The Glossy blue laptop is adjacent to the right of one Spacious yellow bed. ",
         "PPT": [
             {
@@ -4131,10 +4098,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 181,
+        "idx": 173,
         "prompt": "One large, yellow, lighting oven is to the left of one ornate, brown, wooden couch.",
         "PPT": {
             "relation": "To the left of",
@@ -4152,10 +4120,11 @@
                 "one",
                 "wooden."
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 182,
+        "idx": 174,
         "prompt": "One large yellow oven is to the left of one ornate brown couch. The ornate, brown couch is to the right of one long, purple toothbrush. ",
         "PPT": [
             {
@@ -4188,10 +4157,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 183,
+        "idx": 175,
         "prompt": "One bright green fire hydrant is atop one crowded white bus. The crowded white bus is upon one octagonal green stop sign. ",
         "PPT": [
             {
@@ -4224,29 +4194,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 184,
-        "prompt": "One crowded white bus is atop one illuminated red parking meter.",
-        "PPT": {
-            "relation": "Atop",
-            "obj1": "bus",
-            "obj1_attr": [
-                "Crowded",
-                "white",
-                "one"
-            ],
-            "obj2": "parking meter",
-            "obj2_attr": [
-                "Illuminated",
-                "red",
-                "one"
-            ]
-        }
-    },
-    {
-        "idx": 185,
+        "idx": 176,
         "prompt": "One clean black bowl is under one unripe brown banana. The clean black bowl is beneath one ripe pink orange. ",
         "PPT": [
             {
@@ -4279,10 +4231,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 186,
+        "idx": 177,
         "prompt": "One clean black painted bowl is under one unripe brown whole banana.",
         "PPT": {
             "relation": "Under",
@@ -4300,10 +4253,11 @@
                 "one",
                 "Whole"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 187,
+        "idx": 178,
         "prompt": "One clean black bowl is under one unripe brown banana. The clean black bowl is upon one shiny green apple. ",
         "PPT": [
             {
@@ -4336,10 +4290,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 188,
+        "idx": 179,
         "prompt": "One leafy, green, indoor potted plant is to the right of one large, black, marble clock.",
         "PPT": {
             "relation": "To the right of",
@@ -4357,10 +4312,11 @@
                 "one",
                 "large"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 189,
+        "idx": 180,
         "prompt": "One leafy green potted plant is to the right of one black marble clock. The leafy green potted plant is above one thick pink book. ",
         "PPT": [
             {
@@ -4393,10 +4349,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 190,
+        "idx": 181,
         "prompt": "One leafy green potted plant is to the right of one symmetrical black scissors.",
         "PPT": {
             "relation": "To the right of",
@@ -4412,10 +4369,11 @@
                 "black",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 191,
+        "idx": 182,
         "prompt": "One leafy, green, overgrown potted plant is to the right of one marble, black, digital clock.",
         "PPT": {
             "relation": "To the right of",
@@ -4433,10 +4391,11 @@
                 "one",
                 "digital"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 192,
+        "idx": 183,
         "prompt": "One metallic pink parking meter is adjacent to the left of one ancient yellow truck.",
         "PPT": {
             "relation": "Adjacent to the left of",
@@ -4452,10 +4411,11 @@
                 "yellow",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 193,
+        "idx": 184,
         "prompt": "One massive, red, shiny train is adjacent to the left of one metallic, pink, illuminated parking meter.",
         "PPT": {
             "relation": "Adjacent to the left of",
@@ -4473,10 +4433,11 @@
                 "one",
                 "Illuminated"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 194,
+        "idx": 185,
         "prompt": "One dusty yellow book is under one colorful yellow potted plant. The colorful yellow potted plant is on the right side of one lightweight brown hair drier. ",
         "PPT": [
             {
@@ -4509,10 +4470,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 195,
+        "idx": 186,
         "prompt": "One dusty, yellow, illustrated book is under one colorful, vibrant, yellow potted plant.",
         "PPT": {
             "relation": "Under",
@@ -4530,10 +4492,11 @@
                 "one",
                 "Vibrant"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 196,
+        "idx": 187,
         "prompt": "One thick green book is adjacent to the right of one leafy brown potted plant.",
         "PPT": {
             "relation": "Adjacent to the right of",
@@ -4549,10 +4512,11 @@
                 "brown",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 197,
+        "idx": 188,
         "prompt": "One thick, green, large book is adjacent to the right of one comfortable, black, ornate couch.",
         "PPT": {
             "relation": "Adjacent to the right of",
@@ -4570,10 +4534,11 @@
                 "one",
                 "ornate"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 198,
+        "idx": 189,
         "prompt": "One rectangular, white, sturdy cell phone is adjacent to the left of one stained, brown, comfortable couch.",
         "PPT": {
             "relation": "Adjacent to the left of",
@@ -4591,84 +4556,11 @@
                 "one",
                 "comfortable"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 199,
-        "prompt": "One rusty green oven is below one oversized blue couch. The oversized blue couch is below one threadbare yellow teddy bear. ",
-        "PPT": [
-            {
-                "relation": "Below",
-                "obj1": "oven",
-                "obj1_attr": [
-                    "Rusty",
-                    "green",
-                    "one"
-                ],
-                "obj2": "couch",
-                "obj2_attr": [
-                    "oversized",
-                    "blue",
-                    "one"
-                ]
-            },
-            {
-                "relation": "Below",
-                "obj1": "couch",
-                "obj1_attr": [
-                    "oversized",
-                    "blue",
-                    "the"
-                ],
-                "obj2": "teddy bear",
-                "obj2_attr": [
-                    "threadbare",
-                    "yellow",
-                    "one"
-                ]
-            }
-        ]
-    },
-    {
-        "idx": 200,
-        "prompt": "One oversized blue couch is upon one rusty green oven.",
-        "PPT": {
-            "relation": "Upon",
-            "obj1": "couch",
-            "obj1_attr": [
-                "oversized",
-                "blue",
-                "one"
-            ],
-            "obj2": "oven",
-            "obj2_attr": [
-                "Rusty",
-                "green",
-                "one"
-            ]
-        }
-    },
-    {
-        "idx": 201,
-        "prompt": "One oversized blue couch is above one rusty green oven.",
-        "PPT": {
-            "relation": "above",
-            "obj1": "couch",
-            "obj1_attr": [
-                "oversized",
-                "blue",
-                "one"
-            ],
-            "obj2": "oven",
-            "obj2_attr": [
-                "Rusty",
-                "green",
-                "one"
-            ]
-        }
-    },
-    {
-        "idx": 202,
+        "idx": 190,
         "prompt": "One dappled black potted plant is under one torn blue teddy bear. The torn blue teddy bear is adjacent to the right of the foldable yellow bed. ",
         "PPT": [
             {
@@ -4701,10 +4593,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 203,
+        "idx": 191,
         "prompt": "One dappled black potted plant is under one torn blue teddy bear. The Dappled black potted plant is on top of one glossy purple vase. ",
         "PPT": [
             {
@@ -4737,10 +4630,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 204,
+        "idx": 192,
         "prompt": "One dappled, black, flourishing potted plant is under one torn, blue, patchwork teddy bear.",
         "PPT": {
             "relation": "Under",
@@ -4758,10 +4652,11 @@
                 "one",
                 "patchwork"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 205,
+        "idx": 193,
         "prompt": "One torn blue teddy bear is under one ornate green dining table.",
         "PPT": {
             "relation": "Under",
@@ -4777,10 +4672,11 @@
                 "green",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 206,
+        "idx": 194,
         "prompt": "One round, red clock is rightward of one modern, red dining table.",
         "PPT": {
             "relation": "Rightward of",
@@ -4796,10 +4692,11 @@
                 "red",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 207,
+        "idx": 195,
         "prompt": "One round, red, wooden clock is rightward of one rectangular, green, ornate dining table.",
         "PPT": {
             "relation": "Rightward of",
@@ -4817,10 +4714,11 @@
                 "one",
                 "Ornate"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 208,
+        "idx": 196,
         "prompt": "One round red clock is rightward of one rectangular green dining table. The round, red clock is under the polished, purple dining table. ",
         "PPT": [
             {
@@ -4853,10 +4751,11 @@
                     "the"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 209,
+        "idx": 197,
         "prompt": "One striped blue knife is underneath one frosted purple donut.",
         "PPT": {
             "relation": "Underneath",
@@ -4872,10 +4771,11 @@
                 "purple",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 210,
+        "idx": 198,
         "prompt": "One frosted purple donut is Atop one Striped blue knife. The striped blue knife is atop one crunchy brown broccoli. ",
         "PPT": [
             {
@@ -4908,10 +4808,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 211,
+        "idx": 199,
         "prompt": "One frosted purple donut is atop one patterned white cup.",
         "PPT": {
             "relation": "Atop",
@@ -4927,10 +4828,11 @@
                 "white",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 212,
+        "idx": 200,
         "prompt": "One striped blue knife is atop one sliced pink banana.",
         "PPT": {
             "relation": "Atop",
@@ -4946,10 +4848,11 @@
                 "pink",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 213,
+        "idx": 201,
         "prompt": "One heavy brown chair is rightward of one sharp white scissors.",
         "PPT": {
             "relation": "Rightward of",
@@ -4965,10 +4868,11 @@
                 "white",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 214,
+        "idx": 202,
         "prompt": "One vibrant pink ribbed toothbrush is upon one wooden brown spacious bed.",
         "PPT": {
             "relation": "Upon",
@@ -4986,29 +4890,11 @@
                 "one",
                 "Spacious"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 215,
-        "prompt": "One wooden brown bed is upon one sleek pink scissors.",
-        "PPT": {
-            "relation": "Upon",
-            "obj1": "bed",
-            "obj1_attr": [
-                "Wooden",
-                "brown",
-                "one"
-            ],
-            "obj2": "scissors",
-            "obj2_attr": [
-                "Sleek",
-                "pink",
-                "one"
-            ]
-        }
-    },
-    {
-        "idx": 216,
+        "idx": 203,
         "prompt": "One wooden brown bed is upon one oversized black teddy bear.",
         "PPT": {
             "relation": "Upon",
@@ -5024,10 +4910,11 @@
                 "black",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 217,
+        "idx": 204,
         "prompt": "One vibrant pink toothbrush is upon one wooden brown bed. The wooden brown bed is under one colorful brown clock. ",
         "PPT": [
             {
@@ -5060,10 +4947,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 218,
+        "idx": 205,
         "prompt": "One long, white, modern train is on the right side of one round, white, metallic fire hydrant.",
         "PPT": {
             "relation": "On the right side of",
@@ -5081,10 +4969,11 @@
                 "one",
                 "Metallic"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 219,
+        "idx": 206,
         "prompt": "One long white train is on the right side of one electric green traffic light",
         "PPT": {
             "relation": "On the right side of",
@@ -5100,10 +4989,11 @@
                 "green",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 220,
+        "idx": 207,
         "prompt": "One long white train is on the right side of one round white fire hydrant. The long white train is to the left of one metallic brown parking meter. ",
         "PPT": [
             {
@@ -5136,10 +5026,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 221,
+        "idx": 208,
         "prompt": "One long white train is on the right side of one weathered black fire hydrant.",
         "PPT": {
             "relation": "On the right side of",
@@ -5155,10 +5046,11 @@
                 "black",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 222,
+        "idx": 209,
         "prompt": "One spacious green soft bed is below one ornate blue colorful clock.",
         "PPT": {
             "relation": "Below",
@@ -5176,10 +5068,11 @@
                 "one",
                 "colorful"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 223,
+        "idx": 210,
         "prompt": "One spacious, green, rectangular bed is below one ornate, blue, digital clock.",
         "PPT": {
             "relation": "Below",
@@ -5197,10 +5090,11 @@
                 "one",
                 "digital"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 224,
+        "idx": 211,
         "prompt": "One ornate blue clock is below one stained black couch.",
         "PPT": {
             "relation": "Below",
@@ -5216,10 +5110,11 @@
                 "black",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 225,
+        "idx": 212,
         "prompt": "One ornate blue clock is below one spacious brown bed.",
         "PPT": {
             "relation": "Below",
@@ -5235,10 +5130,11 @@
                 "brown",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 226,
+        "idx": 213,
         "prompt": "One tangy, purple, sunny orange is on the left side of one sharp, blue, rusty fork.",
         "PPT": {
             "relation": "On the left side of",
@@ -5256,10 +5152,11 @@
                 "one",
                 "rusty"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 227,
+        "idx": 214,
         "prompt": "One modern, white, clean refrigerator is adjacent to the left of one overgrown, purple, sunlit potted plant.",
         "PPT": {
             "relation": "Adjacent to the left of",
@@ -5277,10 +5174,11 @@
                 "one",
                 "Sunlit"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 228,
+        "idx": 215,
         "prompt": "One glossy red knife is leftward of one fresh red apple.",
         "PPT": {
             "relation": "Leftward of",
@@ -5296,10 +5194,11 @@
                 "red",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 229,
+        "idx": 216,
         "prompt": "One glossy red knife is rightward of one large yellow cake.",
         "PPT": {
             "relation": "Rightward of",
@@ -5315,10 +5214,11 @@
                 "yellow",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 230,
+        "idx": 217,
         "prompt": "\"One large yellow cake is leftward of one glossy red knife.\" The glossy red knife is above one mustard-coated green hot dog. ",
         "PPT": [
             {
@@ -5351,10 +5251,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 231,
+        "idx": 218,
         "prompt": "One large yellow cake is leftward of one glossy red knife. The large yellow cake is underneath one patterned black bowl. ",
         "PPT": [
             {
@@ -5387,10 +5288,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 232,
+        "idx": 219,
         "prompt": "One foldable, green, compact hair drier is atop one sunlit, brown, rootbound potted plant.",
         "PPT": {
             "relation": "Atop",
@@ -5408,10 +5310,11 @@
                 "one",
                 "Rootbound"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 233,
+        "idx": 220,
         "prompt": "One foldable green hair drier is atop one soft purple bed.",
         "PPT": {
             "relation": "Atop",
@@ -5427,10 +5330,11 @@
                 "purple",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 234,
+        "idx": 221,
         "prompt": "One foldable, green, powerful hair drier is atop one sunlit, brown, flourishing potted plant.",
         "PPT": {
             "relation": "Atop",
@@ -5448,10 +5352,11 @@
                 "one",
                 "Flourishing"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 235,
+        "idx": 222,
         "prompt": "One long blue neon remote is under one soft yellow leather-bound couch.",
         "PPT": {
             "relation": "Under",
@@ -5469,10 +5374,11 @@
                 "one",
                 "Soft"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 236,
+        "idx": 223,
         "prompt": "One curved brown wine glass is on the right side of one cutted red carrot.",
         "PPT": {
             "relation": "On the right side of",
@@ -5488,10 +5394,11 @@
                 "red",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 237,
+        "idx": 224,
         "prompt": "One curved, brown wine glass is adjacent to the left of one stuffed, purple pizza.",
         "PPT": {
             "relation": "Adjacent to the left of",
@@ -5507,10 +5414,11 @@
                 "purple",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 238,
+        "idx": 225,
         "prompt": "One curved, brown wine glass is rightward of one cutted, red carrot.",
         "PPT": {
             "relation": "Rightward of",
@@ -5526,46 +5434,11 @@
                 "red",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 239,
-        "prompt": "One rusty pink scissors is under one modern blue dining table. The rusty pink scissors are below the wooden red dining table. ",
-        "PPT": [
-            {
-                "relation": "Under",
-                "obj1": "scissors",
-                "obj1_attr": [
-                    "Rusty",
-                    "pink",
-                    "one"
-                ],
-                "obj2": "dining table",
-                "obj2_attr": [
-                    "Modern",
-                    "blue",
-                    "one"
-                ]
-            },
-            {
-                "relation": "Below",
-                "obj1": "scissors",
-                "obj1_attr": [
-                    "Rusty",
-                    "pink",
-                    "the"
-                ],
-                "obj2": "dining table",
-                "obj2_attr": [
-                    "Wooden",
-                    "red",
-                    "the"
-                ]
-            }
-        ]
-    },
-    {
-        "idx": 240,
+        "idx": 226,
         "prompt": "One rootbound, red potted plant is on the left side of one round, red clock.",
         "PPT": {
             "relation": "On the left side of",
@@ -5581,10 +5454,11 @@
                 "red",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 241,
+        "idx": 227,
         "prompt": "One rootbound red potted plant is to the right of one embossed red handbag.",
         "PPT": {
             "relation": "To the right of",
@@ -5600,10 +5474,11 @@
                 "red",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 242,
+        "idx": 228,
         "prompt": "One rootbound, red potted plant is on the right side of one embossed, red handbag.",
         "PPT": {
             "relation": "On the right side of",
@@ -5619,10 +5494,11 @@
                 "red",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 243,
+        "idx": 229,
         "prompt": "One embossed red handbag is on the left side of one rootbound red potted plant. The embossed red handbag is leftward of one metal yellow bed. ",
         "PPT": [
             {
@@ -5655,10 +5531,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 244,
+        "idx": 230,
         "prompt": "One vibrant, pink, colorful potted plant is rightward of one small, pink, torn book.",
         "PPT": {
             "relation": "Rightward of",
@@ -5676,10 +5553,11 @@
                 "one",
                 "Torn"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 245,
+        "idx": 231,
         "prompt": "One vibrant pink colorful potted plant is rightward of one small pink worn book.",
         "PPT": {
             "relation": "Rightward of",
@@ -5697,10 +5575,11 @@
                 "one",
                 "Worn"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 246,
+        "idx": 232,
         "prompt": "One metal green bed is below one glossy green book.",
         "PPT": {
             "relation": "Below",
@@ -5716,10 +5595,11 @@
                 "green",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 247,
+        "idx": 233,
         "prompt": "One torn green book is on the right side of one spacious pink dining table. The spacious pink dining table is to the right of one durable black hair drier. ",
         "PPT": [
             {
@@ -5752,10 +5632,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 248,
+        "idx": 234,
         "prompt": "One torn green book is on the right side of one spacious pink dining table. The spacious pink dining table is leftward of one electric red toothbrush. ",
         "PPT": [
             {
@@ -5788,10 +5669,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 249,
+        "idx": 235,
         "prompt": "One torn, green, thick book is on the right side of one spacious, pink, ornate dining table.",
         "PPT": {
             "relation": "On the right side of",
@@ -5809,10 +5691,11 @@
                 "one",
                 "Ornate"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 250,
+        "idx": 236,
         "prompt": "One drizzled pink cake is beneath one patterned black bowl.",
         "PPT": {
             "relation": "Beneath",
@@ -5828,10 +5711,11 @@
                 "black",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 251,
+        "idx": 237,
         "prompt": "One faded, bold, purple stop sign is on the right side of one sleek, aerodynamic, blue motorcycle.",
         "PPT": {
             "relation": "On the right side of",
@@ -5849,10 +5733,11 @@
                 "one",
                 "aerodynamic"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 252,
+        "idx": 238,
         "prompt": "One reflective green traffic light is to the left of one old-fashioned green airplane.",
         "PPT": {
             "relation": "To the left of",
@@ -5868,10 +5753,11 @@
                 "green",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 253,
+        "idx": 239,
         "prompt": "One old-fashioned, green, high-flying airplane is adjacent to the right of one reflective, bright, green traffic light.",
         "PPT": {
             "relation": "Adjacent to the right of",
@@ -5889,10 +5775,11 @@
                 "one",
                 "Bright"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 254,
+        "idx": 240,
         "prompt": "One reflective green traffic light is on the left side of one old-fashioned green airplane.",
         "PPT": {
             "relation": "On the left side of",
@@ -5908,10 +5795,11 @@
                 "green",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 255,
+        "idx": 241,
         "prompt": "One oversized red futuristic umbrella is to the right of one quilted green flowered bed.",
         "PPT": {
             "relation": "To the right of",
@@ -5929,10 +5817,11 @@
                 "one",
                 "Flowered"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 256,
+        "idx": 242,
         "prompt": "One bright brown orange is adjacent to the left of one transparent white wine glass.",
         "PPT": {
             "relation": "Adjacent to the left of",
@@ -5948,10 +5837,11 @@
                 "white",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 257,
+        "idx": 243,
         "prompt": "One glossy pink cup is adjacent to the left of one rough brown broccoli.",
         "PPT": {
             "relation": "Adjacent to the left of",
@@ -5967,10 +5857,11 @@
                 "brown",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 258,
+        "idx": 244,
         "prompt": "One high-tech brown hair drier is on the right side of one flowered purple bed.",
         "PPT": {
             "relation": "On the right side of",
@@ -5986,10 +5877,11 @@
                 "purple",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 259,
+        "idx": 245,
         "prompt": "One high-tech, brown hair drier is on the right side of one leafy, green potted plant.",
         "PPT": {
             "relation": "On the right side of",
@@ -6005,10 +5897,11 @@
                 "green",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 260,
+        "idx": 246,
         "prompt": "One ornate blue bed is rightward of one transparent brown vase.",
         "PPT": {
             "relation": "Rightward of",
@@ -6024,10 +5917,11 @@
                 "brown",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 261,
+        "idx": 247,
         "prompt": "One towering, brown, rusty traffic light is to the right of one dirty, red, massive truck.",
         "PPT": {
             "relation": "To the right of",
@@ -6045,10 +5939,11 @@
                 "one",
                 "Massive"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 262,
+        "idx": 248,
         "prompt": "One towering, bright, brown traffic light is to the right of one dirty, metallic, red truck.",
         "PPT": {
             "relation": "To the right of",
@@ -6066,10 +5961,11 @@
                 "one",
                 "Metallic"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 263,
+        "idx": 249,
         "prompt": "One compact, red, portable microwave is adjacent to the right of one wooden, black, stained couch.",
         "PPT": {
             "relation": "Adjacent to the right of",
@@ -6087,10 +5983,11 @@
                 "one",
                 "stained"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 264,
+        "idx": 250,
         "prompt": "One wooden, black couch is adjacent to the right of one ornate, brown clock.",
         "PPT": {
             "relation": "Adjacent to the right of",
@@ -6106,10 +6003,11 @@
                 "brown",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 265,
+        "idx": 251,
         "prompt": "One compact red microwave is adjacent to the right of one overgrown blue potted plant.",
         "PPT": {
             "relation": "Adjacent to the right of",
@@ -6125,10 +6023,11 @@
                 "blue",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 266,
+        "idx": 252,
         "prompt": "One saucy pink overstuffed sandwich is to the right of one pointed blue sharp fork.",
         "PPT": {
             "relation": "To the right of",
@@ -6146,10 +6045,11 @@
                 "one",
                 "sharp"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 267,
+        "idx": 253,
         "prompt": "One saucy, pink, hot sandwich is to the right of one pointed, blue, long fork.",
         "PPT": {
             "relation": "To the right of",
@@ -6167,10 +6067,11 @@
                 "one",
                 "long"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 268,
+        "idx": 254,
         "prompt": "One saucy, pink, cheesy sandwich is to the right of one pointed, blue, sharp fork.",
         "PPT": {
             "relation": "To the right of",
@@ -6188,10 +6089,11 @@
                 "one",
                 "sharp"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 269,
+        "idx": 255,
         "prompt": "One saucy pink sandwich is to the right of one pointed blue fork. The pointed blue fork is on top of one tender yellow broccoli. ",
         "PPT": [
             {
@@ -6224,10 +6126,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 270,
+        "idx": 256,
         "prompt": "One frilly red handbag is beneath one overgrown black potted plant. The frilly, red handbag is above the pruned, purple potted plant. ",
         "PPT": [
             {
@@ -6260,10 +6163,11 @@
                     "the"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 271,
+        "idx": 257,
         "prompt": "One frilly red handbag is beneath one overgrown black potted plant. The frilly red handbag is adjacent to the left of one ornate pink bed. ",
         "PPT": [
             {
@@ -6296,46 +6200,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 272,
-        "prompt": "One frilly red handbag is beneath one overgrown black potted plant. The overgrown black potted plant is upon one high-tech white hair drier. ",
-        "PPT": [
-            {
-                "relation": "Beneath",
-                "obj1": "handbag",
-                "obj1_attr": [
-                    "Frilly",
-                    "red",
-                    "one"
-                ],
-                "obj2": "potted plant",
-                "obj2_attr": [
-                    "Overgrown",
-                    "black",
-                    "one"
-                ]
-            },
-            {
-                "relation": "Upon",
-                "obj1": "potted plant",
-                "obj1_attr": [
-                    "Overgrown",
-                    "black",
-                    "the"
-                ],
-                "obj2": "hair drier",
-                "obj2_attr": [
-                    "High-tech",
-                    "white",
-                    "one"
-                ]
-            }
-        ]
-    },
-    {
-        "idx": 273,
+        "idx": 258,
         "prompt": "One child-sized yellow toothbrush is to the left of one ornate brown chair.",
         "PPT": {
             "relation": "To the left of",
@@ -6351,10 +6220,11 @@
                 "brown",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 274,
+        "idx": 259,
         "prompt": "One carved blue dining table is rightward of one child-sized yellow toothbrush.",
         "PPT": {
             "relation": "Rightward of",
@@ -6370,10 +6240,11 @@
                 "yellow",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 275,
+        "idx": 260,
         "prompt": "One child-sized, yellow, textured toothbrush is to the left of one carved, blue, modern dining table.",
         "PPT": {
             "relation": "To the left of",
@@ -6391,10 +6262,11 @@
                 "one",
                 "Modern"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 276,
+        "idx": 261,
         "prompt": "One spherical blue orange is rightward of one painted blue bowl.",
         "PPT": {
             "relation": "Rightward of",
@@ -6410,10 +6282,11 @@
                 "blue",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 277,
+        "idx": 262,
         "prompt": "One painted blue bowl is leftward of one fondant-covered green donut.",
         "PPT": {
             "relation": "Leftward of",
@@ -6429,10 +6302,11 @@
                 "green",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 278,
+        "idx": 263,
         "prompt": "One painted blue bowl is leftward of one spherical blue orange. The painted blue bowl is on top of one bitten pink hot dog. ",
         "PPT": [
             {
@@ -6465,10 +6339,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 279,
+        "idx": 264,
         "prompt": "One painted blue bowl is leftward of one cutted white banana.",
         "PPT": {
             "relation": "Leftward of",
@@ -6484,10 +6359,11 @@
                 "white",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 280,
+        "idx": 265,
         "prompt": "One skinny brown parking meter is to the left of one sleek green car.",
         "PPT": {
             "relation": "To the left of",
@@ -6503,10 +6379,11 @@
                 "green",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 281,
+        "idx": 266,
         "prompt": "One sleek green convertible car is on the right side of one skinny brown rusty parking meter.",
         "PPT": {
             "relation": "On the right side of",
@@ -6524,10 +6401,11 @@
                 "one",
                 "Rusty"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 282,
+        "idx": 267,
         "prompt": "One twisted, yellow, cracked bottle is leftward of one fresh, green, straight carrot.",
         "PPT": {
             "relation": "Leftward of",
@@ -6545,10 +6423,11 @@
                 "one",
                 "straight"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 283,
+        "idx": 268,
         "prompt": "One twisted yellow bottle is leftward of one fresh green carrot. The twisted yellow bottle is on top of the cutted brown carrot. ",
         "PPT": [
             {
@@ -6581,10 +6460,11 @@
                     "the"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 284,
+        "idx": 269,
         "prompt": "One big white smooth apple is beneath one sparkling brown long knife.",
         "PPT": {
             "relation": "Beneath",
@@ -6602,10 +6482,11 @@
                 "one",
                 "Long"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 285,
+        "idx": 270,
         "prompt": "One sparkling brown knife is beneath one jumbo green sandwich.",
         "PPT": {
             "relation": "Beneath",
@@ -6621,10 +6502,11 @@
                 "green",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 286,
+        "idx": 271,
         "prompt": "One big white apple is beneath one painted purple bowl.",
         "PPT": {
             "relation": "Beneath",
@@ -6640,10 +6522,11 @@
                 "purple",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 287,
+        "idx": 272,
         "prompt": "One neon pink remote is on the right side of one wooden purple bed.",
         "PPT": {
             "relation": "On the right side of",
@@ -6659,10 +6542,11 @@
                 "purple",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 288,
+        "idx": 273,
         "prompt": "One smooth blue apple is to the left of one tarnished black fork. The smooth blue apple is atop one glossy red cup. ",
         "PPT": [
             {
@@ -6695,10 +6579,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 289,
+        "idx": 274,
         "prompt": "One smooth, blue, fresh apple is to the left of one tarnished, black, engraved fork.",
         "PPT": {
             "relation": "To the left of",
@@ -6716,10 +6601,11 @@
                 "one",
                 "engraved."
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 290,
+        "idx": 275,
         "prompt": "One foldable purple dining table is under one foldable white cell phone.",
         "PPT": {
             "relation": "Under",
@@ -6735,29 +6621,11 @@
                 "white",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 291,
-        "prompt": "One foldable, purple dining table is on top of one sleek, brown hair drier.",
-        "PPT": {
-            "relation": "on top of",
-            "obj1": "dining table",
-            "obj1_attr": [
-                "Foldable",
-                "purple",
-                "one"
-            ],
-            "obj2": "hair drier",
-            "obj2_attr": [
-                "Sleek",
-                "brown",
-                "one"
-            ]
-        }
-    },
-    {
-        "idx": 292,
+        "idx": 276,
         "prompt": "One foldable slim white cell phone is on top of one foldable wooden purple dining table.",
         "PPT": {
             "relation": "on top of",
@@ -6775,46 +6643,11 @@
                 "one",
                 "Wooden"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 293,
-        "prompt": "One ergonomic green hair drier is atop one soft blue couch. The soft, blue couch is on top of the powerful, white hair drier. ",
-        "PPT": [
-            {
-                "relation": "Atop",
-                "obj1": "hair drier",
-                "obj1_attr": [
-                    "Ergonomic",
-                    "green",
-                    "one"
-                ],
-                "obj2": "couch",
-                "obj2_attr": [
-                    "Soft",
-                    "blue",
-                    "one"
-                ]
-            },
-            {
-                "relation": "on top of",
-                "obj1": "couch",
-                "obj1_attr": [
-                    "Soft",
-                    "blue",
-                    "the"
-                ],
-                "obj2": "hair drier",
-                "obj2_attr": [
-                    "Powerful",
-                    "white",
-                    "the"
-                ]
-            }
-        ]
-    },
-    {
-        "idx": 294,
+        "idx": 277,
         "prompt": "One ergonomic green hair drier is atop one soft blue couch. The soft blue couch is adjacent to the left of one embellished blue vase. ",
         "PPT": [
             {
@@ -6847,10 +6680,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 295,
+        "idx": 278,
         "prompt": "One toasted red sandwich is upon one jagged black knife.",
         "PPT": {
             "relation": "Upon",
@@ -6866,10 +6700,11 @@
                 "black",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 296,
+        "idx": 279,
         "prompt": "One toasted red sandwich is upon one simple yellow spoon.",
         "PPT": {
             "relation": "Upon",
@@ -6885,10 +6720,11 @@
                 "yellow",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 297,
+        "idx": 280,
         "prompt": "One toasted red sandwich is upon one pointed red fork.",
         "PPT": {
             "relation": "Upon",
@@ -6904,10 +6740,11 @@
                 "red",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 298,
+        "idx": 281,
         "prompt": "One ripe blue peeled banana is underneath one decorated glossy brown cup.",
         "PPT": {
             "relation": "Underneath",
@@ -6925,10 +6762,11 @@
                 "one",
                 "glossy"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 299,
+        "idx": 282,
         "prompt": "One ripe blue banana is underneath one decorated brown cup. The ripe blue banana is adjacent to the left of one twisted black bottle. ",
         "PPT": [
             {
@@ -6961,10 +6799,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 300,
+        "idx": 283,
         "prompt": "One shiny, brown, waterproof suitcase is adjacent to the left of one flourishing, yellow, dappled potted plant.",
         "PPT": {
             "relation": "Adjacent to the left of",
@@ -6982,10 +6821,11 @@
                 "one",
                 "Dappled"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 301,
+        "idx": 284,
         "prompt": "One flourishing yellow potted plant is adjacent to the right of one shiny brown suitcase.",
         "PPT": {
             "relation": "Adjacent to the right of",
@@ -7001,10 +6841,11 @@
                 "brown",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 302,
+        "idx": 285,
         "prompt": "One shiny brown suitcase is adjacent to the left of one flourishing yellow potted plant. The shiny brown suitcase is upon the pruned green potted plant. ",
         "PPT": [
             {
@@ -7037,10 +6878,11 @@
                     "the"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 303,
+        "idx": 286,
         "prompt": "One compact green cell phone is on the left side of one ornate yellow chair. The compact green cell phone is adjacent to the right of one rectangular green bed. ",
         "PPT": [
             {
@@ -7073,10 +6915,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 304,
+        "idx": 287,
         "prompt": "One compact, green, high-tech cell phone is on the left side of one ornate, yellow, curved chair.",
         "PPT": {
             "relation": "On the left side of",
@@ -7094,10 +6937,11 @@
                 "one",
                 "curved"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 305,
+        "idx": 288,
         "prompt": "One compact, green, glossy cell phone is on the left side of one ornate, yellow, curved chair.",
         "PPT": {
             "relation": "On the left side of",
@@ -7115,10 +6959,11 @@
                 "one",
                 "curved"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 306,
+        "idx": 289,
         "prompt": "One compact green glossy cell phone is on the left side of one ornate yellow wooden chair.",
         "PPT": {
             "relation": "On the left side of",
@@ -7136,10 +6981,11 @@
                 "one",
                 "wooden"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 307,
+        "idx": 290,
         "prompt": "One wooden, black couch is adjacent to the right of one glossy, white vase.",
         "PPT": {
             "relation": "Adjacent to the right of",
@@ -7155,10 +7001,11 @@
                 "white",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 308,
+        "idx": 291,
         "prompt": "One wooden, black couch is to the left of one metallic, white handbag.",
         "PPT": {
             "relation": "To the left of",
@@ -7174,10 +7021,11 @@
                 "white",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 309,
+        "idx": 292,
         "prompt": "One juicy, brown, textured orange is above one bent, white, engraved fork.",
         "PPT": {
             "relation": "above",
@@ -7195,10 +7043,11 @@
                 "one",
                 "engraved."
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 310,
+        "idx": 293,
         "prompt": "One juicy brown orange is above one bent white fork. The bent white fork is on top of one stuffed brown pizza. ",
         "PPT": [
             {
@@ -7231,10 +7080,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 311,
+        "idx": 294,
         "prompt": "One bent white fork is below one juicy brown orange.",
         "PPT": {
             "relation": "Below",
@@ -7250,10 +7100,11 @@
                 "brown",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 312,
+        "idx": 295,
         "prompt": "One long yellow toothbrush is adjacent to the left of one sunlit blue potted plant. The long yellow toothbrush is on the left side of one oversized green couch. ",
         "PPT": [
             {
@@ -7286,10 +7137,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 313,
+        "idx": 296,
         "prompt": "One metal green bus is on the right side of one horizontal red traffic light.",
         "PPT": {
             "relation": "On the right side of",
@@ -7305,10 +7157,11 @@
                 "red",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 314,
+        "idx": 297,
         "prompt": "One metal green bus is on the right side of one reflective red parking meter. The metal green bus is under one suspended brown traffic light. ",
         "PPT": [
             {
@@ -7341,10 +7194,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 315,
+        "idx": 298,
         "prompt": "One metal green bus is on the right side of one reflective red parking meter. The reflective red parking meter is leftward of one massive brown airplane. ",
         "PPT": [
             {
@@ -7377,10 +7231,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 316,
+        "idx": 299,
         "prompt": "One metal green bus is on the right side of one reflective red parking meter. The metal green bus is atop one rusty white fire hydrant. ",
         "PPT": [
             {
@@ -7413,10 +7268,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 317,
+        "idx": 300,
         "prompt": "One round, yellow fire hydrant is to the left of one battered, blue boat.",
         "PPT": {
             "relation": "To the left of",
@@ -7432,10 +7288,11 @@
                 "blue",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 318,
+        "idx": 301,
         "prompt": "The one battered, blue, luxurious boat is to the right of the one round, yellow, bright fire hydrant.",
         "PPT": {
             "relation": "To the right of",
@@ -7453,10 +7310,11 @@
                 "one",
                 "Bright"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 319,
+        "idx": 302,
         "prompt": "One battered blue boat is to the right of one rusty blue parking meter.",
         "PPT": {
             "relation": "To the right of",
@@ -7472,10 +7330,11 @@
                 "blue",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 320,
+        "idx": 303,
         "prompt": "One ergonomic red keyboard is above one vibrant blue potted plant. The vibrant blue potted plant is rightward of one black wooden clock. ",
         "PPT": [
             {
@@ -7508,10 +7367,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 321,
+        "idx": 304,
         "prompt": "One vibrant blue potted plant is under one ergonomic red keyboard.",
         "PPT": {
             "relation": "Under",
@@ -7527,10 +7387,11 @@
                 "red",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 322,
+        "idx": 305,
         "prompt": "One large red cake is above one engraved purple knife. The engraved purple knife is adjacent to the left of one ripe brown orange. ",
         "PPT": [
             {
@@ -7563,10 +7424,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 323,
+        "idx": 306,
         "prompt": "One large red Sprinkled cake is above one Engraved purple Sharp knife.",
         "PPT": {
             "relation": "above",
@@ -7584,10 +7446,11 @@
                 "one",
                 "Sharp"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 324,
+        "idx": 307,
         "prompt": "One curved brown wine glass is on the left side of one mustard-coated brown hot dog.",
         "PPT": {
             "relation": "On the left side of",
@@ -7603,10 +7466,11 @@
                 "brown",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 325,
+        "idx": 308,
         "prompt": "One Mustard-coated, brown, Toppings-laden hot dog is adjacent to the right of one curved, tall, brown wine glass.",
         "PPT": {
             "relation": "Adjacent to the right of",
@@ -7624,10 +7488,11 @@
                 "one",
                 "Tall"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 326,
+        "idx": 309,
         "prompt": "One wooden blue chair is rightward of one expensive red toaster.",
         "PPT": {
             "relation": "Rightward of",
@@ -7643,10 +7508,11 @@
                 "red",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 327,
+        "idx": 310,
         "prompt": "One expensive red toaster is leftward of one curved blue chair.",
         "PPT": {
             "relation": "Leftward of",
@@ -7662,10 +7528,11 @@
                 "blue",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 328,
+        "idx": 311,
         "prompt": "One deep purple bowl is to the left of one icing-dripping, brown donut.",
         "PPT": {
             "relation": "To the left of",
@@ -7681,10 +7548,11 @@
                 "brown",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 329,
+        "idx": 312,
         "prompt": "One comfortable red couch is on the left side of one old-fashion yellow keyboard.",
         "PPT": {
             "relation": "On the left side of",
@@ -7700,10 +7568,11 @@
                 "yellow",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 330,
+        "idx": 313,
         "prompt": "One comfortable red couch is to the left of one old-fashion yellow keyboard.",
         "PPT": {
             "relation": "To the left of",
@@ -7719,10 +7588,11 @@
                 "yellow",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 331,
+        "idx": 314,
         "prompt": "One comfortable red couch is adjacent to the right of one modern white hair drier.",
         "PPT": {
             "relation": "Adjacent to the right of",
@@ -7738,10 +7608,11 @@
                 "white",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 332,
+        "idx": 315,
         "prompt": "One old-fashioned, yellow, compact keyboard is adjacent to the right of one comfortable, red, oversized couch.",
         "PPT": {
             "relation": "Adjacent to the right of",
@@ -7759,10 +7630,11 @@
                 "one",
                 "oversized"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 333,
+        "idx": 316,
         "prompt": "One saucy green pizza is above one delicate green wine glass.",
         "PPT": {
             "relation": "above",
@@ -7778,10 +7650,11 @@
                 "green",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 334,
+        "idx": 317,
         "prompt": "One delicate green wine glass is below one saucy green pizza. The delicate green wine glass is to the right of one smooth black apple. ",
         "PPT": [
             {
@@ -7814,29 +7687,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 335,
-        "prompt": "One delicate green wine glass is below one fresh green broccoli.",
-        "PPT": {
-            "relation": "Below",
-            "obj1": "wine glass",
-            "obj1_attr": [
-                "Delicate",
-                "green",
-                "one"
-            ],
-            "obj2": "broccoli",
-            "obj2_attr": [
-                "Fresh",
-                "green",
-                "one"
-            ]
-        }
-    },
-    {
-        "idx": 336,
+        "idx": 318,
         "prompt": "One glossy, red cell phone is upon one green, wooden chair.",
         "PPT": {
             "relation": "Upon",
@@ -7852,10 +7707,11 @@
                 "green",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 337,
+        "idx": 319,
         "prompt": "One tall black broccoli is on the left side of one rusty brown fork.",
         "PPT": {
             "relation": "On the left side of",
@@ -7871,10 +7727,11 @@
                 "brown",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 338,
+        "idx": 320,
         "prompt": "One sliced yellow pizza is adjacent to the left of one short black bottle.",
         "PPT": {
             "relation": "Adjacent to the left of",
@@ -7890,10 +7747,11 @@
                 "black",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 339,
+        "idx": 321,
         "prompt": "One sliced yellow pizza is adjacent to the left of one white glass wine glass. \"The glass white wine glass is adjacent to the right of one crumbled blue cake.\" ",
         "PPT": [
             {
@@ -7926,10 +7784,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 340,
+        "idx": 322,
         "prompt": "One dirty green oven is leftward of one glass-topped brown dining table.",
         "PPT": {
             "relation": "Leftward of",
@@ -7945,10 +7804,11 @@
                 "brown",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 341,
+        "idx": 323,
         "prompt": "One foldable white bed is on the right side of one dirty green oven.",
         "PPT": {
             "relation": "On the right side of",
@@ -7964,10 +7824,11 @@
                 "green",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 342,
+        "idx": 324,
         "prompt": "One spacious, purple, rectangular refrigerator is to the right of one small, green, modern chair.",
         "PPT": {
             "relation": "To the right of",
@@ -7985,10 +7846,11 @@
                 "one",
                 "modern"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 343,
+        "idx": 325,
         "prompt": "One spacious purple refrigerator is to the right of one oversized black couch.",
         "PPT": {
             "relation": "To the right of",
@@ -8004,10 +7866,11 @@
                 "black",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 344,
+        "idx": 326,
         "prompt": "One huggable, red teddy bear is on top of one polished, black dining table.",
         "PPT": {
             "relation": "on top of",
@@ -8023,48 +7886,11 @@
                 "black",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 345,
-        "prompt": "One huggable, red teddy bear is underneath one flourishing, red potted plant.",
-        "PPT": {
-            "relation": "Underneath",
-            "obj1": "teddy bear",
-            "obj1_attr": [
-                "huggable",
-                "red",
-                "one"
-            ],
-            "obj2": "potted plant",
-            "obj2_attr": [
-                "Flourishing",
-                "red",
-                "one"
-            ]
-        }
-    },
-    {
-        "idx": 346,
-        "prompt": "One huggable red teddy bear is underneath one flourishing red potted plant.",
-        "PPT": {
-            "relation": "Underneath",
-            "obj1": "teddy bear",
-            "obj1_attr": [
-                "huggable",
-                "red",
-                "one"
-            ],
-            "obj2": "potted plant",
-            "obj2_attr": [
-                "Flourishing",
-                "red",
-                "one"
-            ]
-        }
-    },
-    {
-        "idx": 347,
+        "idx": 327,
         "prompt": "One huggable, red teddy bear is on top of one flourishing, pink potted plant.",
         "PPT": {
             "relation": "on top of",
@@ -8080,10 +7906,11 @@
                 "pink",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 348,
+        "idx": 328,
         "prompt": "One foldable, yellow dining table is adjacent to the left of one sleek, pink tv.",
         "PPT": {
             "relation": "Adjacent to the left of",
@@ -8099,10 +7926,11 @@
                 "pink",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 349,
+        "idx": 329,
         "prompt": "One torn purple teddy bear is under one leafy pink potted plant. \"The leafy pink potted plant is leftward of one sleek green toothbrush.\" ",
         "PPT": [
             {
@@ -8135,46 +7963,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 350,
-        "prompt": "One torn purple teddy bear is under one leafy pink potted plant. The leafy, pink potted plant is on top of one electric, brown toothbrush. ",
-        "PPT": [
-            {
-                "relation": "Under",
-                "obj1": "teddy bear",
-                "obj1_attr": [
-                    "torn",
-                    "purple",
-                    "one"
-                ],
-                "obj2": "potted plant",
-                "obj2_attr": [
-                    "Leafy",
-                    "pink",
-                    "one"
-                ]
-            },
-            {
-                "relation": "on top of",
-                "obj1": "potted plant",
-                "obj1_attr": [
-                    "Leafy",
-                    "pink",
-                    "the"
-                ],
-                "obj2": "toothbrush",
-                "obj2_attr": [
-                    "Electric",
-                    "brown",
-                    "one"
-                ]
-            }
-        ]
-    },
-    {
-        "idx": 351,
+        "idx": 330,
         "prompt": "One mustard-coated, blue, stuffed hot dog is under one delicate, purple, engraved wine glass.",
         "PPT": {
             "relation": "Under",
@@ -8192,46 +7985,11 @@
                 "one",
                 "Engraved"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 352,
-        "prompt": "One mustard-coated blue hot dog is under one delicate purple wine glass. The delicate, purple wine glass is atop one crunchy, brown carrot. ",
-        "PPT": [
-            {
-                "relation": "Under",
-                "obj1": "hot dog",
-                "obj1_attr": [
-                    "Mustard-coated",
-                    "blue",
-                    "one"
-                ],
-                "obj2": "wine glass",
-                "obj2_attr": [
-                    "Delicate",
-                    "purple",
-                    "one"
-                ]
-            },
-            {
-                "relation": "Atop",
-                "obj1": "wine glass",
-                "obj1_attr": [
-                    "Delicate",
-                    "purple",
-                    "the"
-                ],
-                "obj2": "carrot",
-                "obj2_attr": [
-                    "crunchy",
-                    "brown",
-                    "one"
-                ]
-            }
-        ]
-    },
-    {
-        "idx": 353,
+        "idx": 331,
         "prompt": "One mustard-coated blue hot dog is under one delicate purple wine glass. The delicate purple wine glass is below one ripe pink orange. ",
         "PPT": [
             {
@@ -8264,10 +8022,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 354,
+        "idx": 332,
         "prompt": "One mustard-coated, blue, spicy hot dog is under one delicate, purple, transparent wine glass.",
         "PPT": {
             "relation": "Under",
@@ -8285,10 +8044,11 @@
                 "one",
                 "Transparent"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 355,
+        "idx": 333,
         "prompt": "One soft yellow couch is to the right of one cotton yellow teddy bear.",
         "PPT": {
             "relation": "To the right of",
@@ -8304,10 +8064,11 @@
                 "yellow",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 356,
+        "idx": 334,
         "prompt": "One cotton, yellow, patchwork teddy bear is leftward of one soft, yellow, old-fashioned couch.",
         "PPT": {
             "relation": "Leftward of",
@@ -8325,10 +8086,11 @@
                 "one",
                 "old-fashioned"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 357,
+        "idx": 335,
         "prompt": "One pruned pink potted plant is below one round white remote.",
         "PPT": {
             "relation": "Below",
@@ -8344,10 +8106,11 @@
                 "white",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 358,
+        "idx": 336,
         "prompt": "One round, white, neon remote is above one pruned, pink, flourishing potted plant.",
         "PPT": {
             "relation": "above",
@@ -8365,10 +8128,11 @@
                 "one",
                 "Flourishing"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 359,
+        "idx": 337,
         "prompt": "One transparent red bowl is on the right side of one ripe purple apple. The transparent red bowl is under one juicy green orange. ",
         "PPT": [
             {
@@ -8401,10 +8165,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 360,
+        "idx": 338,
         "prompt": "One transparent, red, shallow bowl is on the right side of one ripe, shiny, purple apple.",
         "PPT": {
             "relation": "On the right side of",
@@ -8422,10 +8187,11 @@
                 "one",
                 "Shiny"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 361,
+        "idx": 339,
         "prompt": "One transparent red bowl is on the right side of one ripe purple apple. The ripe purple apple is adjacent to the right of one patterned green cup. ",
         "PPT": [
             {
@@ -8458,10 +8224,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 362,
+        "idx": 340,
         "prompt": "One dirty red oven is leftward of one oversized purple couch. The oversized purple couch is underneath one huggable red teddy bear. ",
         "PPT": [
             {
@@ -8494,10 +8261,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 363,
+        "idx": 341,
         "prompt": "One oversized purple couch is rightward of one dirty red oven.",
         "PPT": {
             "relation": "Rightward of",
@@ -8513,10 +8281,11 @@
                 "red",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 364,
+        "idx": 342,
         "prompt": "One dirty red oven is leftward of one oversized purple couch. The oversized purple couch is beneath one sleek yellow toothbrush. ",
         "PPT": [
             {
@@ -8549,10 +8318,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 365,
+        "idx": 343,
         "prompt": "One circular green oven is rightward of one modern green dining table.",
         "PPT": {
             "relation": "Rightward of",
@@ -8568,10 +8338,11 @@
                 "green",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 366,
+        "idx": 344,
         "prompt": "One circular green oven is rightward of one spacious red bed. The spacious red bed is below one jagged purple scissors. ",
         "PPT": [
             {
@@ -8604,10 +8375,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 367,
+        "idx": 345,
         "prompt": "One circular green oven is rightward of one spacious red bed. The spacious red bed is above one torn pink teddy bear. ",
         "PPT": [
             {
@@ -8640,10 +8412,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 368,
+        "idx": 346,
         "prompt": "One circular green oven is rightward of one ornate purple couch.",
         "PPT": {
             "relation": "Rightward of",
@@ -8659,10 +8432,11 @@
                 "purple",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 369,
+        "idx": 347,
         "prompt": "One shiny blue apple is rightward of one plastic red bottle. The plastic red bottle is below one overstuffed brown sandwich. ",
         "PPT": [
             {
@@ -8695,10 +8469,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 370,
+        "idx": 348,
         "prompt": "One shiny blue apple is rightward of one simple blue spoon.",
         "PPT": {
             "relation": "Rightward of",
@@ -8714,10 +8489,11 @@
                 "blue",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 371,
+        "idx": 349,
         "prompt": "One plastic red bottle is leftward of one shiny blue apple.",
         "PPT": {
             "relation": "Leftward of",
@@ -8733,10 +8509,11 @@
                 "blue",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 372,
+        "idx": 350,
         "prompt": "One shiny blue apple is rightward of one plastic red bottle. The plastic red bottle is on the right side of one large brown cake. ",
         "PPT": [
             {
@@ -8769,10 +8546,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 373,
+        "idx": 351,
         "prompt": "One fluffy, purple, oversized teddy bear is atop one ornate, green, spacious bed.",
         "PPT": {
             "relation": "Atop",
@@ -8790,10 +8568,11 @@
                 "one",
                 "Spacious"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 374,
+        "idx": 352,
         "prompt": "One ornate green bed is beneath one fluffy purple teddy bear.",
         "PPT": {
             "relation": "Beneath",
@@ -8809,10 +8588,11 @@
                 "purple",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 375,
+        "idx": 353,
         "prompt": "One torn yellow book is adjacent to the left of one rectangular blue dining table",
         "PPT": {
             "relation": "Adjacent to the left of",
@@ -8828,10 +8608,11 @@
                 "blue",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 376,
+        "idx": 354,
         "prompt": "One torn yellow book is adjacent to the left of one sunlit black potted plant. The sunlit black potted plant is on top of one oversized pink teddy bear. ",
         "PPT": [
             {
@@ -8864,10 +8645,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 377,
+        "idx": 355,
         "prompt": "One torn yellow book is adjacent to the left of one sunlit black potted plant. The Sunlit black potted plant is rightward of one slender green scissors. ",
         "PPT": [
             {
@@ -8900,10 +8682,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 378,
+        "idx": 356,
         "prompt": "One octagonal, white, weathered stop sign is adjacent to the right of one minimalistic, black, sleek boat.",
         "PPT": {
             "relation": "Adjacent to the right of",
@@ -8921,10 +8704,11 @@
                 "one",
                 "sleek"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 379,
+        "idx": 357,
         "prompt": "One minimalistic black boat is adjacent to the left of one octagonal white stop sign.",
         "PPT": {
             "relation": "Adjacent to the left of",
@@ -8940,10 +8724,11 @@
                 "white",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 380,
+        "idx": 358,
         "prompt": "One minimalistic black boat is on the left side of one octagonal white stop sign.",
         "PPT": {
             "relation": "On the left side of",
@@ -8959,10 +8744,11 @@
                 "white",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 381,
+        "idx": 359,
         "prompt": "One minimalistic black boat is to the left of one octagonal white stop sign.",
         "PPT": {
             "relation": "To the left of",
@@ -8978,10 +8764,11 @@
                 "white",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 382,
+        "idx": 360,
         "prompt": "One frilly brown umbrella is on the right side of one polished yellow dining table. The polished yellow dining table is leftward of one thin black book. ",
         "PPT": [
             {
@@ -9014,10 +8801,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 383,
+        "idx": 361,
         "prompt": "One drizzled, white, creamy cake is leftward of one oversized, yellow, china cup.",
         "PPT": {
             "relation": "Leftward of",
@@ -9035,10 +8823,11 @@
                 "one",
                 "china"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 384,
+        "idx": 362,
         "prompt": "One fresh blue hot sandwich is beneath one chipped white broken cup.",
         "PPT": {
             "relation": "Beneath",
@@ -9056,10 +8845,11 @@
                 "one",
                 "broken"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 385,
+        "idx": 363,
         "prompt": "One chipped white cup is above one fresh blue sandwich.",
         "PPT": {
             "relation": "above",
@@ -9075,10 +8865,11 @@
                 "blue",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 386,
+        "idx": 364,
         "prompt": "One chipped white cup is upon one fresh blue sandwich.",
         "PPT": {
             "relation": "Upon",
@@ -9094,46 +8885,11 @@
                 "blue",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 387,
-        "prompt": "One fresh blue sandwich is beneath one chipped white cup. The chipped white cup is Atop one juicy red apple. ",
-        "PPT": [
-            {
-                "relation": "Beneath",
-                "obj1": "sandwich",
-                "obj1_attr": [
-                    "fresh",
-                    "blue",
-                    "one"
-                ],
-                "obj2": "cup",
-                "obj2_attr": [
-                    "chipped",
-                    "white",
-                    "one"
-                ]
-            },
-            {
-                "relation": "Atop",
-                "obj1": "cup",
-                "obj1_attr": [
-                    "chipped",
-                    "white",
-                    "the"
-                ],
-                "obj2": "apple",
-                "obj2_attr": [
-                    "Juicy",
-                    "red",
-                    "one"
-                ]
-            }
-        ]
-    },
-    {
-        "idx": 388,
+        "idx": 365,
         "prompt": "One leather-bound green couch is under one shiny white scissors.",
         "PPT": {
             "relation": "Under",
@@ -9149,10 +8905,11 @@
                 "white",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 389,
+        "idx": 366,
         "prompt": "One long red toothbrush is on the right side of one indoor blue potted plant.",
         "PPT": {
             "relation": "On the right side of",
@@ -9168,10 +8925,11 @@
                 "blue",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 390,
+        "idx": 367,
         "prompt": "One indoor blue potted plant is adjacent to the left of one long red toothbrush. The indoor blue potted plant is atop one large red clock. ",
         "PPT": [
             {
@@ -9204,10 +8962,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 391,
+        "idx": 368,
         "prompt": "One cheesy green sandwich is adjacent to the left of one cracked yellow bottle. The cheesy green sandwich is on the right side of one yellow china cup. ",
         "PPT": [
             {
@@ -9240,10 +8999,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 392,
+        "idx": 369,
         "prompt": "One cheesy green sandwich is adjacent to the left of one cracked yellow bottle. The cheesy green sandwich is beneath one striped brown knife. ",
         "PPT": [
             {
@@ -9276,10 +9036,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 393,
+        "idx": 370,
         "prompt": "One cracked yellow bottle is rightward of one cheesy green sandwich.",
         "PPT": {
             "relation": "Rightward of",
@@ -9295,10 +9056,11 @@
                 "green",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 394,
+        "idx": 371,
         "prompt": "One cheesy green sandwich is adjacent to the left of one cracked yellow bottle. The cheesy green sandwich is underneath one green glass wine glass. ",
         "PPT": [
             {
@@ -9331,10 +9093,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 395,
+        "idx": 372,
         "prompt": "One topped white cake is to the right of one patterned black bowl.",
         "PPT": {
             "relation": "To the right of",
@@ -9350,10 +9113,11 @@
                 "black",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 396,
+        "idx": 373,
         "prompt": "One sleek, purple, compact keyboard is on the right side of one glass-topped, purple, foldable dining table.",
         "PPT": {
             "relation": "On the right side of",
@@ -9371,10 +9135,11 @@
                 "one",
                 "Foldable"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 397,
+        "idx": 374,
         "prompt": "One sleek, purple, ergonomic keyboard is on the right side of one glass-topped, purple, foldable dining table.",
         "PPT": {
             "relation": "On the right side of",
@@ -9392,10 +9157,11 @@
                 "one",
                 "Foldable"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 398,
+        "idx": 375,
         "prompt": "One glass-topped, purple dining table is on the right side of one dusty, black book.",
         "PPT": {
             "relation": "On the right side of",
@@ -9411,10 +9177,11 @@
                 "black",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 399,
+        "idx": 376,
         "prompt": "One glass-topped red carved dining table is to the right of one cuddly blue smiling teddy bear",
         "PPT": {
             "relation": "To the right of",
@@ -9432,10 +9199,11 @@
                 "one",
                 "smiling"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 400,
+        "idx": 377,
         "prompt": "One cuddly blue teddy bear is to the left of one glass-topped red dining table.",
         "PPT": {
             "relation": "To the left of",
@@ -9451,10 +9219,11 @@
                 "red",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 401,
+        "idx": 378,
         "prompt": "One glass-topped red dining table is to the right of one straight yellow toothbrush.",
         "PPT": {
             "relation": "To the right of",
@@ -9470,10 +9239,11 @@
                 "yellow",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 402,
+        "idx": 379,
         "prompt": "\"One saucy red pizza is underneath one engraved white fork.\"",
         "PPT": {
             "relation": "Underneath",
@@ -9489,10 +9259,11 @@
                 "white",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 403,
+        "idx": 380,
         "prompt": "One cracked, purple, transparent bottle is underneath one saucy, red, peppered pizza.",
         "PPT": {
             "relation": "Underneath",
@@ -9510,10 +9281,11 @@
                 "one",
                 "peppered"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 404,
+        "idx": 381,
         "prompt": "One glass-topped yellow dining table is on the right side of one thin pink toothbrush.",
         "PPT": {
             "relation": "On the right side of",
@@ -9529,10 +9301,11 @@
                 "pink",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 405,
+        "idx": 382,
         "prompt": "One high-tech white hair drier is on the right side of one rusty green dining table.",
         "PPT": {
             "relation": "On the right side of",
@@ -9548,10 +9321,11 @@
                 "green",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 406,
+        "idx": 383,
         "prompt": "One engraved, purple, frosted wine glass is atop one saucy, purple, stuffed pizza.",
         "PPT": {
             "relation": "Atop",
@@ -9569,10 +9343,11 @@
                 "one",
                 "stuffed"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 407,
+        "idx": 384,
         "prompt": "One engraved purple wine glass is atop one icing-dripping green donut.",
         "PPT": {
             "relation": "Atop",
@@ -9588,10 +9363,11 @@
                 "green",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 408,
+        "idx": 385,
         "prompt": "One engraved purple wine glass is atop one saucy purple pizza. The saucy, purple pizza is beneath one silver, brown fork. ",
         "PPT": [
             {
@@ -9624,10 +9400,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 409,
+        "idx": 386,
         "prompt": "One engraved purple wine glass is atop one fresh pink sandwich.",
         "PPT": {
             "relation": "Atop",
@@ -9643,10 +9420,11 @@
                 "pink",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 410,
+        "idx": 387,
         "prompt": "One juicy blue apple is below one shallow blue bowl.",
         "PPT": {
             "relation": "Below",
@@ -9662,46 +9440,11 @@
                 "blue",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 411,
-        "prompt": "One shallow blue bowl is above one juicy blue apple. The juicy blue apple is beneath one transparent red bottle. ",
-        "PPT": [
-            {
-                "relation": "above",
-                "obj1": "bowl",
-                "obj1_attr": [
-                    "Shallow",
-                    "blue",
-                    "one"
-                ],
-                "obj2": "apple",
-                "obj2_attr": [
-                    "Juicy",
-                    "blue",
-                    "one"
-                ]
-            },
-            {
-                "relation": "Beneath",
-                "obj1": "apple",
-                "obj1_attr": [
-                    "Juicy",
-                    "blue",
-                    "the"
-                ],
-                "obj2": "bottle",
-                "obj2_attr": [
-                    "Transparent",
-                    "red",
-                    "one"
-                ]
-            }
-        ]
-    },
-    {
-        "idx": 412,
+        "idx": 388,
         "prompt": "One shallow blue bowl is above one topped pink cake.",
         "PPT": {
             "relation": "above",
@@ -9717,10 +9460,11 @@
                 "pink",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 413,
+        "idx": 389,
         "prompt": "One shallow blue bowl is above one juicy blue apple. The juicy blue apple is leftward of one red plastic bottle. ",
         "PPT": [
             {
@@ -9753,10 +9497,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 414,
+        "idx": 390,
         "prompt": "One shiny white suitcase is to the right of one modern blue dining table. The shiny white suitcase is atop one vibrant pink potted plant. ",
         "PPT": [
             {
@@ -9789,10 +9534,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 415,
+        "idx": 391,
         "prompt": "One shiny white suitcase is to the right of one modern blue dining table. The modern blue dining table is below one large brown clock. ",
         "PPT": [
             {
@@ -9825,10 +9571,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 416,
+        "idx": 392,
         "prompt": "\"One shiny white suitcase is to the right of one modern blue dining table.\" The modern blue dining table is adjacent to the left of one illustrated blue book. ",
         "PPT": [
             {
@@ -9861,10 +9608,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 417,
+        "idx": 393,
         "prompt": "One modern blue dining table is to the left of one shiny white suitcase.",
         "PPT": {
             "relation": "To the left of",
@@ -9880,10 +9628,11 @@
                 "white",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 418,
+        "idx": 394,
         "prompt": "One vibrant red potted plant is above one compact brown toaster.",
         "PPT": {
             "relation": "above",
@@ -9899,29 +9648,11 @@
                 "brown",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 419,
-        "prompt": "One vibrant red potted plant is below one transparent white vase.",
-        "PPT": {
-            "relation": "Below",
-            "obj1": "potted plant",
-            "obj1_attr": [
-                "Vibrant",
-                "red",
-                "one"
-            ],
-            "obj2": "vase",
-            "obj2_attr": [
-                "transparent",
-                "white",
-                "one"
-            ]
-        }
-    },
-    {
-        "idx": 420,
+        "idx": 395,
         "prompt": "One vibrant red potted plant is on top of one compact brown toaster.",
         "PPT": {
             "relation": "on top of",
@@ -9937,10 +9668,11 @@
                 "brown",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 421,
+        "idx": 396,
         "prompt": "One shiny pink car is to the right of one vertical brown traffic light. The shiny, pink car is to the left of the horizontal, brown traffic light. ",
         "PPT": [
             {
@@ -9973,10 +9705,11 @@
                     "the"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 422,
+        "idx": 397,
         "prompt": "One shallow purple bowl is adjacent to the right of one sprinkled pink cake. The shallow purple bowl is below one layered white sandwich. ",
         "PPT": [
             {
@@ -10009,10 +9742,11 @@
                     "one"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 423,
+        "idx": 398,
         "prompt": "One sprinkled pink cake is on the left side of one shallow purple bowl.",
         "PPT": {
             "relation": "On the left side of",
@@ -10028,10 +9762,11 @@
                 "purple",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 424,
+        "idx": 399,
         "prompt": "One shallow purple bowl is adjacent to the right of one steamy blue hot dog.",
         "PPT": {
             "relation": "Adjacent to the right of",
@@ -10047,10 +9782,11 @@
                 "blue",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 425,
+        "idx": 400,
         "prompt": "One sprinkled pink cake is adjacent to the left of one shallow purple bowl.",
         "PPT": {
             "relation": "Adjacent to the left of",
@@ -10066,10 +9802,11 @@
                 "purple",
                 "one"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 426,
+        "idx": 401,
         "prompt": "One leafy, blue, rootbound potted plant is under one metallic, white, sturdy scissors.",
         "PPT": {
             "relation": "Under",
@@ -10087,10 +9824,11 @@
                 "one",
                 "Sturdy"
             ]
-        }
+        },
+        "validity": true
     },
     {
-        "idx": 427,
+        "idx": 402,
         "prompt": "One leafy blue potted plant is under one metallic white scissors. The leafy, blue potted plant is on the left side of the symmetrical, blue scissors. ",
         "PPT": [
             {
@@ -10123,10 +9861,11 @@
                     "the"
                 ]
             }
-        ]
+        ],
+        "validity": true
     },
     {
-        "idx": 428,
+        "idx": 403,
         "prompt": "One leafy blue potted plant is under one metallic white scissors. The Metallic white scissors are to the right of one Ornate black bed. ",
         "PPT": [
             {
@@ -10159,42 +9898,7 @@
                     "one"
                 ]
             }
-        ]
-    },
-    {
-        "idx": 429,
-        "prompt": "One leafy blue potted plant is under one metallic white scissors. The metallic white scissors are underneath the leafy brown potted plant. ",
-        "PPT": [
-            {
-                "relation": "Under",
-                "obj1": "potted plant",
-                "obj1_attr": [
-                    "Leafy",
-                    "blue",
-                    "one"
-                ],
-                "obj2": "scissors",
-                "obj2_attr": [
-                    "Metallic",
-                    "white",
-                    "one"
-                ]
-            },
-            {
-                "relation": "Underneath",
-                "obj1": "scissors",
-                "obj1_attr": [
-                    "Metallic",
-                    "white",
-                    "the"
-                ],
-                "obj2": "potted plant",
-                "obj2_attr": [
-                    "Leafy",
-                    "brown",
-                    "the"
-                ]
-            }
-        ]
+        ],
+        "validity": true
     }
 ]
