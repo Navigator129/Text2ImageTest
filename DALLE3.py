@@ -40,12 +40,18 @@ def generate(prompts):
 def save_urls(urls, file_path):
     with open(file_path, "w") as file:
         json.dump(urls, file)
+    return file_path
+
+def get_urls(file_path):
+    with open(file_path, "r") as file:
+        data = json.load(file)
+    return data
 
 def download(urls, check):
     if check:
-        save_path = "./images/images/DALLE3/exp1/related/"
+        save_path = "./images/DALLE3/exp1/related/"
     else:
-        save_path = "./images/images/DALLE3/exp1/unrelated/"
+        save_path = "./images/DALLE3/exp1/unrelated/"
     for dict_ in urls:
         index = dict_['index']
         url = dict_['url']
@@ -53,7 +59,9 @@ def download(urls, check):
         img_data = requests.get(url).content
         with open(file_path, 'wb') as handler:
             handler.write(img_data)
-        i += 1
+
+
+
 if __name__ == "__main__":
     file_path1 = './files/exp{}/related_seed_prompts.json'.format(1)
     file_path2 = './files/exp{}/related_mutate_prompts.json'.format(1)
@@ -71,6 +79,8 @@ if __name__ == "__main__":
     unrelated_urls = generate(unrelated_prompts)
     save_urls(related_urls, './images/DALLE3/exp1/related_urls.json')
     save_urls(unrelated_urls, './images/DALLE3/exp1/unrelated_urls.json')
+    related_urls = get_urls('./images/DALLE3/exp1/related_urls.json')
+    unrelated_urls = get_urls('./images/DALLE3/exp1/unrelated_urls.json')
     download(related_urls, True)
     download(unrelated_urls, False)
     
