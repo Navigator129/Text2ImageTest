@@ -49,9 +49,11 @@ def get_urls(file_path):
 
 def download(urls, check):
     if check:
-        save_path = "./images/DALLE3/exp1/related/"
+        save_path = "./images/DALLE3/exp2/related/"
     else:
-        save_path = "./images/DALLE3/exp1/unrelated/"
+        save_path = "./images/DALLE3/exp2/unrelated/"
+    if not os.path.exists(save_path):
+        os.makedirs(save_path)
     for dict_ in urls:
         index = dict_['index']
         url = dict_['url']
@@ -63,10 +65,10 @@ def download(urls, check):
 
 
 if __name__ == "__main__":
-    file_path1 = './files/exp{}/related_seed_prompts.json'.format(1)
-    file_path2 = './files/exp{}/related_mutate_prompts.json'.format(1)
-    file_path3 = './files/exp{}/unrelated_seed_prompts.json'.format(1)
-    file_path4 = './files/exp{}/unrelated_mutate_prompts.json'.format(1)
+    file_path1 = './files/exp{}/related_seed_prompts.json'.format(2)
+    file_path2 = './files/exp{}/related_mutate_prompts.json'.format(2)
+    file_path3 = './files/exp{}/unrelated_seed_prompts.json'.format(2)
+    file_path4 = './files/exp{}/unrelated_mutate_prompts.json'.format(2)
     prompt_list1 = fetch_prompt(file_path1)
     prompt_list2 = fetch_prompt(file_path2)
     prompt_list3 = fetch_prompt(file_path3)
@@ -77,10 +79,10 @@ if __name__ == "__main__":
 
     related_urls = generate(related_prompts)
     unrelated_urls = generate(unrelated_prompts)
-    save_urls(related_urls, './images/DALLE3/exp1/related_urls.json')
-    save_urls(unrelated_urls, './images/DALLE3/exp1/unrelated_urls.json')
-    related_urls = get_urls('./images/DALLE3/exp1/related_urls.json')
-    unrelated_urls = get_urls('./images/DALLE3/exp1/unrelated_urls.json')
+    save_urls(related_urls, './images/DALLE3/exp2/related_urls.json')
+    save_urls(unrelated_urls, './images/DALLE3/exp2/unrelated_urls.json')
+    related_urls = get_urls('./images/DALLE3/exp2/related_urls.json')
+    unrelated_urls = get_urls('./images/DALLE3/exp2/unrelated_urls.json')
     download(related_urls, True)
     download(unrelated_urls, False)
     
