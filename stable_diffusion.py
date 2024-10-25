@@ -67,18 +67,18 @@ def generate_img():
     for i in range(1,4):
         related_prompts, unrelated_prompts = get_prompt(i)
         idx = 0
-        for p in related_prompts:
+        for p in tqdm(related_prompts):
             save_img(pipe1, save_path1.format(model="sd1_0", i=i), idx, p)
             save_img(pipe2, save_path1.format(model="sd1_4", i=i), idx, p)
             save_img(pipe3, save_path1.format(model="sd1_5", i=i), idx, p)
             idx += 1
         
         idx = 0
-        for p in unrelated_prompts:
+        for p in tqdm(unrelated_prompts):
             save_img(pipe1, save_path2.format(model="sd1_0", i=i), idx, p)
             save_img(pipe2, save_path2.format(model="sd1_4", i=i), idx, p)
             save_img(pipe3, save_path2.format(model="sd1_5", i=i), idx, p)
             idx += 1
 
 if __name__ == '__main__':
-    
+    generate_img()
