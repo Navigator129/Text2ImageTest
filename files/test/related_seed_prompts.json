@@ -1,0 +1,222 @@
+[
+    {
+        "idx": 0,
+        "prompt": "One fluffy pink teddy bear is on top of one leather-bound yellow couch.",
+        "PPT": {
+            "relation": "on top of",
+            "obj1": "teddy bear",
+            "obj1_attr": [
+                "Fluffy",
+                "pink",
+                "one"
+            ],
+            "obj2": "couch",
+            "obj2_attr": [
+                "leather-bound",
+                "yellow",
+                "one"
+            ]
+        },
+        "validity": true
+    },
+    {
+        "idx": 1,
+        "prompt": "One gigantic yellow airplane is on the right side of one rusty black parking meter.",
+        "PPT": {
+            "relation": "On the right side of",
+            "obj1": "airplane",
+            "obj1_attr": [
+                "Gigantic",
+                "yellow",
+                "one"
+            ],
+            "obj2": "parking meter",
+            "obj2_attr": [
+                "Rusty",
+                "black",
+                "one"
+            ]
+        },
+        "validity": true
+    },
+    {
+        "idx": 2,
+        "prompt": "One foldable green dining table is underneath one torn blue book.",
+        "PPT": {
+            "relation": "Underneath",
+            "obj1": "dining table",
+            "obj1_attr": [
+                "Foldable",
+                "green",
+                "one"
+            ],
+            "obj2": "book",
+            "obj2_attr": [
+                "Torn",
+                "blue",
+                "one"
+            ]
+        },
+        "validity": true
+    },
+    {
+        "idx": 3,
+        "prompt": "One shining blue TV is underneath one foldable blue dining table.",
+        "PPT": {
+            "relation": "Underneath",
+            "obj1": "tv",
+            "obj1_attr": [
+                "shinning",
+                "blue",
+                "one"
+            ],
+            "obj2": "dining table",
+            "obj2_attr": [
+                "Foldable",
+                "blue",
+                "one"
+            ]
+        },
+        "validity": true
+    },
+    {
+        "idx": 4,
+        "prompt": "One racing blue car is underneath one towering red traffic light.",
+        "PPT": {
+            "relation": "Underneath",
+            "obj1": "car",
+            "obj1_attr": [
+                "Racing",
+                "blue",
+                "one"
+            ],
+            "obj2": "traffic light",
+            "obj2_attr": [
+                "Towering",
+                "red",
+                "one"
+            ]
+        },
+        "validity": true
+    },
+    {
+        "idx": 5,
+        "prompt": "One straight purple toothbrush is upon one small purple chair.",
+        "PPT": {
+            "relation": "Upon",
+            "obj1": "toothbrush",
+            "obj1_attr": [
+                "Straight",
+                "purple",
+                "one"
+            ],
+            "obj2": "chair",
+            "obj2_attr": [
+                "small",
+                "purple",
+                "one"
+            ]
+        },
+        "validity": true
+    },
+    {
+        "idx": 6,
+        "prompt": "One glass-topped, blue dining table is beneath one large, blue clock.",
+        "PPT": {
+            "relation": "Beneath",
+            "obj1": "dining table",
+            "obj1_attr": [
+                "Glass-topped",
+                "blue",
+                "one"
+            ],
+            "obj2": "clock",
+            "obj2_attr": [
+                "large",
+                "blue",
+                "one"
+            ]
+        },
+        "validity": true
+    },
+    {
+        "idx": 7,
+        "prompt": "One fluffy black cake is rightward of one transparent pink bowl.",
+        "PPT": {
+            "relation": "Rightward of",
+            "obj1": "cake",
+            "obj1_attr": [
+                "Fluffy",
+                "black",
+                "one"
+            ],
+            "obj2": "bowl",
+            "obj2_attr": [
+                "Transparent",
+                "pink",
+                "one"
+            ]
+        },
+        "validity": true
+    },
+    {
+        "idx": 8,
+        "prompt": "One waxed purple bench is above one streamlined pink bicycle.",
+        "PPT": {
+            "relation": "above",
+            "obj1": "bench",
+            "obj1_attr": [
+                "waxed",
+                "purple",
+                "one"
+            ],
+            "obj2": "bicycle",
+            "obj2_attr": [
+                "Streamlined",
+                "pink",
+                "one"
+            ]
+        },
+        "validity": true
+    },
+    {
+        "idx": 9,
+        "prompt": "One rectangular white bed is above one cuddly brown teddy bear.",
+        "PPT": {
+            "relation": "above",
+            "obj1": "bed",
+            "obj1_attr": [
+                "Rectangular",
+                "white",
+                "one"
+            ],
+            "obj2": "teddy bear",
+            "obj2_attr": [
+                "cuddly",
+                "brown",
+                "one"
+            ]
+        },
+        "validity": true
+    },
+    {
+        "idx": 10,
+        "prompt": "One sunny pink orange is to the left of one engraved pink bowl.",
+        "PPT": {
+            "relation": "To the left of",
+            "obj1": "orange",
+            "obj1_attr": [
+                "Sunny",
+                "pink",
+                "one"
+            ],
+            "obj2": "bowl",
+            "obj2_attr": [
+                "Engraved",
+                "pink",
+                "one"
+            ]
+        },
+        "validity": true
+    }
+]
