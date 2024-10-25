@@ -16,9 +16,10 @@ def fetch_prompt(file_path):
     return prompts
 
 def generate(prompts, check):
-    i = 0 
-    for p in tqdm(prompts):
+    total_prompts = len(prompts)
+    for i in tqdm(range(150, total_prompts)):
         try:
+            p = total_prompts[i]
             response = client.images.generate(
             model="dall-e-3",
             prompt = p,
@@ -32,7 +33,6 @@ def generate(prompts, check):
         except openai.BadRequestError as e:
             print('Error at index:', i)
             continue
-        i += 1
 
 # def save_urls(urls, file_path):
 #     with open(file_path, "w") as file:
