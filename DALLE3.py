@@ -46,9 +46,9 @@ def generate(prompts, check):
 
 def download(url, check, index):
     if check:
-        save_path = "./images/DALLE3/exp3/related/"
+        save_path = "./images/DALLE3/exp1/related/"
     else:
-        save_path = "./images/DALLE3/exp3/unrelated/"
+        save_path = "./images/DALLE3/exp1/unrelated/"
     if not os.path.exists(save_path):
         os.makedirs(save_path)
     
