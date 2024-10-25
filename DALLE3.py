@@ -15,8 +15,7 @@ def fetch_prompt(file_path):
         prompts.append(dict_["prompt"])
     return prompts
 
-def generate(prompts):
-    urls = []
+def generate(prompts, check):
     i = 0 
     for p in tqdm(prompts):
         try:
@@ -29,40 +28,40 @@ def generate(prompts):
             )
             
             url = response.data[0].url
-            dict_ = {'index': i, 'url': url}
-            urls.append(dict_)
+            download(url, check, i)
         except openai.BadRequestError as e:
             print('Error at index:', i)
             continue
         i += 1
-    return urls
 
-def save_urls(urls, file_path):
-    with open(file_path, "w") as file:
-        json.dump(urls, file)
-    return file_path
+# def save_urls(urls, file_path):
+#     with open(file_path, "w") as file:
+#         json.dump(urls, file)
+#     return file_path
 
-def get_urls(file_path):
-    with open(file_path, "r") as file:
-        data = json.load(file)
-    return data
+# def get_urls(file_path):
+#     with open(file_path, "r") as file:
+#         data = json.load(file)
+#     return data
 
-def download(urls, check):
+def download(url, check, index):
     if check:
         save_path = "./images/DALLE3/exp3/related/"
     else:
         save_path = "./images/DALLE3/exp3/unrelated/"
     if not os.path.exists(save_path):
         os.makedirs(save_path)
-    for dict_ in urls:
-        index = dict_['index']
-        url = dict_['url']
-        file_path = os.path.join(save_path, "{}.jpg".format(index))
-        img_data = requests.get(url).content
+    
+    # for dict_ in urls:
+    #     index = dict_['index']
+    #     url = dict_['url']
+    file_path = os.path.join(save_path, "{}.jpg".format(index))
+    img_data = requests.get(url)
+    if img_data.status_code == 200:
         with open(file_path, 'wb') as handler:
-            handler.write(img_data)
-
-
+            handler.write(img_data.content)
+    else:
+        print('Error at index:', index)
 
 if __name__ == "__main__":
     file_path1 = './files/exp{}/related_seed_prompts.json'.format(3)
@@ -79,11 +78,5 @@ if __name__ == "__main__":
 
     related_urls = generate(related_prompts)
     unrelated_urls = generate(unrelated_prompts)
-    save_urls(related_urls, './images/DALLE3/exp3/related_urls.json')
-    save_urls(unrelated_urls, './images/DALLE3/exp3/unrelated_urls.json')
-    related_urls = get_urls('./images/DALLE3/exp3/related_urls.json')
-    unrelated_urls = get_urls('./images/DALLE3/exp3/unrelated_urls.json')
-    download(related_urls, True)
-    download(unrelated_urls, False)
     
 
