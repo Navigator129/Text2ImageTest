@@ -6,7 +6,7 @@ from constructPPT import *
 from tqdm import tqdm
 
 
-gpt_value = {"key": "sk-proj-1BPvHk5XzjyLbAc1UPy5T3BlbkFJSuwD9Ey30jzLFHcL30ZD",
+gpt_value = {"key": "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",
             "org": "YOUR_ORG_ID",}
 
 
