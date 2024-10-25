@@ -14,7 +14,7 @@ def fetch_prompt(file_path):
     for dict_ in data:
         prompts.append(dict_["prompt"])
     return prompts
-
+        
 def generate(prompts):
     urls = []
     i = 0 

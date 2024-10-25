@@ -62,9 +62,9 @@ if __name__ == '__main__':
 
     related_channel_id = '1282072651921358899'
     unrelated_channel_id = '1282072689971957864'
-    # for prompt in related_prompts:
-    #     generate(prompt, related_channel_id)
-    for prompt in unrelated_prompts:
-        generate(prompt, unrelated_channel_id)
+    for prompt in related_prompts:
+        generate(prompt, related_channel_id)
+    # for prompt in unrelated_prompts:
+    #     generate(prompt, unrelated_channel_id)
 
     print('finish')
