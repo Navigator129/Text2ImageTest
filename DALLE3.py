@@ -76,7 +76,7 @@ if __name__ == "__main__":
     related_prompts = prompt_list1 + prompt_list2
     unrelated_prompts = prompt_list3 + prompt_list4
 
-    related_urls = generate(related_prompts)
-    unrelated_urls = generate(unrelated_prompts)
+    related_urls = generate(related_prompts, True)
+    unrelated_urls = generate(unrelated_prompts, False)
     
 
