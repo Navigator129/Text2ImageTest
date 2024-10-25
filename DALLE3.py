@@ -6,7 +6,7 @@ import openai
 import requests
 
 # Replace YOUR_API_KEY with your OpenAI API key
-client = OpenAI(api_key = "sk-proj-1BPvHk5XzjyLbAc1UPy5T3BlbkFJSuwD9Ey30jzLFHcL30ZD")
+client = OpenAI(api_key = "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")
 def fetch_prompt(file_path):
     prompts = []
     with open(file_path, "r") as file:
@@ -14,7 +14,7 @@ def fetch_prompt(file_path):
     for dict_ in data:
         prompts.append(dict_["prompt"])
     return prompts
-        
+
 def generate(prompts):
     urls = []
     i = 0 

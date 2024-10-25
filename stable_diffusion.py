@@ -1,54 +1,52 @@
-from diffusers import DiffusionPipeline
-import torch
 import json
+from diffusers import DiffusionPipeline, StableDiffusionPipeline
+import torch
+from tqdm import tqdm
+import os
 
-def load_prompt():
-    with open("./files/prompts.json", "r") as f:
-        prompts = json.load(f)
-    prompt_list = list(prompts.values())
-    return prompt_list
 
-def generate():
-    # load both base & refiner
-    base = DiffusionPipeline.from_pretrained(
-        "stabilityai/stable-diffusion-xl-base-1.0", torch_dtype=torch.float16, variant="fp16", use_safetensors=True
-    )
-    base.to("cuda")
-    refiner = DiffusionPipeline.from_pretrained(
-        "stabilityai/stable-diffusion-xl-refiner-1.0",
-        text_encoder_2=base.text_encoder_2,
-        vae=base.vae,
-        torch_dtype=torch.float16,
-        use_safetensors=True,
-        variant="fp16",
-    )
-    refiner.to("cuda")
+def fetch_prompt(path):
+    prompts = []
+    with open(path, 'r', encoding = 'utf-8') as f:
+        dict_list = json.load(f)
 
-    # Define how many steps and what % of steps to be run on each experts (80/20) here
-    n_steps = 40
-    high_noise_frac = 0.8
+    for dict_ in dict_list:
+        prompts.append(dict_['prompt'])
+    return prompts
 
-    # load prompt
-    prompt_list = load_prompt()
-    prompt = "A majestic lion jumping from a big stone at night"
+def sd1_0_generator():
+    pipe = DiffusionPipeline.from_pretrained("stabilityai/stable-diffusion-xl-base-1.0", torch_dtype=torch.float16, use_safetensors=True, variant="fp16")
+    pipe.to("cuda")
+    return pipe
 
-    # run both experts
-    image = base(
-        prompt=prompt,
-        num_inference_steps=n_steps,
-        denoising_end=high_noise_frac,
-        output_type="latent",
-    ).images
-    image = refiner(
-        prompt=prompt,
-        num_inference_steps=n_steps,
-        denoising_start=high_noise_frac,
-        image=image,
-    ).images[0]
-    print('DONE!')
+def sd1_4_generator():
+    model_id = "CompVis/stable-diffusion-v1-4"
+    device = "cuda"
+    pipe = StableDiffusionPipeline.from_pretrained(model_id, torch_dtype=torch.float16)
+    pipe = pipe.to('cuda')
+    return pipe
 
-if __name__ == "__main__":
-    print("Torch version:",torch.__version__)
+def sd1_5_generator():
+    model_id = "runwayml/stable-diffusion-v1-5"
+    pipe = StableDiffusionPipeline.from_pretrained(model_id, torch_dtype=torch.float16)
+    pipe = pipe.to("cuda")
+    return pipe
 
-    print("Is CUDA enabled?",torch.cuda.is_available())
-    generate()
+def get_prompt():
+    file_path1 = './files/exp{}/related_seed_prompts.json'
+    file_path2 = './files/exp{}/related_mutate_prompts.json'
+    file_path3 = './files/exp{}/unrelated_seed_prompts.json'
+    file_path4 = './files/exp{}/unrelated_mutate_prompts.json'
+
+    for i in range(1,4):
+        prompt_list1 = fetch_prompt(file_path1.format(i))
+        prompt_list2 = fetch_prompt(file_path2.format(i))
+        prompt_list3 = fetch_prompt(file_path3.format(i))
+        prompt_list4 = fetch_prompt(file_path4.format(i))
+
+        related_prompts = prompt_list1 + prompt_list2
+        unrelated_prompts = prompt_list3 + prompt_list4
+
+        return related_prompts, unrelated_prompts
+
+def generate
