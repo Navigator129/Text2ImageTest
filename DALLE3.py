@@ -64,10 +64,10 @@ def download(url, check, index):
         print('Error at index:', index)
 
 if __name__ == "__main__":
-    file_path1 = './files/exp{}/related_seed_prompts.json'.format(3)
-    file_path2 = './files/exp{}/related_mutate_prompts.json'.format(3)
-    file_path3 = './files/exp{}/unrelated_seed_prompts.json'.format(3)
-    file_path4 = './files/exp{}/unrelated_mutate_prompts.json'.format(3)
+    file_path1 = './files/exp{}/related_seed_prompts.json'.format(1)
+    file_path2 = './files/exp{}/related_mutate_prompts.json'.format(1)
+    file_path3 = './files/exp{}/unrelated_seed_prompts.json'.format(1)
+    file_path4 = './files/exp{}/unrelated_mutate_prompts.json'.format(1)
     prompt_list1 = fetch_prompt(file_path1)
     prompt_list2 = fetch_prompt(file_path2)
     prompt_list3 = fetch_prompt(file_path3)
