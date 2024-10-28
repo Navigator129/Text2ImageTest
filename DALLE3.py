@@ -19,7 +19,7 @@ def generate(prompts, check):
     total_prompts = len(prompts)
     for i in tqdm(range(150, total_prompts)):
         try:
-            p = total_prompts[i]
+            p = prompts[i]
             response = client.images.generate(
             model="dall-e-3",
             prompt = p,
