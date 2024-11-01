@@ -4,3 +4,4 @@ url = 'https://oaidalleapiprodscus.blob.core.windows.net/private/org-YGi1QDMf6n1
 img = requests.get(url)
 with open('img.png', 'wb') as f:
     f.write(img.content)
+

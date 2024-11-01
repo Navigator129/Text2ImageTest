@@ -251,6 +251,7 @@ def add_attribute(input_PPT):
         return root
     
 def check_ambiguity(relation_node, idx):
+    #remove objects that may cause impossible position
     if idx != 0:
         return False
     else:
